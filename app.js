@@ -350,44 +350,6 @@ function postNewUserToDB() {
         post_req.write(b);
         post_req.end();
 }
-//Not in use right now
-/*
-function getAnalytics(){
-    var buffer = "";
-    var a = "";
-    var optionsget = {
-        host: 'graph.facebook.com',
-        port: 443,
-        path: '/v2.8/me/insights/page_messages_active_threads_unique&access_token=' + PAGE_ACCESS_TOKEN ,
-        method: 'GET'
-    };
-
-    console.info('Options prepared:');
-    console.info(optionsget);
-    console.info('Do the GET call');
-
-// do the GET request
-    var reqGet = https.request(optionsget, function(res) {
-        console.log("statusCode: ", res.statusCode);
-        // uncomment it for header details
-        //  console.log("headers: ", res.headers);
-
-        res.on('data', function(d) {
-            console.info('GET result:\n');
-            process.stdout.write(d);
-            buffer += d;
-            console.log(buffer);
-            a = JSON.parse(buffer);
-            console.log(a);
-        });
-    });
-
-    reqGet.end();
-    reqGet.on('error', function(e) {
-        console.error(e);
-    });
-}
-*/
 
 /*
  * Message Event

@@ -3,7 +3,6 @@ var router = express.Router();
 var https = require('https');
 var request = require('request');
 var http = require('http');
-var parseString = require('xml2js').parseString;
 var sourceFile = require('../app');
 var cors = require('cors');
 var bodyParser = require('body-parser');
@@ -29,9 +28,6 @@ router.use(cors());
 
 //Global variables
 var errMsg = "";
-var successMsg = "";
-
-//Data recieved from the HotelResRQ request to Channelmanager
 var newFileUploaded = false;
 var gaesteGlobalSenderID =[];
 var broadcast = "";
@@ -152,7 +148,6 @@ router.post('/guestsMessage', function(req, res, next) {
             broadcastMessages();
         }
     });
-
     function broadcastMessages() {
         console.log(dateReqFormatted + "=" + dateNowFormatted);
         //If message is not send at least 1 min later than now, schedule event is not fired
@@ -255,11 +250,11 @@ router.post('/guestsMessage', function(req, res, next) {
                                 if (rightMessage.date.indexOf(regex) !== -1) {
                                     console.log("HHHH:" + rightMessage.date + rightMessage.text);
                                     for (var l = 0; l < gaesteGlobalSenderID.length; l++) {
-                                        sendBroadcast(gaesteGlobalSenderID[l], rightMessage.text);
+                                        sourceFile.sendBroadcast(gaesteGlobalSenderID[l], rightMessage.text);
                                         if (rightMessage.uploaded_file) {
                                             console.log("URLUploadedFile:" + URLUploadedFile);
                                             console.log("rightMessage.uploadedfile: " + rightMessage.uploaded_file);
-                                            sendBroadcastFile(gaesteGlobalSenderID[l], SERVER_URL + "/uploads/" + rightMessage.uploaded_file);
+                                            sourceFile.sendBroadcastFile(gaesteGlobalSenderID[l], SERVER_URL + "/uploads/" + rightMessage.uploaded_file);
                                         }
                                     }
                                     db.testScheduledMessages.update({
@@ -376,59 +371,5 @@ router.get('/wlanlandingpage', function(req, res, next) {
     console.log("wlanlandingpage ejs rendered");
 
 });
-
-//Broadcast gesendet von Dashboard to all angemeldete Gäste
-function sendBroadcast(recipientId, broadcastText) {
-    console.log("---->>>>>recipientId: in send broadcast function: "  + recipientId);
-    var messageData = {
-        recipient: {
-            id: recipientId
-        },
-        message: {
-            text: broadcastText,
-            metadata: "DEVELOPER_DEFINED_METADATA"
-        }
-    };
-    sourceFile.callSendAPI(messageData);
-}
-
-//Broadcast gesendet von Dashboard to all angemeldete Gäste - Wenn Anhang hochgeladen, diese function wird gecalled
-function sendBroadcastFile(recipientId, URLUploadedFile) {
-    var messageData;
-    var imageEnding = "jpg";
-    var imageEnding2 = "png";
-    if (URLUploadedFile.indexOf(imageEnding) !== -1 || URLUploadedFile.indexOf(imageEnding2) !== -1 ) {
-        messageData = {
-            recipient: {
-                id: recipientId
-            },
-            message: {
-                attachment: {
-                    type: "image",
-                    payload: {
-                        url: URLUploadedFile
-                    }
-                }
-            }
-        };
-        sourceFile.callSendAPI(messageData);
-    } else {
-        messageData = {
-            recipient: {
-                id: recipientId
-            },
-            message: {
-                attachment: {
-                    type: "file",
-                    payload: {
-                        url: URLUploadedFile
-                    }
-                }
-            }
-        };
-        sourceFile.callSendAPI(messageData);
-    }
-
-}
 
 module.exports = router;
