@@ -8,7 +8,7 @@ var sourceFile = require('../app');
 var cors = require('cors');
 var bodyParser = require('body-parser');
 var mongojs = require('mongojs');
-var db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['salzburgerhofMessages', 'salzburgerhofGaeste', 'salzburgerhofScheduledMessages']);
+var db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['testMessages', 'testGaeste', 'testScheduledMessages']);
 var config = require('config');
 var cron = require('node-cron');
 var CronJob = require('cron').CronJob;
@@ -48,7 +48,7 @@ var dateMinute = "";
 router.get('/guestsMessages', function(req, res, next) {
     console.log("guestsMessages get called");
     //Get guests from Mongo DB
-    db.salzburgerhofMessages.find(function(err, message){
+    db.testMessages.find(function(err, message){
         if (err){
             res.send(err);
         }
@@ -60,7 +60,7 @@ router.get('/guestsMessages', function(req, res, next) {
 router.get('/guestsScheduledMessages', function(req, res, next) {
     console.log("guestsMessages get called");
     //Get guests from Mongo DB
-    db.salzburgerhofScheduledMessages.find(function(err, message){
+    db.testScheduledMessages.find(function(err, message){
         if (err){
             res.send(err);
         }
@@ -72,7 +72,7 @@ router.get('/guestsScheduledMessages', function(req, res, next) {
 router.get('/guests', function(req, res, next) {
     console.log("guests get called");
     //Get guests from Mongo DB
-    db.salzburgerhofGaeste.find(function(err, gaeste){
+    db.testGaeste.find(function(err, gaeste){
         if (err){
             res.send(err);
         }
@@ -92,7 +92,7 @@ router.post('/guests', function(req, res, next) {
             error: "Bad data"
         });
     } else {
-        db.salzburgerhofGaeste.save(guest, function (err, guest) {
+        db.testGaeste.save(guest, function (err, guest) {
             if (err) {
                 res.send(err);
             }
@@ -108,7 +108,7 @@ router.put('/guests', function(req, res, next) {
     var guestUpdateString = JSON.stringify(guestUpdate);
     var guestUpdateHoi = guestUpdateString.slice(2, -5);
     console.log("SenderId:" + guestUpdateHoi);
-    db.salzburgerhofGaeste.update({
+    db.testGaeste.update({
             senderId:  guestUpdateHoi  },
         {
             $set: { signed_up: false }
@@ -139,7 +139,7 @@ router.post('/guestsMessage', function(req, res, next) {
     var URLUploadedFile = String(config.get('serverURL') + "/uploads/" + uploadedFileName);
     newFileUploaded = sourceFile.newFileUploaded;
 
-    db.salzburgerhofGaeste.find(function (err, gaeste) {
+    db.testGaeste.find(function (err, gaeste) {
         if (err) {
             errMsg = "Das senden der Nachricht ist nicht möglich. Es sind keine Gäste angemeldet.";
         } else {
@@ -159,7 +159,7 @@ router.post('/guestsMessage', function(req, res, next) {
         if (dateReqFormatted !== dateNowFormatted) {
             console.log("scheduled event fired!");
             //Save Message to DB
-            db.salzburgerhofScheduledMessages.save(message, function (err, message) {
+            db.testScheduledMessages.save(message, function (err, message) {
                 console.log("scheduleMessage saved: " + message.text + " " + message.date);
                 if (err) {
                     res.send(err);
@@ -169,7 +169,7 @@ router.post('/guestsMessage', function(req, res, next) {
 
             if (uploadedFileName !== undefined && newFileUploaded === true) {
 
-                db.salzburgerhofScheduledMessages.update({
+                db.testScheduledMessages.update({
                         text: message.text
                     },
                     {
@@ -262,7 +262,7 @@ router.post('/guestsMessage', function(req, res, next) {
                                             sendBroadcastFile(gaesteGlobalSenderID[l], SERVER_URL + "/uploads/" + rightMessage.uploaded_file);
                                         }
                                     }
-                                    db.salzburgerhofScheduledMessages.update({
+                                    db.testScheduledMessages.update({
                                             text: rightMessage.text
                                         },
                                         {
@@ -294,7 +294,7 @@ router.post('/guestsMessage', function(req, res, next) {
                 sourceFile.sendBroadcast(gaesteGlobalSenderID[j], broadcast);
             }
             //Save Message to DB
-            db.salzburgerhofMessages.save(message, function (err, message) {
+            db.testMessages.save(message, function (err, message) {
                 console.log("Message saved: " + message.text + " " + message.date);
                 if (err) {
                     res.send(err);
@@ -305,7 +305,7 @@ router.post('/guestsMessage', function(req, res, next) {
             console.log("NEWFILEUPLOAD ======= >>>> 4" + newFileUploaded);
             if (uploadedFileName !== undefined && newFileUploaded === true) {
 
-                db.salzburgerhofMessages.update({
+                db.testMessages.update({
                         text: message.text,
                         date: message.date
                     },
