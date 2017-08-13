@@ -93,11 +93,12 @@ export class DashboardComponent implements OnInit {
         formData.append('uploads[]', files[0], files[0]['name']);
 
         this.http.post('/upload', formData)
+            .map(files => files.json()).map(res =>
             // 1st parameter is a flash message text
             // 2nd parameter is optional. You can pass object with options.
-            .subscribe(function files (){ console.log('files', files);
-            this._flashMessagesService.show('Erfolgreich Datei angehängt', { cssClass: 'alert-success', timeout: 10000 });
-            });
+            this._flashMessagesService.show('Datei wird angehängt. Einen Moment bitte', { cssClass: 'alert-success', timeout: 20000 }),
+            )
+            .subscribe(files => console.log('files', files));
     }
 
     fileChangeEvent(fileInput: any) {
