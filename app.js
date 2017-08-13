@@ -116,11 +116,8 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
     console.log("console log in app.post upload", 'files', req.files);
     exports.uploadedFileName = req.files[0].filename;
     //console.log("New file uploaded status:" + newFileUploaded);
-    newFileUploaded = true;
+    routes.newFileUploaded();
     //Export value to index.js - a new file got uploaded
-    console.log("NEWFILEUPLOAD ======= >>>> app1" +  exports.newFileUploaded);
-    exports.newFileUploaded = newFileUploaded;
-    console.log("NEWFILEUPLOAD ======= >>>> app2" +  exports.newFileUploaded);
 
     //console.log("New file uploaded status:" + newFileUploaded);
     //console.log("New file uploaded status:" + newFileUploaded);
