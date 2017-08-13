@@ -26,16 +26,16 @@ router.use(bodyParser.urlencoded({ extended: false}));
 router.use(cors());
 
 //Global variables
-let errMsg = "";
-let newFileUploaded = false;
-let gaesteGlobalSenderID =[];
-let broadcast = "";
-let dateNowFormatted = "";
-let dateReqFormatted = "";
-let dateDay = "";
-let dateMonth = "";
-let dateHour = "";
-let dateMinute = "";
+var errMsg = "";
+var newFileUploaded = false;
+var gaesteGlobalSenderID =[];
+var broadcast = "";
+var dateNowFormatted = "";
+var dateReqFormatted = "";
+var dateDay = "";
+var dateMonth = "";
+var dateHour = "";
+var dateMinute = "";
 
 //----->REST-FUL API<------//
 
