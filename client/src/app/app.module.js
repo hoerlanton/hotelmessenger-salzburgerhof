@@ -15,6 +15,7 @@ var dashboard_component_1 = require("./components/dashboard/dashboard.component"
 var angular2_flash_messages_1 = require("angular2-flash-messages");
 var angular2_moment_1 = require("angular2-moment");
 var ng2_datetime_1 = require("ng2-datetime/ng2-datetime");
+require("mdn-polyfills/Object.assign");
 require("@angular/platform-browser");
 require("@angular/platform-browser-dynamic");
 require("@angular/core");
