@@ -49,8 +49,6 @@ app.use('/', routes);
 
 //Global variables
 var i = 0;
-var autoAnswerIsOn = true;
-exports.newFileUploaded = false;
 //data when user clicks send to messenger button -> send to index.js REST-API
 var a = {};
 //object a stringified in order to make post request to REST-API
@@ -299,7 +297,7 @@ function receivedAuthentication(event) {
             // to let them know it was successful.
             sendTextMessage(senderID, "Hallo " +  a.first_name + " " + a.last_name + "! Sie haben sich erfolgreich angemeldet. " +
                 "Sie erhalten nun Neuigkeiten via Facebook Messenger " +
-                "von Ihrem " + HOTEL_NAME +  " team. Viel Spaß!");
+                "von Ihrem " + HOTEL_NAME +  " Team. Viel Spaß!");
             //Additionally senderID is added to the Javascript object, which is saved to the MongoDB
             a["senderId"] = senderID;
             //User is a "angemeldeter Gast" and is able to recieve messages
@@ -392,9 +390,6 @@ function receivedMessage(event) {
             messageId, quickReplyPayload);
 
         if (messageText) {
-
-
-
             // If we receive a text message, check to see if it matches any special
             // keywords and send back the corresponding example. Otherwise, just echo
             // the text we received.
@@ -471,7 +466,6 @@ exports.sendBroadcastFile = function (recipientId, URLUploadedFile) {
     }
 };
 
-
 /*
  * Delivery Confirmation Event
  *
@@ -522,12 +516,6 @@ function receivedPostback(event) {
    }
    else if (payload === "GET_STARTED_PAYLOAD") {
        sendWelcomeMessage(senderID);
-   }    else if (payload === "Zimmer Anfrage") {
-       sendPersonRequest(senderID);
-   }    else if (payload === "personal") {
-       sendPersonalFeedback(senderID);
-   } else if (payload === "DEVELOPER_DEFINED_PAYLOAD") {
-
    }
 }
 
@@ -571,8 +559,6 @@ function receivedAccountLink(event) {
 //Employee will soon take care of users request
 function sendPersonalFeedback(recipientId) {
 
-    autoAnswerIsOn = false;
-
     var messageData = {
         recipient: {
             id: recipientId
@@ -604,35 +590,6 @@ function sendTextMessage(recipientId, messageText) {
 
     callSendAPI(messageData);
 }
-//Function called if user signes up first time
-function sendWelcomeMessage(recipientId) {
-    var messageData = {
-        recipient: {
-            id: recipientId
-        },
-        message: {
-            attachment: {
-                type: "template",
-                payload: {
-                    template_type: "button",
-                    text: "Hallo & Willkommen beim Chatbot vom Hotel Salzburger Hof Leogang - #homeofsports. Wollen Sie eine Zimmer Anfrage erstellen, oder persönlich beraten werden? Schreiben Sie oder wählen Sie aus.",
-                    buttons:[ {
-                        type: "postback",
-                        title: "Zimmer Anfrage",
-                        payload: "Zimmer Anfrage"
-                    }, {
-                        type: "postback",
-                        title: "Persönliche Beratung",
-                        payload: "personal"
-                    }]
-                }
-            }
-        }
-    };
-
-    callSendAPI(messageData);
-}
-
 /*
  * Turn typing indicator on
  *
