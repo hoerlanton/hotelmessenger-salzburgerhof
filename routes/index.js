@@ -27,7 +27,7 @@ router.use(cors());
 
 //Global variables
 var errMsg = "";
-var newFileUploaded = false;
+var newFileUploaded;
 var gaesteGlobalSenderID =[];
 var broadcast = "";
 var dateNowFormatted = "";

@@ -50,7 +50,6 @@ app.use('/', routes);
 //Global variables
 var i = 0;
 var autoAnswerIsOn = true;
-var newFileUploaded = false;
 exports.newFileUploaded = false;
 //data when user clicks send to messenger button -> send to index.js REST-API
 var a = {};
@@ -393,20 +392,14 @@ function receivedMessage(event) {
             messageId, quickReplyPayload);
 
     if (messageText) {
-        if (autoAnswerIsOn === false) {
-            return;
-        }
-    }
+
+
 
         // If we receive a text message, check to see if it matches any special
         // keywords and send back the corresponding example. Otherwise, just echo
         // the text we received.
 
         switch (messageText) {
-
-            case 'Menü':
-                sendMenu(senderID);
-                break;
 
             case 'typing on':
                 sendTypingOn(senderID);
@@ -419,26 +412,6 @@ function receivedMessage(event) {
             case 'account linking':
                 sendAccountLinking(senderID);
                 break;
-
-            case 'Zimmer Anfrage':
-                sendPersonRequest(senderID);
-                break;
-
-            case 'Persönliche Beratung':
-                sendPersonalFeedback(senderID);
-                break;
-
-            case "pay":
-                sendPaymentButton(senderID);
-                break;
-
-            default:
-                /* Auto reply Menu disabled
-                 *
-                 *if (typeof quickReplyPayload === "undefined") {
-                 *   sendMenu(senderID);
-                 * }
-                 */
             }
         }
 }
@@ -773,8 +746,6 @@ function callSendAPI(messageData) {
       }
     });
 }
-
-exports.callSendAPI = callSendAPI;
 
 /*
  * Send update to REST-ful API in index.js if signed-out, change signed-up field to false
