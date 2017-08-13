@@ -113,9 +113,8 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
     console.log("console log in app.post upload", 'files', req.files);
     exports.uploadedFileName = req.files[0].filename;
     //console.log("New file uploaded status:" + newFileUploaded);
-    routes.newFileUploaded();
     //Export value to index.js - a new file got uploaded
-
+    routes.newFileUploaded();
     //console.log("New file uploaded status:" + newFileUploaded);
     //console.log("New file uploaded status:" + newFileUploaded);
     res.send(req.files);
@@ -246,7 +245,6 @@ function verifyRequestSignature(req, res, buf) {
  * https://developers.facebook.com/docs/messenger-platform/webhook-reference/authentication
  *
  */
-
 //Recieve authentication from wlanlandingpage when user click Send to messenger button - Send data to mongoDB database.
 function receivedAuthentication(event) {
     var senderID = event.sender.id;
@@ -318,6 +316,7 @@ function receivedAuthentication(event) {
     });
     setTimeout(postNewUserToDB, 15000);
 }
+
 //New User is saved in DB, function called in receivedAuthentication - send to index.js /guests REST-FUL API
 function postNewUserToDB() {
         // An object of options to indicate where to post to
@@ -556,21 +555,6 @@ function receivedAccountLink(event) {
   console.log("Received account link event with for user %d with status %s " +
     "and auth code %s ", senderID, status, authCode);
 }
-//Employee will soon take care of users request
-function sendPersonalFeedback(recipientId) {
-
-    var messageData = {
-        recipient: {
-            id: recipientId
-        },
-        message: {
-            text: "Es wird sich ehestmöglich einer unserer Mitarbeiter um Ihre Anfrage kümmern.",
-            metadata: "DEVELOPER_DEFINED_METADATA"
-        }
-    };
-
-    callSendAPI(messageData);
-}
 
 /*
  * Send a text message using the Send API.
@@ -590,6 +574,7 @@ function sendTextMessage(recipientId, messageText) {
 
     callSendAPI(messageData);
 }
+
 /*
  * Turn typing indicator on
  *

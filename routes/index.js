@@ -147,10 +147,7 @@ router.post('/guestsMessage', function(req, res, next) {
                     gaesteGlobalSenderID.push(gaeste[l].senderId);
                 }
             }
-            broadcastMessages();
-        }
-    });
-    function broadcastMessages() {
+    setTimeout(function () {
         console.log(dateReqFormatted + "=" + dateNowFormatted);
         //If message is not send at least 1 min later than now, schedule event is not fired
         if (dateReqFormatted !== dateNowFormatted) {
@@ -363,7 +360,9 @@ router.post('/guestsMessage', function(req, res, next) {
         errMsg = "";
         //set the boolean that a new file got uploaded to false
         setNewFileUploadedToFalse();
-    }
+    }, 10000);
+        }
+    });
 });
 
 //Get W-Lan-landingpage
