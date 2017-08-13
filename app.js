@@ -59,7 +59,7 @@ var c = "";
 var storage = multer.diskStorage({
     // Destination of upload
     destination: function (req, file, cb) {
-        cb(null, './uploads/')
+        cb(null, './uploads/');
     },
     // Rename of file
     filename: function (req, file, cb) {
@@ -112,11 +112,7 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
 app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
     console.log("console log in app.post upload", 'files', req.files);
     exports.uploadedFileName = req.files[0].filename;
-    //console.log("New file uploaded status:" + newFileUploaded);
-    //Export value to index.js - a new file got uploaded
     routes.newFileUploaded();
-    //console.log("New file uploaded status:" + newFileUploaded);
-    //console.log("New file uploaded status:" + newFileUploaded);
     res.send(req.files);
 });
 
