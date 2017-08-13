@@ -136,7 +136,6 @@ router.post('/guestsMessage', function(req, res, next) {
     var uploadedFileName = sourceFile.uploadedFileName;
     //Destination URL for uploaded files
     var URLUploadedFile = String(config.get('serverURL') + "/uploads/" + uploadedFileName);
-    setNewFileUploadedToFalse();
 
     db.testGaeste.find(function (err, gaeste) {
         if (err) {
@@ -348,8 +347,6 @@ router.post('/guestsMessage', function(req, res, next) {
                                         sourceFile.sendBroadcastFile(gaesteGlobalSenderID[k], String(config.get('serverURL') + "/uploads/" + objectMessages[lastMessage].uploaded_file));
                                     }
                                 }
-                                //set the boolean that a new file got uploaded to false
-                                setNewFileUploadedToTrue();
                                 //}
                             });
                         });
@@ -365,6 +362,7 @@ router.post('/guestsMessage', function(req, res, next) {
             }, 10000);
         }
     });
+    setNewFileUploadedToFalse();
 });
 
 //Get W-Lan-landingpage
@@ -377,7 +375,6 @@ router.get('/wlanlandingpage', function(req, res, next) {
 function setNewFileUploadedToTrue(){
     newFileUploaded = true;
 }
-
 
 function setNewFileUploadedToFalse(){
     newFileUploaded = false;
