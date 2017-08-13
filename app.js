@@ -391,29 +391,30 @@ function receivedMessage(event) {
         console.log("Quick reply for message %s with payload %s",
             messageId, quickReplyPayload);
 
-    if (messageText) {
+        if (messageText) {
 
 
 
-        // If we receive a text message, check to see if it matches any special
-        // keywords and send back the corresponding example. Otherwise, just echo
-        // the text we received.
+            // If we receive a text message, check to see if it matches any special
+            // keywords and send back the corresponding example. Otherwise, just echo
+            // the text we received.
 
-        switch (messageText) {
+            switch (messageText) {
 
-            case 'typing on':
-                sendTypingOn(senderID);
-                break;
+                case 'typing on':
+                    sendTypingOn(senderID);
+                    break;
 
-            case 'typing off':
-                sendTypingOff(senderID);
-                break;
+                case 'typing off':
+                    sendTypingOff(senderID);
+                    break;
 
-            case 'account linking':
-                sendAccountLinking(senderID);
-                break;
+                case 'account linking':
+                    sendAccountLinking(senderID);
+                    break;
             }
         }
+    }
 }
 
 //2 functions for broadcasting texts - Broadcast gesendet von Dashboard to all angemeldete Gäste
