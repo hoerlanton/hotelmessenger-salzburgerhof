@@ -10653,8 +10653,8 @@ var DashboardComponent = (function () {
             .map(function (files) { return files.json(); }).map(function (res) {
             // 1st parameter is a flash message text
             // 2nd parameter is optional. You can pass object with options.
-            return _this._flashMessagesService.show('Datei wird angehängt. Einen Moment bitte', { cssClass: 'alert-success', timeout: 20000 });
-        }, this._flashMessagesService.grayOut(true))
+            return _this._flashMessagesService.show('Datei wird angehängt. Einen Moment bitte ... Sobald diese Meldung verschwindet ist der Upload fertig', { cssClass: 'alert-success', timeout: 20000 });
+        })
             .subscribe(function (files) { return console.log('files', files); });
     };
     DashboardComponent.prototype.fileChangeEvent = function (fileInput) {
