@@ -10,7 +10,6 @@ const
     mongojs = require('mongojs'),
     db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['testMessages', 'testGaeste', 'testScheduledMessages']),
     config = require('config'),
-    cron = require('node-cron'),
     CronJob = require('cron').CronJob;
 
 // HOST_URL used for DB calls - SERVER_URL without https or https://
@@ -27,15 +26,18 @@ router.use(cors());
 
 //Global variables
 var errMsg = "";
+//New file uploaded is initially set to false
 var newFileUploaded = false;
+//Temp array of gaeste sender ids for sending message
 var gaesteGlobalSenderID =[];
-var broadcast = "";
+//Variables for cornjob
 var dateNowFormatted = "";
 var dateReqFormatted = "";
 var dateDay = "";
 var dateMonth = "";
 var dateHour = "";
 var dateMinute = "";
+var broadcast = "";
 
 //----->REST-FUL API<------//
 
@@ -123,21 +125,24 @@ router.newFileUploaded = function () {
 //Post message to guests
 router.post('/guestsMessage', function(req, res, next) {
     console.log("######## 2 Post request made to /guestsMessage");
-
+    //message extracted
     var message = req.body;
+    //Date from now
     var dateNow = new Date();
     var dateString = JSON.stringify(dateNow);
     dateNowFormatted = dateString.slice(1, 17);
+    //Date from message request
     dateReqFormatted = req.body.date.slice(0, 16);
     dateDay = req.body.date.slice(8, 10);
     dateMonth = req.body.date.slice(3, 7);
     dateHour = req.body.date.slice(15, 18);
     dateMinute = req.body.date.slice(19, 21);
     broadcast = req.body.text;
+    //Get uploaded file name from upload post function line app.js 114
     var uploadedFileName = sourceFile.uploadedFileName;
     //Destination URL for uploaded files
     var URLUploadedFile = String(config.get('serverURL') + "/uploads/" + uploadedFileName);
-
+    //Find all senderids from signed_up guests abd push it to the temporary array gaesteGlobalSenderID
     db.testGaeste.find(function (err, gaeste) {
         if (err) {
             errMsg = "Das senden der Nachricht ist nicht möglich. Es sind keine Gäste angemeldet.";
@@ -150,10 +155,10 @@ router.post('/guestsMessage', function(req, res, next) {
             }
             setTimeout(function () {
                 console.log(dateReqFormatted + "=" + dateNowFormatted);
-                //If message is not send at least 1 min later than now, schedule event is not fired
+                //If message is send at least 1 min later than now, schedule event is fired
                 if (dateReqFormatted !== dateNowFormatted) {
                     console.log("scheduled event fired!");
-                    //Save Message to DB
+                    //Save scheduled Message to db
                     db.testScheduledMessages.save(message, function (err, message) {
                         console.log("scheduleMessage saved: " + message.text + " " + message.date);
                         if (err) {
@@ -161,7 +166,7 @@ router.post('/guestsMessage', function(req, res, next) {
                         }
                         res.json(message);
                     });
-
+                    //If there is a file uploaded, update message in db
                     if (uploadedFileName !== undefined && newFileUploaded === true) {
 
                         db.testScheduledMessages.update({
@@ -177,28 +182,30 @@ router.post('/guestsMessage', function(req, res, next) {
                                 }
                             });
                     }
+                    //https://github.com/kelektiv/node-cron
+                    //Cronjob is created
                     var job = new CronJob({
+                        //Global variables from the message sent are set as the crontime property
                         cronTime: "00 " + dateMinute + " " + dateHour + " " + dateDay + " " + dateMonth + " *",
                         onTick: function () {
                             console.log("00 " + dateMinute + " " + dateHour + " " + dateDay + " " + dateMonth + " *");
                             console.log('job ticked');
                             console.log(gaesteGlobalSenderID + " " + broadcast);
                             console.log("guestsMessages get called");
-                            //Get guests from Mongo DB
 
                             //https://stackoverflow.com/questions/5643321/how-to-make-remote-rest-call-inside-node-js-any-curl
+                            //Get scheduled messages from db
                             var buffer = "";
                             var optionsget = {
                                 host: HOST_URL,
                                 path: '/guestsScheduledMessages',
                                 method: 'GET'
                             };
-
                             console.info('Options prepared:');
                             console.info(optionsget);
                             console.info('Do the GET call');
 
-                            // do the GET request to retrieve data from the user's graph API
+                            //Do the GET request to retrieve scheduled messages from the db
                             var reqGet = https.request(optionsget, function (res) {
                                 console.log("statusCode: ", res.statusCode);
                                 // uncomment it for header details
@@ -206,16 +213,12 @@ router.post('/guestsMessage', function(req, res, next) {
 
                                 res.on('data', function (d) {
                                     console.info('GET result:\n');
-                                    //process.stdout.write(d);
                                     buffer += d;
-                                    //console.log(buffer);
+                                    //scheduled message is stored in bufferObject
                                     var bufferObject = JSON.parse(buffer);
-
-                                    //console.log(bufferObject);
+                                    //data is retrieved from job.cronTime property
                                     var crontTimeString = job.cronTime.toString();
                                     var cronTimeSplitted = crontTimeString.split(" ");
-
-                                    console.log("jobcrontime splitted: " + cronTimeSplitted);
 
                                     var minutes = cronTimeSplitted[1];
                                     if (minutes.length === 1) {
@@ -231,32 +234,31 @@ router.post('/guestsMessage', function(req, res, next) {
                                     }
                                     var monthNumber = cronTimeSplitted[4];
 
-                                    console.log("---->>>monthnumber" + monthNumber);
-
                                     var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
                                         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
                                     var month = monthNames[monthNumber];
 
-                                    console.log("---->>>month" + monthNames[monthNumber]);
-                                    //Filter the right message
+                                    //Regex is the added variables from the cronbJob job.crontime property
                                     var regex = String(month + " " + day + " 2017 " + hour + ":" + minutes);
                                     console.log("---->regex:"+regex);
-
+                                    //Messages from stored scheduled messages stored in rightmessage variable
                                     for (var m = 0; m < bufferObject.length; m++) {
                                         var rightMessage = bufferObject[m];
-                                        //console.log(rightMessage.date);
-                                        //console.log("rightmessage ohne date:" + rightMessage);
+                                        //If the rightmessage date property is the same as from the cron job property stored in the regex variable
                                         if (rightMessage.date.indexOf(regex) !== -1) {
                                             console.log("HHHH:" + rightMessage.date + rightMessage.text);
+                                            //Send out to all signed up people the the text property of the right scheduled message
                                             for (var l = 0; l < gaesteGlobalSenderID.length; l++) {
                                                 sourceFile.sendBroadcast(gaesteGlobalSenderID[l], rightMessage.text);
+                                                //And if there exists a uploaded_file property, send out to all signed up people the the text property of the right scheduled message
                                                 if (rightMessage.uploaded_file) {
                                                     console.log("URLUploadedFile:" + URLUploadedFile);
                                                     console.log("rightMessage.uploadedfile: " + rightMessage.uploaded_file);
                                                     sourceFile.sendBroadcastFile(gaesteGlobalSenderID[l], SERVER_URL + "/uploads/" + rightMessage.uploaded_file);
                                                 }
                                             }
+                                            //Now the message object in the db is update that it is in the past - now it is displayed in white in the user interface
                                             db.testScheduledMessages.update({
                                                     text: rightMessage.text
                                                 },
@@ -282,7 +284,10 @@ router.post('/guestsMessage', function(req, res, next) {
                         start: false,
                         timeZone: 'Europe/Berlin'
                     });
-                    job.start(); // job 1 started
+                    console.log("job variable: " + String(job.cronTime));
+                    //Start the job
+                    job.start();
+                    console.log("job variable: " + String(job.cronTime));
                 } else {
                     for (var j = 0; j < gaesteGlobalSenderID.length; j++) {
                         console.log("gaesteGlobalSenderID: line 166 - " + gaesteGlobalSenderID[j]);
