@@ -493,6 +493,8 @@ function receivedDeliveryConfirmation(event) {
  * https://developers.facebook.com/docs/messenger-platform/webhook-reference/postback-received
  * 
  */
+
+//Payload events not in FHG app
 function receivedPostback(event) {
     var senderID = event.sender.id;
     var recipientID = event.recipient.id;
@@ -506,12 +508,105 @@ function receivedPostback(event) {
 
     // When a postback is called, we'll send a message back to the sender to
     // let them know it was successful
-   if (payload === "1") {
-       sendGifMessage(senderID);
-   }
-   else if (payload === "GET_STARTED_PAYLOAD") {
+   if (payload === "GET_STARTED_PAYLOAD") {
        sendWelcomeMessage(senderID);
+   }    else if (payload === "Zimmer Anfrage") {
+       sendPersonRequest(senderID);
+   }    else if (payload === "personal") {
+       sendPersonalFeedback(senderID);
    }
+}
+
+//Next three functions not in FHG app
+//Function called if user signes up first time
+function sendWelcomeMessage(recipientId) {
+    var messageData = {
+        recipient: {
+            id: recipientId
+        },
+        message: {
+            attachment: {
+                type: "template",
+                payload: {
+                    template_type: "button",
+                    text: "Hallo & Willkommen beim Chatbot vom Hotel Salzburger Hof Leogang - #homeofsports. Wollen Sie eine Zimmer Anfrage erstellen, oder persönlich beraten werden? Schreiben Sie oder wählen Sie aus.",
+                    buttons:[ {
+                        type: "postback",
+                        title: "Zimmer Anfrage",
+                        payload: "Zimmer Anfrage"
+                    }, {
+                        type: "postback",
+                        title: "Persönliche Beratung",
+                        payload: "personal"
+                    }]
+                }
+            }
+        }
+    };
+
+    callSendAPI(messageData);
+}
+
+//Employee will soon take care of users request
+function sendPersonalFeedback(recipientId) {
+
+    autoAnswerIsOn = false;
+
+    var messageData = {
+        recipient: {
+            id: recipientId
+        },
+        message: {
+            text: "Es wird sich ehestmöglich einer unserer Mitarbeiter um Ihre Anfrage kümmern.",
+            metadata: "DEVELOPER_DEFINED_METADATA"
+        }
+    };
+
+    callSendAPI(messageData);
+}
+
+//function called if case: 'Zimmer Anfrage' in receivedMessage
+function sendPersonRequest(recipientId) {
+
+    autoAnswerIsOn = true;
+
+    var messageData = {
+        recipient: {
+            id: recipientId
+        },
+        message: {
+            "text":"Anzahl der Personen:",
+            "quick_replies":[
+                {
+                    "content_type":"text",
+                    "title":"1 Person",
+                    "payload":"1 person"
+                },
+                {
+                    "content_type":"text",
+                    "title":"2 Personen",
+                    "payload":"2 persons"
+                },
+                {
+                    "content_type":"text",
+                    "title":"3 Personen",
+                    "payload":"3 persons"
+                },
+                {
+                    "content_type":"text",
+                    "title":"4 Personen",
+                    "payload":"4 persons"
+                },
+                {
+                    "content_type":"text",
+                    "title":"5 Personen",
+                    "payload":"5 persons"
+                }
+            ]
+        }
+    };
+
+    callSendAPI(messageData);
 }
 
 /*
