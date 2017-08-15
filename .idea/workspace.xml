@@ -30,31 +30,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="default.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/default.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+            <state relative-caret-position="75">
+              <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="692" column="1" lean-forward="true" selection-start-line="692" selection-start-column="1" selection-end-line="692" selection-end-column="1" />
+            <state relative-caret-position="667">
+              <caret line="446" column="50" lean-forward="true" selection-start-line="446" selection-start-column="50" selection-end-line="446" selection-end-column="50" />
               <folding>
                 <element signature="e#1813#2074#0" expanded="false" />
-                <element signature="e#4068#4391#0" expanded="false" />
-                <element signature="e#4710#6010#0" expanded="false" />
-                <element signature="e#6190#6742#0" expanded="false" />
+                <element signature="e#5503#5826#0" expanded="false" />
+                <element signature="e#6145#7445#0" expanded="false" />
+                <element signature="e#7625#8177#0" expanded="false" />
                 <element signature="n#!!block;n#verifyRequestSignature#0" expanded="false" />
                 <element signature="n#!!block;n#receivedAuthentication#0" expanded="false" />
                 <element signature="n#!!block;n#postNewUserToDB#0" expanded="false" />
-                <element signature="e#14843#15081#0" expanded="false" />
-                <element signature="e#15268#16226#0" expanded="false" />
+                <element signature="e#24531#24769#0" expanded="false" />
+                <element signature="e#24956#25914#0" expanded="false" />
                 <element signature="n#!!block;n#receivedDeliveryConfirmation#0" expanded="false" />
                 <element signature="n#!!block;n#receivedPostback#0" expanded="false" />
                 <element signature="n#!!block;n#sendWelcomeMessage#0" expanded="false" />
@@ -63,7 +63,24 @@
                 <element signature="n#!!block;n#sendWunschRequest#0" expanded="false" />
                 <element signature="n#!!block;n#sendZimmernummerFeedback#0" expanded="false" />
                 <element signature="n#!!block;n#sendWunschFeedback#0" expanded="false" />
-                <element signature="n#!!block;n#sendSonstigerwunschFeedback#0" expanded="false" />
+                <element signature="n#!!block;n#sendSonstigerWunschFeedback#0" expanded="false" />
+                <element signature="n#!!block;n#sendDepartureDateSuggestion#0" expanded="false" />
+                <element signature="n#!!block;n#sendRoomRequest#0" expanded="false" />
+                <element signature="n#!!block;n#sendArrivalDateMonth#0" expanded="false" />
+                <element signature="n#!!block;n#sendArrivalDateMonth2#0" expanded="false" />
+                <element signature="n#!!block;n#sendArrivalDay#0" expanded="false" />
+                <element signature="n#!!block;n#sendArrivalDay2#0" expanded="false" />
+                <element signature="n#!!block;n#sendArrivalDay3#0" expanded="false" />
+                <element signature="n#!!block;n#calculateStayRange#0" expanded="false" />
+                <element signature="n#!!block;n#resetData#0" expanded="false" />
+                <element signature="n#!!block;n#assigningNumberOfPersonsVar#0" expanded="false" />
+                <element signature="n#!!block;n#assigningNumberOfRoomsVar#0" expanded="false" />
+                <element signature="n#!!block;n#assigningNumberOfMonthsVar#0" expanded="false" />
+                <element signature="n#!!block;n#assigningArrivalDateVar#0" expanded="false" />
+                <element signature="n#!!block;n#createDepartureDateSuggestion#0" expanded="false" />
+                <element signature="n#!!block;n#assignDepartureDateVar#0" expanded="false" />
+                <element signature="n#!!block;n#checkIfDateIsInPast#0" expanded="false" />
+                <element signature="n#!!block;n#sendErrorMessageNoRoom#0" expanded="false" />
                 <element signature="n#!!block;n#receivedMessageRead#0" expanded="false" />
                 <element signature="n#!!block;n#receivedAccountLink#0" expanded="false" />
                 <element signature="n#!!block;n#sendTextMessage#0" expanded="false" />
@@ -90,8 +107,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3616">
-              <caret line="117" column="3" lean-forward="true" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
+            <state relative-caret-position="532">
+              <caret line="371" column="32" lean-forward="true" selection-start-line="371" selection-start-column="32" selection-end-line="371" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -188,9 +205,9 @@
         <option value="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.css" />
         <option value="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.ts" />
-        <option value="$PROJECT_DIR$/config/default.json" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/config/default.json" />
       </list>
     </option>
   </component>
@@ -214,6 +231,7 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="154" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="773" />
@@ -239,41 +257,6 @@
             <path>
               <item name="hotelmessenger-salzburgerhof" type="b2602c69:ProjectViewProjectNode" />
               <item name="hotelmessenger-salzburgerhof" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotelmessenger-salzburgerhof" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelmessenger-salzburgerhof" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotelmessenger-salzburgerhof" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelmessenger-salzburgerhof" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotelmessenger-salzburgerhof" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelmessenger-salzburgerhof" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotelmessenger-salzburgerhof" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelmessenger-salzburgerhof" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="hotelmessenger-salzburgerhof" type="b2602c69:ProjectViewProjectNode" />
-              <item name="hotelmessenger-salzburgerhof" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="dashboard" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hotelmessenger-salzburgerhof" type="b2602c69:ProjectViewProjectNode" />
@@ -356,7 +339,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84753000" />
+    <option name="totallyTimeSpent" value="90366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -378,7 +361,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890856" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28060523" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18982118" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -754,14 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/default.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="47" lean-forward="false" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -774,26 +749,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3616">
-          <caret line="117" column="3" lean-forward="true" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
+        <state relative-caret-position="532">
+          <caret line="371" column="32" lean-forward="true" selection-start-line="371" selection-start-column="32" selection-end-line="371" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="692" column="1" lean-forward="true" selection-start-line="692" selection-start-column="1" selection-end-line="692" selection-end-column="1" />
+        <state relative-caret-position="667">
+          <caret line="446" column="50" lean-forward="true" selection-start-line="446" selection-start-column="50" selection-end-line="446" selection-end-column="50" />
           <folding>
             <element signature="e#1813#2074#0" expanded="false" />
-            <element signature="e#4068#4391#0" expanded="false" />
-            <element signature="e#4710#6010#0" expanded="false" />
-            <element signature="e#6190#6742#0" expanded="false" />
+            <element signature="e#5503#5826#0" expanded="false" />
+            <element signature="e#6145#7445#0" expanded="false" />
+            <element signature="e#7625#8177#0" expanded="false" />
             <element signature="n#!!block;n#verifyRequestSignature#0" expanded="false" />
             <element signature="n#!!block;n#receivedAuthentication#0" expanded="false" />
             <element signature="n#!!block;n#postNewUserToDB#0" expanded="false" />
-            <element signature="e#14843#15081#0" expanded="false" />
-            <element signature="e#15268#16226#0" expanded="false" />
+            <element signature="e#24531#24769#0" expanded="false" />
+            <element signature="e#24956#25914#0" expanded="false" />
             <element signature="n#!!block;n#receivedDeliveryConfirmation#0" expanded="false" />
             <element signature="n#!!block;n#receivedPostback#0" expanded="false" />
             <element signature="n#!!block;n#sendWelcomeMessage#0" expanded="false" />
@@ -802,7 +777,24 @@
             <element signature="n#!!block;n#sendWunschRequest#0" expanded="false" />
             <element signature="n#!!block;n#sendZimmernummerFeedback#0" expanded="false" />
             <element signature="n#!!block;n#sendWunschFeedback#0" expanded="false" />
-            <element signature="n#!!block;n#sendSonstigerwunschFeedback#0" expanded="false" />
+            <element signature="n#!!block;n#sendSonstigerWunschFeedback#0" expanded="false" />
+            <element signature="n#!!block;n#sendDepartureDateSuggestion#0" expanded="false" />
+            <element signature="n#!!block;n#sendRoomRequest#0" expanded="false" />
+            <element signature="n#!!block;n#sendArrivalDateMonth#0" expanded="false" />
+            <element signature="n#!!block;n#sendArrivalDateMonth2#0" expanded="false" />
+            <element signature="n#!!block;n#sendArrivalDay#0" expanded="false" />
+            <element signature="n#!!block;n#sendArrivalDay2#0" expanded="false" />
+            <element signature="n#!!block;n#sendArrivalDay3#0" expanded="false" />
+            <element signature="n#!!block;n#calculateStayRange#0" expanded="false" />
+            <element signature="n#!!block;n#resetData#0" expanded="false" />
+            <element signature="n#!!block;n#assigningNumberOfPersonsVar#0" expanded="false" />
+            <element signature="n#!!block;n#assigningNumberOfRoomsVar#0" expanded="false" />
+            <element signature="n#!!block;n#assigningNumberOfMonthsVar#0" expanded="false" />
+            <element signature="n#!!block;n#assigningArrivalDateVar#0" expanded="false" />
+            <element signature="n#!!block;n#createDepartureDateSuggestion#0" expanded="false" />
+            <element signature="n#!!block;n#assignDepartureDateVar#0" expanded="false" />
+            <element signature="n#!!block;n#checkIfDateIsInPast#0" expanded="false" />
+            <element signature="n#!!block;n#sendErrorMessageNoRoom#0" expanded="false" />
             <element signature="n#!!block;n#receivedMessageRead#0" expanded="false" />
             <element signature="n#!!block;n#receivedAccountLink#0" expanded="false" />
             <element signature="n#!!block;n#sendTextMessage#0" expanded="false" />
@@ -812,6 +804,14 @@
             <element signature="n#!!block;n#callSendAPI#0" expanded="false" />
             <element signature="n#!!block;n#updateDB#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/default.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="47" lean-forward="true" selection-start-line="5" selection-start-column="47" selection-end-line="5" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

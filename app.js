@@ -69,6 +69,63 @@ var storage = multer.diskStorage({
 //Store uploaded files - destination set / name of file set
 var upload = multer({ storage: storage });
 
+
+//Global variables for Zimmer Anfrage (NOT IN FHG APP)
+//HIER->>>>>>>>>
+var resultTransferData = [];
+
+var numberOfPersons = 0;
+var numberOfRooms = 0;
+var count = 0;
+var arrivalDateMonth = 0;
+var arrivalDateDay = 0;
+var arrivalDateDayCalculations = 0;
+var arrivalDateMonthCalculations = 0;
+var numberOfRoomsSplitted = [];
+var numberOfPersonsSplitted = [];
+var arrivalDayDateSplitted = [];
+var arrivalDate = 0;
+var departureDate = 0;
+var i = 0;
+var stayRange = 0;
+var arrivalDateSplitted = [];
+var departureDateSplitted = [];
+var priceAllNightsDoppelzimmerDeluxeHolzleo = 0;
+var priceAllNightsDoppelzimmerSuperiorSteinleo = 0;
+var priceAllNightsEinzelzimmerSommerstein = 0;
+var priceAllNightsDoppelzimmerClassicSteinleo = 0;
+var january = 31;
+var february = 28;
+var march = 31;
+var april = 30;
+var may = 31;
+var june = 30;
+var july = 31;
+var august = 31;
+var september = 30;
+var oktober = 31;
+var november = 30;
+var december = 31;
+var monthDays = 0;
+var daysInFirstMonth = 0;
+var daysInSecondMonth = 0;
+var secondMonth = 0;
+var daysInSecondMonthCount = 0;
+var daysInFirstMonthCount = 0;
+var daysInAllTwoMonths = [];
+var daysInFirstMonthDisplay = [];
+var daysInSecondMonthDisplay = [];
+var arrivalFirstDateMonthDisplay = [];
+var arrivalSecondDateMonthDisplay = [];
+var arrivalAllTwoMonthsDisplay = [];
+var bookingLink = "";
+var departureDateForLink = "";
+var arrivalDateForLink = "";
+var dateIsInThePast = false;
+//BIS HIER->>>>>>>>>
+
+
+
 /*
  * Be sure to setup your config values before running this code. You can 
  * set them using environment variables or modifying the config file in /config.
@@ -383,13 +440,64 @@ function receivedMessage(event) {
         var quickReplyPayload = quickReply.payload;
         console.log("Quick reply for message %s with payload %s",
             messageId, quickReplyPayload);
-
+        //NOT IN FHG APP HIER ->>>>>>>>
+        if (quickReplyPayload === "wunschGesendet") {
+            sendZimmernummerFeedback(senderID);
+        } else if (quickReplyPayload === "sonstigerWunsch") {
+            sendSonstigerWunschFeedback(senderID);
+        } else if (quickReplyPayload === "1 person" || quickReplyPayload === "2 persons" || quickReplyPayload === "3 persons" || quickReplyPayload === "4 persons" || quickReplyPayload === "5 persons") {
+            //If request is bigger than 2, the basic arguments for the request are reset.
+            resetData();
+            //indicated value (how many persons are joining) from the user is added to the numberOfPersons variable
+            assigningNumberOfPersonsVar(quickReplyPayload);
+            //Number of rooms is the next question
+            sendRoomRequest(senderID);
+        } else if (quickReplyPayload === "1 room" || quickReplyPayload === "2 rooms" || quickReplyPayload === "3 rooms" || quickReplyPayload === "4 rooms" || quickReplyPayload === "5 rooms") {
+            //indicated value (how many rooms) from the user is added to the numberOfRooms variable
+            //Arrival month is next question
+            assigningNumberOfRoomsVar(quickReplyPayload);
+            sendArrivalDateMonth(senderID);
+        } else if (quickReplyPayload === "mehr1") {
+            //all monthbubbles are not fitting in one question
+            sendArrivalDateMonth2(senderID);
+        } else if (quickReplyPayload === "01" || quickReplyPayload === "02" || quickReplyPayload === "03" || quickReplyPayload === "04" || quickReplyPayload === "05" || quickReplyPayload === "06" || quickReplyPayload === "07" || quickReplyPayload === "08" || quickReplyPayload === "09" || quickReplyPayload === "10" || quickReplyPayload === "11" || quickReplyPayload === "12") {
+            //indicated value (which months is the arrival) from the user is added to the arrivalDateMonth variable
+            assigningNumberOfMonthsVar(quickReplyPayload);
+            //Next question is which day the user arrives
+            sendArrivalDay(senderID);
+        } else if (quickReplyPayload === "mehr2") {
+            //all daybubbles are not fitting in one question
+            sendArrivalDay2(senderID);
+        } else if (quickReplyPayload === "mehr3") {
+            //all daybubbles are not fitting in one question
+            sendArrivalDay3(senderID);
+        } else if (quickReplyPayload === "d 01" || quickReplyPayload === "d 02" || quickReplyPayload === "d 03" || quickReplyPayload === "d 04" || quickReplyPayload === "d 05" || quickReplyPayload === "d 06" || quickReplyPayload === "d 07" || quickReplyPayload === "d 08" || quickReplyPayload === "d 09" || quickReplyPayload === "d 10" || quickReplyPayload === "d 11" || quickReplyPayload === "d 12" || quickReplyPayload === "d 13" || quickReplyPayload === "d 14" || quickReplyPayload === "d 15" || quickReplyPayload === "d 16" || quickReplyPayload === "d 17" || quickReplyPayload === "d 18" || quickReplyPayload === "d 19" || quickReplyPayload === "d 20" || quickReplyPayload === "d 21" || quickReplyPayload === "d 22" || quickReplyPayload === "d 23" || quickReplyPayload === "d 24" || quickReplyPayload === "d 25" || quickReplyPayload === "d 26" || quickReplyPayload === "d 27" || quickReplyPayload === "d 28" || quickReplyPayload === "d 29" || quickReplyPayload === "d 30" || quickReplyPayload === "d 31") {
+            //arrival Day Date is splitted, day is saved in arrivalDateDay variable. Int is saved in arrivalDateDayCalculations varible, whcih is used for stay-range calculations. Arrival date is a string.
+            assigningArrivalDateVar(quickReplyPayload);
+            //departure date is created and sent to the use
+            createDepartureDateSuggestion();
+            sendDepartureDateSuggestion(senderID);
+        } else if (quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[0] + "-" + daysInAllTwoMonths[0] || quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[1] + "-" + daysInAllTwoMonths[1] || quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[2] + "-" + daysInAllTwoMonths[2] || quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[3] + "-" + daysInAllTwoMonths[3] || quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[4] + "-" + daysInAllTwoMonths[4] || quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[5] + "-" + daysInAllTwoMonths[5] || quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[6] + "-" + daysInAllTwoMonths[6] || quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[7] + "-" + daysInAllTwoMonths[7] || quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[8] + "-" + daysInAllTwoMonths[8] || quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[9] + "-" + daysInAllTwoMonths[9] || quickReplyPayload === "2017-" + arrivalAllTwoMonthsDisplay[10] + "-" + daysInAllTwoMonths[10]) {
+            //departureDate is assigned
+            assignDepartureDateVar(quickReplyPayload);
+            //Range of stay is calculated
+            calculateStayRange(arrivalDate, departureDate);
+            //Check if date is in the past - if so error message is send
+            checkIfDateIsInPast(senderID);
+            if (dateIsInThePast) {
+                return;
+            } else {
+                sendPersonalFeedback(senderID);
+            }
+            //BIS HIER ->>>>>>>>
+        }
+    }
         if (messageText) {
             // If we receive a text message, check to see if it matches any special
             // keywords and send back the corresponding example. Otherwise, just echo
             // the text we received.
 
-            switch (messageText) {
+            switch (messageText.toLowerCase()) {
 
                 case 'typing on':
                     sendTypingOn(senderID);
@@ -403,12 +511,114 @@ function receivedMessage(event) {
                     sendAccountLinking(senderID);
                     break;
 
-                case'122':
+                case '101':
+                case '102':
+                case '103':
+                case '104':
+                case '105':
+                case '106':
+                case '107':
+                case '108':
+                case '109':
+                case '110':
+                case '111':
+                case '114':
+                case '115':
+                case '116':
+                case '117':
+                case '118':
+                case '121':
+                case '122':
+                case '123':
+                case '124':
+                case '125':
+                case '126':
+                case '127':
+                case '128':
+                case '129':
+                case '130':
+                case '201':
+                case '202':
+                case '203':
+                case '204':
+                case '205':
+                case '206':
+                case '207':
+                case '208':
+                case '209':
+                case '210':
+                case '211':
+                case '214':
+                case '215':
+                case '216':
+                case '217':
+                case '218':
+                case '219':
+                case '221':
+                case '222':
+                case '223':
+                case '224':
+                case '225':
+                case '226':
+                case '227':
+                case '228':
+                case '229':
+                case '230':
+                case '301':
+                case '302':
+                case '303':
+                case '304':
+                case '305':
+                case '306':
+                case '307':
+                case '308':
+                case '309':
+                case '310':
+                case '311':
+                case '314':
+                case '315':
+                case '316':
+                case '317':
+                case '318':
+                case '319':
+                case '321':
+                case '322':
+                case '323':
+                case '324':
+                case '325':
+                case '326':
+                case '327':
+                case '328':
+                case '329':
+                case '330':
+                case '401':
+                case '402':
+                case '403':
+                case '404':
+                case '405':
+                case '406':
+                case '407':
+                case '408':
+                case '409':
+                case '410':
+                case '411':
+                case '421':
+                case '422':
+                case '423':
+                case '424':
+                case '425':
+                case '426':
+                case '427':
+                case '428':
+                case '429':
+                case '430':
                     sendWunschFeedback(senderID);
+                    break;
+
+                default:
                     break;
             }
         }
-    }
 }
 
 //2 functions for broadcasting texts - Broadcast gesendet von Dashboard to all angemeldete Gäste
@@ -520,16 +730,13 @@ function receivedPostback(event) {
        sendPersonalFeedback(senderID);
    }    else if (payload === "wunsch") {
        sendWunschRequest(senderID);
-   }    else if (payload === "wunschGesendet") {
-       sendZimmernummerFeedback(senderID);
-   }    else if (payload === "sonstigerWunsch") {
-       sendSonstigerwunschFeedback(senderID);
    }
 }
 
-//Next three functions not in FHG app
+//Next functions are not in FHG app
+//HIER->>>>>>>>>>>>>
 //Function called if user signes up first time
-function sendWelcomeMessage(recipientId) {
+    function sendWelcomeMessage(recipientId) {
     var messageData = {
         recipient: {
             id: recipientId
@@ -539,7 +746,7 @@ function sendWelcomeMessage(recipientId) {
                 type: "template",
                 payload: {
                     template_type: "button",
-                    text: "Hallo & Willkommen beim Chatbot vom Hotel Salzburger Hof Leogang - #homeofsports. Wollen Sie eine Zimmer Anfrage erstellen, oder persönlich beraten werden? Schreiben Sie oder wählen Sie aus.",
+                    text: "Hallo & herzlich Willkommen im Chat vom Hotel Salzburger Hof Leogang #homeofsports. Wollen Sie eine Zimmer Anfrage erstellen, persönlich beraten werden, oder einen Wunsch äußern? Wählen Sie bitte aus.",
                     buttons:[ {
                         type: "postback",
                         title: "Zimmer Anfrage",
@@ -560,9 +767,8 @@ function sendWelcomeMessage(recipientId) {
 
     callSendAPI(messageData);
 }
-
 //Employee will soon take care of users request
-function sendPersonalFeedback(recipientId) {
+    function sendPersonalFeedback(recipientId) {
 
     var messageData = {
         recipient: {
@@ -576,9 +782,8 @@ function sendPersonalFeedback(recipientId) {
 
     callSendAPI(messageData);
 }
-
 //function called if postback: 'zimmerAnfrage'
-function sendPersonRequest(recipientId) {
+    function sendPersonRequest(recipientId) {
 
     var messageData = {
         recipient: {
@@ -618,9 +823,8 @@ function sendPersonRequest(recipientId) {
 
     callSendAPI(messageData);
 }
-
 //function called if postback: 'wunschGesendet'
-function sendWunschRequest(recipientId) {
+    function sendWunschRequest(recipientId) {
 
     var messageData = {
         recipient: {
@@ -632,25 +836,25 @@ function sendWunschRequest(recipientId) {
                 {
                     "content_type":"text",
                     "title":"Wunsch Kopfpolster",
-                    "payload":"WunschGesendet",
+                    "payload":"wunschGesendet",
                     "image_url":"http://servicio.io/wp-content/uploads/2017/08/kopfpolster-weiss-textil-sleeptex_dO2G3_rYB5JpgOBqUFvVulvdwrk.jpg"
                 },
                 {
                     "content_type":"text",
                     "title":"Zusätzliche Handtücher",
-                    "payload":"WunschGesendet",
+                    "payload":"wunschGesendet",
                     "image_url":"http://servicio.io/wp-content/uploads/2017/08/handtuch-alvito-weiss.jpg"
                 },
                 {
                     "content_type":"text",
                     "title":"Zusätzlicher Bademantel",
-                    "payload":"WunschGesendet",
+                    "payload":"wunschGesendet",
                     "image_url":"http://servicio.io/wp-content/uploads/2017/08/bademantel-floringo-waffelpikee-schalkragen-weiss-2b7.jpg"
                 },
                 {
                     "content_type":"text",
                     "title":"Sonstiger Wunsch",
-                    "payload":"Sonstiger Wunsch",
+                    "payload":"sonstigerWunsch",
                     "image_url":"http://servicio.io/wp-content/uploads/2016/05/header-servicio.png"
                 },
             ]
@@ -659,8 +863,8 @@ function sendWunschRequest(recipientId) {
 
     callSendAPI(messageData);
 }
-
-function sendZimmernummerFeedback(recipientId){
+//Ask for Zimmernummer
+    function sendZimmernummerFeedback(recipientId){
 
     var messageData = {
         recipient: {
@@ -675,15 +879,15 @@ function sendZimmernummerFeedback(recipientId){
     callSendAPI(messageData);
 
 }
-
-function sendWunschFeedback(recipientId){
+//Feedbakc für Wunsch
+    function sendWunschFeedback(recipientId){
 
     var messageData = {
         recipient: {
             id: recipientId
         },
         message: {
-            text: "Es wird sich ehestmöglich einer unserer Mitarbeiter um Ihre Wunsch-Anfrage kümmern.",
+            text: "Vielen Dank für die Anfrage. Es wird sich ehestmöglich einer unserer Mitarbeiter um Ihre Wunsch-Anfrage kümmern.",
             metadata: "DEVELOPER_DEFINED_METADATA"
         }
     };
@@ -691,15 +895,15 @@ function sendWunschFeedback(recipientId){
     callSendAPI(messageData);
 
 }
-
-function sendSonstigerwunschFeedback(recipientId){
+//Feedbakc für sonstigen Wunsch
+    function sendSonstigerWunschFeedback(recipientId){
 
     var messageData = {
         recipient: {
             id: recipientId
         },
         message: {
-            text: "Bitte teilen Sie uns den Wunsch und Ihre Zimmernummer mit.",
+            text: "Bitte teilen Sie uns den Wunsch und Ihre Zimmernummer mit. Es wird sich ehestmöglich ein Mitarbeiter um Ihre Anfrage kümmern.",
             metadata: "DEVELOPER_DEFINED_METADATA"
         }
     };
@@ -707,7 +911,625 @@ function sendSonstigerwunschFeedback(recipientId){
     callSendAPI(messageData);
 
 }
+//Function called in receivedMessage
+    function sendDepartureDateSuggestion(recipientId) {
 
+        var messageData = {
+            recipient: {
+                id: recipientId
+            },
+            message: {
+                "text":"Wann wollen Sie abreisen?:",
+                "quick_replies":[
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[0] + "." + arrivalAllTwoMonthsDisplay[0] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[0] + "-" + daysInAllTwoMonths[0]
+                    },
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[1] + "." + arrivalAllTwoMonthsDisplay[1] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[1] + "-" + daysInAllTwoMonths[1]
+                    },
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[2] + "." + arrivalAllTwoMonthsDisplay[2] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[2] + "-" + daysInAllTwoMonths[2]
+                    },
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[3] + "." + arrivalAllTwoMonthsDisplay[3] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[3] + "-" + daysInAllTwoMonths[3]
+                    },
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[4] + "." + arrivalAllTwoMonthsDisplay[4] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[4] + "-" + daysInAllTwoMonths[4]
+                    },
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[5] + "." + arrivalAllTwoMonthsDisplay[5] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[5] + "-" + daysInAllTwoMonths[5]
+                    },
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[6] + "." + arrivalAllTwoMonthsDisplay[6] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[6] + "-" + daysInAllTwoMonths[6]
+                    },
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[7] + "." + arrivalAllTwoMonthsDisplay[7] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[0] + "-" + daysInAllTwoMonths[7]
+                    },
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[8] + "." + arrivalAllTwoMonthsDisplay[8] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[7] + "-" + daysInAllTwoMonths[8]
+                    },
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[9] + "." + arrivalAllTwoMonthsDisplay[9] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[8] + "-" + daysInAllTwoMonths[9]
+                    },
+                    {
+                        "content_type":"text",
+                        "title": daysInAllTwoMonths[10] + "." + arrivalAllTwoMonthsDisplay[10] + "." + "2017",
+                        "payload":"2017-" + arrivalAllTwoMonthsDisplay[9] + "-" + daysInAllTwoMonths[10]
+                    },
+                ]
+            }
+        };
+
+        callSendAPI(messageData);
+    }
+//Function called in receivedMessage
+    function sendRoomRequest(recipientId) {
+        var messageData = {
+            recipient: {
+                id: recipientId
+            },
+            message: {
+                "text":"Anzahl der Zimmer:",
+                "quick_replies":[
+                    {
+                        "content_type":"text",
+                        "title":"1 Zimmer",
+                        "payload":"1 room"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"2 Zimmer",
+                        "payload":"2 rooms"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"3 Zimmer",
+                        "payload":"3 rooms"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"4 Zimmer",
+                        "payload":"4 rooms"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"5 Zimmer",
+                        "payload":"5 rooms"
+                    }
+                ]
+            }
+        };
+
+        callSendAPI(messageData);
+    }
+//Function called in receivedMessage
+    function sendArrivalDateMonth(recipientId) {
+        var messageData = {
+            recipient: {
+                id: recipientId
+            },
+            message: {
+                "text":"Für welchen Monat wollen Sie anfragen?:",
+                "quick_replies":[
+                    {
+                        "content_type":"text",
+                        "title":"Jänner",
+                        "payload":"01"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"Februar",
+                        "payload":"02"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"März",
+                        "payload":"03"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"April",
+                        "payload":"04"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"Mai",
+                        "payload":"05"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"Juni",
+                        "payload":"06"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"Mehr",
+                        "payload":"mehr1"
+                    },
+                ]
+            }
+        };
+
+        callSendAPI(messageData);
+    }
+//Function called in receivedMessage
+    function sendArrivalDateMonth2(recipientId) {
+        var messageData = {
+            recipient: {
+                id: recipientId
+            },
+            message: {
+                "text":"Für welchen Monat wollen Sie anfragen?:",
+                "quick_replies":[
+                    {
+                        "content_type":"text",
+                        "title":"Juli",
+                        "payload":"07"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"August",
+                        "payload":"08"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"September",
+                        "payload":"09"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"Oktober",
+                        "payload":"10"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"November",
+                        "payload":"11"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"Dezember",
+                        "payload":"12"
+                    },
+
+                ]
+            }
+        };
+
+        callSendAPI(messageData);
+    }
+//Function called in receivedMessage
+    function sendArrivalDay(recipientId) {
+        var messageData = {
+            recipient: {
+                id: recipientId
+            },
+            message: {
+                "text":"An welchen Tag wollen Sie anreisen?:",
+                "quick_replies":[
+                    {
+                        "content_type":"text",
+                        "title":"01",
+                        "payload":"d 01"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"02",
+                        "payload":"d 02"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"03",
+                        "payload":"d 03"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"04",
+                        "payload":"d 04"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"05",
+                        "payload":"d 05"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"06",
+                        "payload":"d 06"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"07",
+                        "payload":"d 07"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"08",
+                        "payload":"d 08"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"09",
+                        "payload":"d 09"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"10",
+                        "payload":"d 10"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"Mehr",
+                        "payload":"mehr2"
+                    },
+
+                ]
+            }
+        };
+
+        callSendAPI(messageData);
+    }
+//Function called in receivedMessage
+    function sendArrivalDay2(recipientId) {
+        var messageData = {
+            recipient: {
+                id: recipientId
+            },
+            message: {
+                "text":"An welchen Tag wollen Sie anreisen?:",
+                "quick_replies":[
+
+                    {
+                        "content_type":"text",
+                        "title":"11",
+                        "payload":"d 11"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"12",
+                        "payload":"d 12"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"13",
+                        "payload":"d 13"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"14",
+                        "payload":"d 14"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"15",
+                        "payload":"d 15"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"16",
+                        "payload":"d 16"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"17",
+                        "payload":"d 17"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"18",
+                        "payload":"d 18"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"19",
+                        "payload":"d 19"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"20",
+                        "payload":"d 20"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"Mehr",
+                        "payload":"mehr3"
+                    },
+                ]
+            }
+        };
+
+        callSendAPI(messageData);
+    }
+//Function called in receivedMessage
+    function sendArrivalDay3(recipientId) {
+        var messageData = {
+            recipient: {
+                id: recipientId
+            },
+            message: {
+                "text":"An welchen Tag wollen Sie anreisen?:",
+                "quick_replies":[
+                    {
+                        "content_type":"text",
+                        "title":"21",
+                        "payload":"d 21"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"22",
+                        "payload":"d 22"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"23",
+                        "payload":"d 23"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"24",
+                        "payload":"d 24"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"25",
+                        "payload":"d 25"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"26",
+                        "payload":"d 26"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"27",
+                        "payload":"d 27"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"28",
+                        "payload":"d 28"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"29",
+                        "payload":"d 29"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"30",
+                        "payload":"d 30"
+                    },
+                    {
+                        "content_type":"text",
+                        "title":"31",
+                        "payload":"d 31"
+                    },
+                ]
+            }
+        };
+
+        callSendAPI(messageData);
+    }
+//Stay range is the difference between arrivalday and departureday
+    function calculateStayRange(arrivalDate, departureDate) {
+    arrivalDateSplitted = arrivalDate.split("-");
+    departureDateSplitted = departureDate.split("-");
+    console.log("Abreisedatum Tag:" + departureDateSplitted[2]);
+    console.log("Anreisedatum Tag:" + arrivalDateSplitted[2]);
+    console.log(typeof departureDateSplitted[2]);
+    console.log("Tage des Monats: " + monthDays);
+    if(parseInt(departureDateSplitted[2]) > parseInt(arrivalDateSplitted[2])) {
+        console.log("Tag der Abreise ist kleiner als Tag der Anreise Schleife (1)");
+        stayRange = parseInt(departureDateSplitted[2] - arrivalDateSplitted[2]);
+    } else{
+        console.log("Tag der Abreise ist kleiner als Tag der Anreise Schleife (2)");
+        stayRange = (monthDays - parseInt(arrivalDateSplitted[2])) + parseInt(departureDateSplitted[2]);
+    }
+    console.log("Stay Range: " + stayRange);
+}
+//Reset data
+    function resetData(){
+    count++;
+    if (count >= 1) {
+        stayRange = 0;
+        numberOfPersonsSplitted[0] = 0;
+        numberOfRoomsSplitted[0] = 0;
+        numberOfRooms = 0;
+        numberOfPersons = 0;
+        arrivalDate = 0;
+        departureDate = 0;
+        resultTransferData = [];
+        monthDays = 0;
+        daysInFirstMonth = 0;
+        daysInSecondMonth = 0;
+        secondMonth = 0;
+        daysInSecondMonthCount = 0;
+        daysInFirstMonthCount = 0;
+        daysInAllTwoMonths = [];
+        daysInFirstMonthDisplay = [];
+        daysInSecondMonthDisplay = [];
+        arrivalFirstDateMonthDisplay = [];
+        arrivalSecondDateMonthDisplay = [];
+        arrivalAllTwoMonthsDisplay = [];
+        priceAllNightsDoppelzimmerDeluxeHolzleo = 0;
+        priceAllNightsDoppelzimmerSuperiorSteinleo = 0;
+        priceAllNightsEinzelzimmerSommerstein = 0;
+        priceAllNightsDoppelzimmerClassicSteinleo = 0;
+        arrivalDateForLink = "";
+        departureDateForLink = "";
+        bookingLink = "";
+        app.locals.titleSummary = "";
+        app.locals.subTitleSummary = "";
+        app.locals.totalPrice = 0;
+    }
+}
+//Function called in receivedMessage
+    function assigningNumberOfPersonsVar(quickReplyPayload){
+    numberOfPersonsSplitted = quickReplyPayload.split(" ");
+    numberOfPersons = parseInt(numberOfPersonsSplitted[0]);
+    exports.numberOfPersons = numberOfPersons;
+}
+//Function called in receivedMessage
+    function assigningNumberOfRoomsVar(quickReplyPayload) {
+    numberOfRoomsSplitted = quickReplyPayload.split(" ");
+    console.log("Number of rooms splitted: " + numberOfRoomsSplitted);
+    numberOfRooms = parseInt(numberOfRoomsSplitted[0]);
+    console.log("Number of rooms INT: " + numberOfRooms);
+    exports.numberOfRooms = numberOfRooms;
+}
+//Function called in receivedMessage
+    function assigningNumberOfMonthsVar(quickReplyPayload) {
+    arrivalDateMonth = quickReplyPayload;
+    arrivalDateMonthCalculations = parseInt(arrivalDateMonth);
+}
+//Function called in receivedMessage
+    function assigningArrivalDateVar(quickReplyPayload) {
+    arrivalDayDateSplitted = quickReplyPayload.split(" ");
+    arrivalDateDay = arrivalDayDateSplitted[1];
+    arrivalDateDayCalculations = parseInt(arrivalDayDateSplitted[1]);
+    arrivalDate = "2017-" + arrivalDateMonth + "-" + arrivalDateDay;
+    exports.arrivalDate = arrivalDate;
+}
+//Function called in receivedMessage
+    function createDepartureDateSuggestion(){
+    console.log(arrivalDateMonthCalculations);
+    if(arrivalDateMonthCalculations === 1) {
+        monthDays = january;
+    } else if (arrivalDateMonthCalculations === 2) {
+        monthDays = february;
+    } else if (arrivalDateMonthCalculations === 3) {
+        monthDays = march;
+    } else if (arrivalDateMonthCalculations === 4) {
+        monthDays = april;
+    } else if (arrivalDateMonthCalculations === 5) {
+        monthDays = may;
+    } else if (arrivalDateMonthCalculations === 6) {
+        monthDays = june;
+    } else if (arrivalDateMonthCalculations === 7) {
+        monthDays = july;
+    } else if (arrivalDateMonthCalculations === 8) {
+        monthDays = august;
+    } else if (arrivalDateMonthCalculations === 9) {
+        monthDays = september;
+    } else if (arrivalDateMonthCalculations === 10) {
+        monthDays = oktober;
+    } else if (arrivalDateMonthCalculations === 11) {
+        monthDays = november;
+    } else if (arrivalDateMonthCalculations === 12) {
+        monthDays = december;
+    }
+    daysInFirstMonth = monthDays - arrivalDateDayCalculations;
+    console.log(daysInFirstMonth);
+    console.log(arrivalDateMonthCalculations);
+    if (daysInFirstMonth > 12) {
+        for (daysInFirstMonthCount = (arrivalDateDayCalculations + 1); daysInFirstMonthCount <= (arrivalDateDayCalculations + 12); daysInFirstMonthCount++) {
+            console.log(daysInFirstMonthCount);
+            daysInFirstMonthDisplay.push(daysInFirstMonthCount);
+            arrivalFirstDateMonthDisplay.push(arrivalDateMonthCalculations);
+            daysInFirstMonth = 12;
+        }
+    } else {
+        for (daysInFirstMonthCount = (arrivalDateDayCalculations + 1); daysInFirstMonthCount <= monthDays; daysInFirstMonthCount++) {
+            console.log(daysInFirstMonthCount);
+            daysInFirstMonthDisplay.push(daysInFirstMonthCount);
+            arrivalFirstDateMonthDisplay.push(arrivalDateMonthCalculations);
+        }
+    }
+    console.log(daysInFirstMonthDisplay);
+    console.log(arrivalFirstDateMonthDisplay);
+    console.log(daysInFirstMonth);
+    daysInSecondMonth = 12 - daysInFirstMonth;
+    console.log(daysInSecondMonth);
+    secondMonth = arrivalDateMonthCalculations + 1;
+    console.log(secondMonth);
+    for (daysInSecondMonthCount = 1; daysInSecondMonthCount < daysInSecondMonth; daysInSecondMonthCount++) {
+        console.log(daysInSecondMonthCount);
+        daysInSecondMonthDisplay.push(daysInSecondMonthCount);
+        arrivalSecondDateMonthDisplay.push(secondMonth);
+    }
+    console.log(daysInSecondMonthDisplay);
+    console.log(arrivalSecondDateMonthDisplay);
+    daysInAllTwoMonths = daysInFirstMonthDisplay.concat(daysInSecondMonthDisplay);
+    arrivalAllTwoMonthsDisplay = arrivalFirstDateMonthDisplay.concat(arrivalSecondDateMonthDisplay);
+    console.log(daysInAllTwoMonths);
+    console.log(arrivalDateDayCalculations);
+    console.log(arrivalDateMonthCalculations);
+    console.log(arrivalDateMonth);
+    console.log(arrivalDate);
+}
+//Function called in receivedMessage
+    function assignDepartureDateVar(quickReplyPayload){
+    departureDate = quickReplyPayload;
+    console.log("Departure Date: " + departureDate);
+    exports.departureDate = departureDate;
+}
+//Function called in receivedMessage
+    function checkIfDateIsInPast(senderID){
+    var d = new Date();
+    var f = JSON.stringify(d);
+    var i = f.match(/.{1,11}/g);
+    var g = i[0];
+    while(g.charAt(0) === '"')
+    {
+        g = g.substr(1);
+    }
+    var j = g.split("-");
+    var h = arrivalDate.split("-");
+    if (h[0] < j[0] || h[1] <= j[1] && h[2] < j[2] ) {
+        setTimeout(sendErrorMessageNoRoom, 1500, senderID);
+        dateIsInThePast = true;
+    } else {
+        dateIsInThePast = false;
+    }
+}
+//If the hotel is closed the price per room per night is above 1000 EUR. As a rule all prices above 1000 EUR per night and per room trigger this Error Messages.
+    function sendErrorMessageNoRoom(recipientId) {
+    var messageData = {
+        recipient: {
+            id: recipientId
+        },
+        message: {
+            attachment: {
+                type: "template",
+                payload: {
+                    template_type: "button",
+                    text: "Zu diesem Zeitpunkt gibt es leider keine Verfügbarkeiten.",
+                    buttons:[ {
+                        type: "postback",
+                        title: "Erneute Anfrage",
+                        payload: "zimmerAnfrage"
+                    }, {
+                        type: "postback",
+                        title: "Persönliche Beratung",
+                        payload: "personal"
+                    }]
+                }
+            }
+        }
+    };
+    callSendAPI(messageData);
+}
+//BIS HIER->>>>>>>>>>>>>>>
 
 /*
  * Message Read Event
