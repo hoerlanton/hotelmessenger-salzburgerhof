@@ -550,8 +550,6 @@ function sendWelcomeMessage(recipientId) {
 //Employee will soon take care of users request
 function sendPersonalFeedback(recipientId) {
 
-    autoAnswerIsOn = false;
-
     var messageData = {
         recipient: {
             id: recipientId
@@ -567,8 +565,6 @@ function sendPersonalFeedback(recipientId) {
 
 //function called if case: 'Zimmer Anfrage' in receivedMessage
 function sendPersonRequest(recipientId) {
-
-    autoAnswerIsOn = true;
 
     var messageData = {
         recipient: {
