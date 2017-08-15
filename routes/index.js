@@ -365,12 +365,12 @@ router.post('/guestsMessage', function(req, res, next) {
                 }
                 errMsg = "";
 
-            }, 5000);
+            }, 15000);
         }
     });
     setTimeout(function() {
         newFileUploaded = false;
-    }, 15000);
+    }, 30000);
 });
 
 //Get W-Lan-landingpage
