@@ -213,9 +213,8 @@ router.post('/guestsMessage', function(req, res, next) {
 
                                 res.on('data', function (d) {
                                     console.info('GET result:\n');
-                                    buffer += d;
                                     //scheduled message is stored in bufferObject
-                                    var bufferObject = JSON.parse(buffer);
+                                    var bufferObject = JSON.parse(d);
                                     //data is retrieved from job.cronTime property
                                     var crontTimeString = job.cronTime.toString();
                                     var cronTimeSplitted = crontTimeString.split(" ");
