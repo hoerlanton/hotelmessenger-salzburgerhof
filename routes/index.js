@@ -10,6 +10,7 @@ const
     mongojs = require('mongojs'),
     db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['testMessages', 'testGaeste', 'testScheduledMessages']),
     config = require('config'),
+    cron = require('node-cron'),
     CronJob = require('cron').CronJob;
 
 // HOST_URL used for DB calls - SERVER_URL without https or https://
@@ -213,8 +214,9 @@ router.post('/guestsMessage', function(req, res, next) {
 
                                 res.on('data', function (d) {
                                     console.info('GET result:\n');
+                                    buffer += d;
                                     //scheduled message is stored in bufferObject
-                                    var bufferObject = JSON.parse(d);
+                                    var bufferObject = JSON.parse(buffer);
                                     //data is retrieved from job.cronTime property
                                     var crontTimeString = job.cronTime.toString();
                                     var cronTimeSplitted = crontTimeString.split(" ");
