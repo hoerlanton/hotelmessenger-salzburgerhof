@@ -10655,7 +10655,7 @@ var DashboardComponent = (function () {
             // 2nd parameter is optional. You can pass object with options.
             return _this._flashMessagesService.show('Datei wird angehängt. Einen Moment bitte ... Sobald diese Meldung verschwindet ist der Upload fertig', { cssClass: 'alert-success', timeout: 20000 });
         })
-            .subscribe(function (files) { return console.log('files', files); });
+            .subscribe(function (files) { return _this._flashMessagesService.show('HELLLOO', { cssClass: 'alert-success', timeout: 20000 }); });
     };
     DashboardComponent.prototype.fileChangeEvent = function (fileInput) {
         this.filesToUpload = fileInput.target.files;

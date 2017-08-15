@@ -113,7 +113,7 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
     console.log("console log in app.post upload", 'files', req.files);
     exports.uploadedFileName = req.files[0].filename;
     routes.newFileUploaded();
-    res.send(req.files);
+    res.send(req.files + "HOI");
 });
 
 /*
