@@ -402,6 +402,10 @@ function receivedMessage(event) {
                 case 'account linking':
                     sendAccountLinking(senderID);
                     break;
+
+                case'122':
+                    sendWunschFeedback(senderID);
+                    break;
             }
         }
     }
@@ -510,10 +514,16 @@ function receivedPostback(event) {
     // let them know it was successful
    if (payload === "GET_STARTED_PAYLOAD") {
        sendWelcomeMessage(senderID);
-   }    else if (payload === "Zimmer Anfrage") {
+   }    else if (payload === "zimmerAnfrage") {
        sendPersonRequest(senderID);
    }    else if (payload === "personal") {
        sendPersonalFeedback(senderID);
+   }    else if (payload === "wunsch") {
+       sendWunschRequest(senderID);
+   }    else if (payload === "wunschGesendet") {
+       sendZimmernummerFeedback(senderID);
+   }    else if (payload === "sonstigerWunsch") {
+       sendSonstigerwunschFeedback(senderID);
    }
 }
 
@@ -533,11 +543,15 @@ function sendWelcomeMessage(recipientId) {
                     buttons:[ {
                         type: "postback",
                         title: "Zimmer Anfrage",
-                        payload: "Zimmer Anfrage"
+                        payload: "zimmerAnfrage"
                     }, {
                         type: "postback",
                         title: "Persönliche Beratung",
                         payload: "personal"
+                    }, {
+                        type: "postback",
+                        title: "Sonstiger Wunsch",
+                        payload: "wunsch"
                     }]
                 }
             }
@@ -563,7 +577,7 @@ function sendPersonalFeedback(recipientId) {
     callSendAPI(messageData);
 }
 
-//function called if case: 'Zimmer Anfrage' in receivedMessage
+//function called if postback: 'zimmerAnfrage'
 function sendPersonRequest(recipientId) {
 
     var messageData = {
@@ -604,6 +618,96 @@ function sendPersonRequest(recipientId) {
 
     callSendAPI(messageData);
 }
+
+//function called if postback: 'wunschGesendet'
+function sendWunschRequest(recipientId) {
+
+    var messageData = {
+        recipient: {
+            id: recipientId
+        },
+        message: {
+            "text":"Sonstiger Wunsch?",
+            "quick_replies":[
+                {
+                    "content_type":"text",
+                    "title":"Wunsch Kopfpolster",
+                    "payload":"WunschGesendet",
+                    "image_url":"http://servicio.io/wp-content/uploads/2017/08/kopfpolster-weiss-textil-sleeptex_dO2G3_rYB5JpgOBqUFvVulvdwrk.jpg"
+                },
+                {
+                    "content_type":"text",
+                    "title":"Zusätzliche Handtücher",
+                    "payload":"WunschGesendet",
+                    "image_url":"http://servicio.io/wp-content/uploads/2017/08/handtuch-alvito-weiss.jpg"
+                },
+                {
+                    "content_type":"text",
+                    "title":"Zusätzlicher Bademantel",
+                    "payload":"WunschGesendet",
+                    "image_url":"http://servicio.io/wp-content/uploads/2017/08/bademantel-floringo-waffelpikee-schalkragen-weiss-2b7.jpg"
+                },
+                {
+                    "content_type":"text",
+                    "title":"Sonstiger Wunsch",
+                    "payload":"Sonstiger Wunsch",
+                    "image_url":"http://servicio.io/wp-content/uploads/2016/05/header-servicio.png"
+                },
+            ]
+        }
+    };
+
+    callSendAPI(messageData);
+}
+
+function sendZimmernummerFeedback(recipientId){
+
+    var messageData = {
+        recipient: {
+            id: recipientId
+        },
+        message: {
+            text: "Könnten Sie uns bitte Ihre Zimmernummer mitteilen?",
+            metadata: "DEVELOPER_DEFINED_METADATA"
+        }
+    };
+
+    callSendAPI(messageData);
+
+}
+
+function sendWunschFeedback(recipientId){
+
+    var messageData = {
+        recipient: {
+            id: recipientId
+        },
+        message: {
+            text: "Es wird sich ehestmöglich einer unserer Mitarbeiter um Ihre Wunsch-Anfrage kümmern.",
+            metadata: "DEVELOPER_DEFINED_METADATA"
+        }
+    };
+
+    callSendAPI(messageData);
+
+}
+
+function sendSonstigerwunschFeedback(recipientId){
+
+    var messageData = {
+        recipient: {
+            id: recipientId
+        },
+        message: {
+            text: "Bitte teilen Sie uns den Wunsch und Ihre Zimmernummer mit.",
+            metadata: "DEVELOPER_DEFINED_METADATA"
+        }
+    };
+
+    callSendAPI(messageData);
+
+}
+
 
 /*
  * Message Read Event
