@@ -370,7 +370,7 @@ router.post('/guestsMessage', function(req, res, next) {
     });
     setTimeout(function() {
         newFileUploaded = false;
-    }, 30000);
+    }, 18000);
 });
 
 //Get W-Lan-landingpage
