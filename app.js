@@ -112,7 +112,8 @@ if (!(APP_SECRET && VALIDATION_TOKEN && PAGE_ACCESS_TOKEN && SERVER_URL)) {
 app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
     console.log("console log in app.post upload", 'files', req.files);
     exports.uploadedFileName = req.files[0].filename;
-    res.send(req.files, routes.newFileUploaded());
+    routes.newFileUploaded();
+    res.send(req.files);
 });
 
 /*
