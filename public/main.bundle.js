@@ -10594,9 +10594,9 @@ var DashboardComponent = (function () {
         this.http = http;
         this._flashMessagesService = _flashMessagesService;
         this.filesToUpload = [];
-        this.scheduledDate = new Date(2017, 5, 10);
+        this.scheduledDate = new Date(2017, 1, 1);
         this.datepickerOpts = {
-            startDate: __WEBPACK_IMPORTED_MODULE_6_moment__('2017-05-10'),
+            startDate: new Date(2017, 1, 1),
             autoclose: true,
             todayBtn: 'linked',
             todayHighlight: true,
@@ -10656,7 +10656,8 @@ var DashboardComponent = (function () {
             .map(function (files) { return files.json(); }).map(function (res) {
             // 1st parameter is a flash message text
             // 2nd parameter is optional. You can pass object with options.
-            return _this._flashMessagesService.show('Datei wird angehängt. Einen Moment bitte... Sobald diese Meldung ausgeblendet wird, ist der Upload abgeschlossen.', { cssClass: 'alert-success', timeout: 20000 });
+            return _this._flashMessagesService.show('Datei wird angehängt. Einen Moment bitte... ' +
+                'Sobald diese Meldung ausgeblendet wird, ist der Upload abgeschlossen.', { cssClass: 'alert-success', timeout: 20000 });
         })
             .subscribe(function (files) { return console.log('files', files); });
     };
