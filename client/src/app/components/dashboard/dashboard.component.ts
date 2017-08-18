@@ -21,10 +21,10 @@ export class DashboardComponent implements OnInit {
     title: string;
     dateGenerated: any;
     filesToUpload: Array<File> = [];
-    scheduledDate: Date = new Date(2016, 5, 10);
+    scheduledDate: Date = new Date(2017, 5, 10);
     scheduledMessages: Messages[];
     datepickerOpts = {
-        startDate: new Date(2016, 5, 10),
+        startDate: moment('2017-05-10'),
         autoclose: true,
         todayBtn: 'linked',
         todayHighlight: true,
@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit {
 
     sendMessage(event) {
         event.preventDefault();
-        this.dateGenerated = moment();
+        this.dateGenerated = moment().format('LLLL');;
         let newMessage = {
             text: this.title,
             date: this.dateGenerated

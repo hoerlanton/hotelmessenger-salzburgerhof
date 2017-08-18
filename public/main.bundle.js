@@ -10594,9 +10594,9 @@ var DashboardComponent = (function () {
         this.http = http;
         this._flashMessagesService = _flashMessagesService;
         this.filesToUpload = [];
-        this.scheduledDate = new Date(2016, 5, 10);
+        this.scheduledDate = new Date(2017, 5, 10);
         this.datepickerOpts = {
-            startDate: new Date(2016, 5, 10),
+            startDate: __WEBPACK_IMPORTED_MODULE_6_moment__('2017-05-10'),
             autoclose: true,
             todayBtn: 'linked',
             todayHighlight: true,
@@ -10633,7 +10633,8 @@ var DashboardComponent = (function () {
     DashboardComponent.prototype.sendMessage = function (event) {
         var _this = this;
         event.preventDefault();
-        this.dateGenerated = __WEBPACK_IMPORTED_MODULE_6_moment__();
+        this.dateGenerated = __WEBPACK_IMPORTED_MODULE_6_moment__().format('LLLL');
+        ;
         var newMessage = {
             text: this.title,
             date: this.dateGenerated
