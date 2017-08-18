@@ -7,6 +7,7 @@ import { OnInit } from '@angular/core';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { FlashMessagesService } from 'angular2-flash-messages';
+import * as moment from 'moment';
 
 @Component({
     selector: 'dashboard',
@@ -68,7 +69,7 @@ export class DashboardComponent implements OnInit {
 
     sendMessage(event) {
         event.preventDefault();
-        this.dateGenerated = new Date();
+        this.dateGenerated = moment();
         let newMessage = {
             text: this.title,
             date: this.dateGenerated
