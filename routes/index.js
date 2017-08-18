@@ -10,7 +10,8 @@ const
     mongojs = require('mongojs'),
     db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['salzburgerhofMessages', 'salzburgerhofGaeste', 'salzburgerhofScheduledMessages']),
     config = require('config'),
-    CronJob = require('cron').CronJob;
+    CronJob = require('cron').CronJob,
+    moment = require('moment-timezone');
 
 // HOST_URL used for DB calls - SERVER_URL without https or https://
 const HOST_URL = config.get('hostURL');
@@ -128,7 +129,7 @@ router.post('/guestsMessage', function(req, res, next) {
     //message extracted
     var message = req.body;
     //Date from now
-    var dateNow = new Date();
+    var dateNow = moment();
     var dateString = JSON.stringify(dateNow);
     dateNowFormatted = dateString.slice(1, 17);
     //Date from message request
