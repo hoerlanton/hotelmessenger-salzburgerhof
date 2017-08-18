@@ -10634,7 +10634,6 @@ var DashboardComponent = (function () {
         var _this = this;
         event.preventDefault();
         this.dateGenerated = __WEBPACK_IMPORTED_MODULE_6_moment__().format('LLLL');
-        ;
         var newMessage = {
             text: this.title,
             date: this.dateGenerated

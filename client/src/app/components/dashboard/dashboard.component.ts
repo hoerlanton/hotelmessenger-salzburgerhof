@@ -69,7 +69,7 @@ export class DashboardComponent implements OnInit {
 
     sendMessage(event) {
         event.preventDefault();
-        this.dateGenerated = moment().format('LLLL');;
+        this.dateGenerated = moment().format('LLLL');
         let newMessage = {
             text: this.title,
             date: this.dateGenerated
