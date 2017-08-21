@@ -1485,7 +1485,7 @@ function receivedPostback(event) {
 }
 //Function called in receivedMessage
     function checkIfDateIsInPast(senderID){
-    var d = moment();
+    var d = new Date();
     var f = JSON.stringify(d);
     var i = f.match(/.{1,11}/g);
     var g = i[0];

@@ -129,7 +129,7 @@ router.post('/guestsMessage', function(req, res, next) {
     //message extracted
     var message = req.body;
     //Date from now
-    var dateNow = moment();
+    var dateNow = new Date();
     var dateString = JSON.stringify(dateNow);
     dateNowFormatted = dateString.slice(1, 17);
     //Date from message request
@@ -220,7 +220,9 @@ router.post('/guestsMessage', function(req, res, next) {
                                     //data is retrieved from job.cronTime property
                                     var crontTimeString = job.cronTime.toString();
                                     var cronTimeSplitted = crontTimeString.split(" ");
-                                    console.log(cronTimeSplitted);
+                                    for(var w = 0; w < cronTimeSplitted.length; w++) {
+                                        console.log(cronTimeSplitted[w]);
+                                    }
 
                                     var minutes = cronTimeSplitted[1];
                                     if (minutes.length === 1) {
