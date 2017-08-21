@@ -313,6 +313,7 @@ router.post('/guestsMessage', function(req, res, next) {
 
                     console.log("######## 3 newFileUploaded is " + newFileUploaded);
                     if (uploadedFileName !== undefined && newFileUploaded === true) {
+                        setTimeout(function() {
 
                         db.testHotelMessengerMessages.update({
                                 text: message.text,
@@ -327,6 +328,9 @@ router.post('/guestsMessage', function(req, res, next) {
                                     console.log("Updated successfully, messages var (deleted)");
                                 }
                             });
+                        }, 3000);
+
+                        setTimeout(function() {
 
                         var bufferMessages = "";
                         var optionsget = {
@@ -370,6 +374,7 @@ router.post('/guestsMessage', function(req, res, next) {
                         reqGet.on('error', function (e) {
                             console.error("Error line 450:" + e);
                         });
+                        }, 5000);
                     }
                 }
                 errMsg = "";
