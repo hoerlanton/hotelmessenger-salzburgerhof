@@ -8,7 +8,7 @@ const
     cors = require('cors'),
     bodyParser = require('body-parser'),
     mongojs = require('mongojs'),
-    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['testMessages', 'testGaeste', 'testScheduledMessages']),
+    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['testHotelMessengerMessages', 'testHotelMessengerGaeste', 'testHotelMessengerScheduledMessages']),
     config = require('config'),
     CronJob = require('cron').CronJob,
     moment = require('moment-timezone');
@@ -46,7 +46,7 @@ var broadcast = "";
 router.get('/guestsMessages', function(req, res, next) {
     console.log("guestsMessages get called");
     //Get guests from Mongo DB
-    db.testMessages.find(function(err, message){
+    db.testHotelMessengerMessages.find(function(err, message){
         if (err){
             res.send(err);
         }
@@ -58,7 +58,7 @@ router.get('/guestsMessages', function(req, res, next) {
 router.get('/guestsScheduledMessages', function(req, res, next) {
     console.log("guestsMessages get called");
     //Get guests from Mongo DB
-    db.testScheduledMessages.find(function(err, message){
+    db.testHotelMessengerScheduledMessages.find(function(err, message){
         if (err){
             res.send(err);
         }
@@ -70,7 +70,7 @@ router.get('/guestsScheduledMessages', function(req, res, next) {
 router.get('/guests', function(req, res, next) {
     console.log("guests get called");
     //Get guests from Mongo DB
-    db.testGaeste.find(function(err, gaeste){
+    db.testHotelMessengerGaeste.find(function(err, gaeste){
         if (err){
             res.send(err);
         }
@@ -90,7 +90,7 @@ router.post('/guests', function(req, res, next) {
             error: "Bad data"
         });
     } else {
-        db.testGaeste.save(guest, function (err, guest) {
+        db.testHotelMessengerGaeste.save(guest, function (err, guest) {
             if (err) {
                 res.send(err);
             }
@@ -106,7 +106,7 @@ router.put('/guests', function(req, res, next) {
     var guestUpdateString = JSON.stringify(guestUpdate);
     var guestUpdateHoi = guestUpdateString.slice(2, -5);
     console.log("SenderId:" + guestUpdateHoi);
-    db.testGaeste.update({
+    db.testHotelMessengerGaeste.update({
             senderId:  guestUpdateHoi  },
         {
             $set: { signed_up: false }
@@ -144,7 +144,7 @@ router.post('/guestsMessage', function(req, res, next) {
     //Destination URL for uploaded files
     var URLUploadedFile = String(config.get('serverURL') + "/uploads/" + uploadedFileName);
     //Find all senderids from signed_up guests abd push it to the temporary array gaesteGlobalSenderID
-    db.testGaeste.find(function (err, gaeste) {
+    db.testHotelMessengerGaeste.find(function (err, gaeste) {
         if (err) {
             errMsg = "Das senden der Nachricht ist nicht möglich. Es sind keine Gäste angemeldet.";
         } else {
@@ -160,7 +160,7 @@ router.post('/guestsMessage', function(req, res, next) {
                 if (dateReqFormatted !== dateNowFormatted) {
                     console.log("scheduled event fired!");
                     //Save scheduled Message to db
-                    db.testScheduledMessages.save(message, function (err, message) {
+                    db.testHotelMessengerScheduledMessages.save(message, function (err, message) {
                         console.log("scheduleMessage saved: " + message.text + " " + message.date);
                         if (err) {
                             res.send(err);
@@ -170,7 +170,7 @@ router.post('/guestsMessage', function(req, res, next) {
                     //If there is a file uploaded, update message in db
                     if (uploadedFileName !== undefined && newFileUploaded === true) {
 
-                        db.testScheduledMessages.update({
+                        db.testHotelMessengerScheduledMessages.update({
                                 text: message.text
                             },
                             {
@@ -220,6 +220,7 @@ router.post('/guestsMessage', function(req, res, next) {
                                     //data is retrieved from job.cronTime property
                                     var crontTimeString = job.cronTime.toString();
                                     var cronTimeSplitted = crontTimeString.split(" ");
+                                    console.log(cronTimeSplitted);
 
                                     var minutes = cronTimeSplitted[1];
                                     if (minutes.length === 1) {
@@ -235,8 +236,7 @@ router.post('/guestsMessage', function(req, res, next) {
                                     }
                                     var monthNumber = cronTimeSplitted[4];
 
-                                    var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                                        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                                    var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
                                     var month = monthNames[monthNumber];
 
@@ -260,7 +260,7 @@ router.post('/guestsMessage', function(req, res, next) {
                                                 }
                                             }
                                             //Now the message object in the db is update that it is in the past - now it is displayed in white in the user interface
-                                            db.testScheduledMessages.update({
+                                            db.testHotelMessengerScheduledMessages.update({
                                                     text: rightMessage.text
                                                 },
                                                 {
@@ -295,7 +295,7 @@ router.post('/guestsMessage', function(req, res, next) {
                         sourceFile.sendBroadcast(gaesteGlobalSenderID[j], broadcast);
                     }
                     //Save Message to DB
-                    db.testMessages.save(message, function (err, message) {
+                    db.testHotelMessengerMessages.save(message, function (err, message) {
                         console.log("Message saved: " + message.text + " " + message.date);
                         if (err) {
                             res.send(err);
@@ -306,7 +306,7 @@ router.post('/guestsMessage', function(req, res, next) {
                     console.log("######## 3 newFileUploaded is " + newFileUploaded);
                     if (uploadedFileName !== undefined && newFileUploaded === true) {
 
-                        db.testMessages.update({
+                        db.testHotelMessengerMessages.update({
                                 text: message.text,
                                 date: message.date
                             },
