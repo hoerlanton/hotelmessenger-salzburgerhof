@@ -168,11 +168,16 @@ router.post('/guestsMessage', function(req, res, next) {
                         res.json(message);
                     });
                     //If there is a file uploaded, update message in db
-                    if (uploadedFileName !== undefined && newFileUploaded === true) {
+                    console.log("######Uploadedfilename line 170");
+                    console.log(uploadedFileName);
+                    console.log("######newFileUploaded line 172");
+                    console.log(newFileUploaded);
+                    if (uploadedFileName !== undefined && newFileUploaded === true && uploadedFileName !== "undefined") {
 
                     setTimeout(function() {
                         db.testHotelMessengerScheduledMessages.update({
-                                text: message.text
+                            console.log("scheduleMessage updated: " + message.text + " " + message.date);
+                        text: message.text
                             },
                             {
                                 $set: {uploaded_file: uploadedFileName}
