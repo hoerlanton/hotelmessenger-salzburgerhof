@@ -170,6 +170,7 @@ router.post('/guestsMessage', function(req, res, next) {
                     //If there is a file uploaded, update message in db
                     if (uploadedFileName !== undefined && newFileUploaded === true) {
 
+                    setTimeout(function() {
                         db.testHotelMessengerScheduledMessages.update({
                                 text: message.text
                             },
@@ -182,6 +183,7 @@ router.post('/guestsMessage', function(req, res, next) {
                                     console.log("Updated successfully, scheduled messages var (deleted)");
                                 }
                             });
+                        }, 3000);
                     }
                     //https://github.com/kelektiv/node-cron
                     //Cronjob is created
