@@ -175,8 +175,8 @@ router.post('/guestsMessage', function(req, res, next) {
                     if (uploadedFileName !== undefined && newFileUploaded === true && uploadedFileName !== "undefined") {
 
                     setTimeout(function() {
+                        console.log("scheduleMessage updated: " + message.text + " " + message.date);
                         db.testHotelMessengerScheduledMessages.update({
-                            console.log("scheduleMessage updated: " + message.text + " " + message.date);
                         text: message.text
                             },
                             {
@@ -186,9 +186,8 @@ router.post('/guestsMessage', function(req, res, next) {
                                     console.log("error: " + err);
                                 } else {
                                     console.log("Updated successfully, scheduled messages var (deleted)");
-                                }
-                            });
-                        }, 3000);
+                        }
+                        })}, 3000);
                     }
                     //https://github.com/kelektiv/node-cron
                     //Cronjob is created
