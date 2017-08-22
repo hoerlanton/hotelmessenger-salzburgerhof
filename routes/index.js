@@ -128,6 +128,7 @@ router.post('/guestsMessage', function(req, res, next) {
     console.log("######## 2 Post request made to /guestsMessage");
     //message extracted
     var message = req.body;
+    console.log("Message:" + message);
     //Date from now
     var dateNow = new Date();
     var dateString = JSON.stringify(dateNow);
