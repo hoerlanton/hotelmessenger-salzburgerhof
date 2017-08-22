@@ -8,7 +8,7 @@ const
     cors = require('cors'),
     bodyParser = require('body-parser'),
     mongojs = require('mongojs'),
-    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['testHotelMessengerMessages', 'testHotelMessengerGaeste', 'testHotelMessengerScheduledMessages']),
+    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['salzburgerhofMessages', 'salzburgerhofGaeste', 'salzburgerhofScheduledMessages']),
     config = require('config'),
     CronJob = require('cron').CronJob,
     moment = require('moment-timezone');
@@ -46,7 +46,7 @@ var broadcast = "";
 router.get('/guestsMessages', function(req, res, next) {
     console.log("guestsMessages get called");
     //Get guests from Mongo DB
-    db.testHotelMessengerMessages.find(function(err, message){
+    db.salzburgerhofMessages.find(function(err, message){
         if (err){
             res.send(err);
         }
@@ -58,7 +58,7 @@ router.get('/guestsMessages', function(req, res, next) {
 router.get('/guestsScheduledMessages', function(req, res, next) {
     console.log("guestsMessages get called");
     //Get guests from Mongo DB
-    db.testHotelMessengerScheduledMessages.find(function(err, message){
+    db.salzburgerhofScheduledMessages.find(function(err, message){
         if (err){
             res.send(err);
         }
@@ -70,7 +70,7 @@ router.get('/guestsScheduledMessages', function(req, res, next) {
 router.get('/guests', function(req, res, next) {
     console.log("guests get called");
     //Get guests from Mongo DB
-    db.testHotelMessengerGaeste.find(function(err, gaeste){
+    db.salzburgerhofGaeste.find(function(err, gaeste){
         if (err){
             res.send(err);
         }
@@ -90,7 +90,7 @@ router.post('/guests', function(req, res, next) {
             error: "Bad data"
         });
     } else {
-        db.testHotelMessengerGaeste.save(guest, function (err, guest) {
+        db.salzburgerhofGaeste.save(guest, function (err, guest) {
             if (err) {
                 res.send(err);
             }
@@ -106,7 +106,7 @@ router.put('/guests', function(req, res, next) {
     var guestUpdateString = JSON.stringify(guestUpdate);
     var guestUpdateHoi = guestUpdateString.slice(2, -5);
     console.log("SenderId:" + guestUpdateHoi);
-    db.testHotelMessengerGaeste.update({
+    db.salzburgerhofGaeste.update({
             senderId:  guestUpdateHoi  },
         {
             $set: { signed_up: false }
@@ -125,10 +125,12 @@ router.newFileUploaded = function () {
 
 //Post message to guests
 router.post('/guestsMessage', function(req, res, next) {
-    console.log("######## 2 Post request made to /guestsMessage");
+    console.log("#####----### 2 Post request made to /guestsMessage");
     //message extracted
     var message = req.body;
-    console.log("Message:" + message);
+    var senf = JSON.stringify(message);
+    console.log("Message Test:" );
+    console.log(senf);
     //Date from now
     var dateNow = new Date();
     var dateString = JSON.stringify(dateNow);
@@ -142,10 +144,12 @@ router.post('/guestsMessage', function(req, res, next) {
     broadcast = req.body.text;
     //Get uploaded file name from upload post function line app.js 114
     var uploadedFileName = sourceFile.uploadedFileName;
+    var updateMessageObjectUploadedFile = { uploaded_file: uploadedFileName };
+    console.log("updateMessageObjectUploadedFile:" + JSON.stringify(updateMessageObjectUploadedFile));
     //Destination URL for uploaded files
     var URLUploadedFile = String(config.get('serverURL') + "/uploads/" + uploadedFileName);
     //Find all senderids from signed_up guests abd push it to the temporary array gaesteGlobalSenderID
-    db.testHotelMessengerGaeste.find(function (err, gaeste) {
+    db.salzburgerhofGaeste.find(function (err, gaeste) {
         if (err) {
             errMsg = "Das senden der Nachricht ist nicht möglich. Es sind keine Gäste angemeldet.";
         } else {
@@ -161,35 +165,37 @@ router.post('/guestsMessage', function(req, res, next) {
                 if (dateReqFormatted !== dateNowFormatted) {
                     console.log("scheduled event fired!");
                     //Save scheduled Message to db
-                    db.testHotelMessengerScheduledMessages.save(message, function (err, message) {
-                        console.log("scheduleMessage saved: " + message.text + " " + message.date);
-                        if (err) {
-                            res.send(err);
-                        }
-                        res.json(message);
-                    });
+
+                    if (uploadedFileName !== undefined && newFileUploaded === true && uploadedFileName !== "undefined") {
+                        var scheduledMessageUpdated = Object.assign(message, updateMessageObjectUploadedFile);
+                        console.log("scheduleMessage updated: " + scheduledMessageUpdated.text + " " + scheduledMessageUpdated.date +  " " + scheduledMessageUpdated.uploaded_file);
+
+                        setTimeout(function() {
+                            db.salzburgerhofScheduledMessages.save(scheduledMessageUpdated, function (err, scheduledMessageUpdated) {
+                            console.log("scheduleMessageUpdated saved: " + scheduledMessageUpdated.text + " " + scheduledMessageUpdated.date +  " " + scheduledMessageUpdated.uploaded_file);
+                            if (err) {
+                                res.send(err);
+                            }
+                                res.json(scheduledMessageUpdated);
+                            });
+                        }, 3000);
+                    } else {
+                        setTimeout(function() {
+                            db.salzburgerhofScheduledMessages.save(message, function (err, message) {
+                                console.log("scheduleMessage saved: " + message.text + " " + message.date);
+                                if (err) {
+                                    res.send(err);
+                                }
+                                res.json(message);
+                            });
+                        }, 3000);
+                    }
+
                     //If there is a file uploaded, update message in db
                     console.log("######Uploadedfilename line 170");
                     console.log(uploadedFileName);
                     console.log("######newFileUploaded line 172");
                     console.log(newFileUploaded);
-                    if (uploadedFileName !== undefined && newFileUploaded === true && uploadedFileName !== "undefined") {
-
-                    setTimeout(function() {
-                        console.log("scheduleMessage updated: " + message.text + " " + message.date);
-                        db.testHotelMessengerScheduledMessages.update({
-                        text: message.text
-                            },
-                            {
-                                $set: {uploaded_file: uploadedFileName}
-                            }, {multi: true}, function (err, message) {
-                                if (err) {
-                                    console.log("error: " + err);
-                                } else {
-                                    console.log("Updated successfully, scheduled messages var (deleted)");
-                        }
-                        })}, 3000);
-                    }
                     //https://github.com/kelektiv/node-cron
                     //Cronjob is created
                     var job = new CronJob({
@@ -269,12 +275,12 @@ router.post('/guestsMessage', function(req, res, next) {
                                                 }
                                             }
                                             //Now the message object in the db is update that it is in the past - now it is displayed in white in the user interface
-                                            db.testHotelMessengerScheduledMessages.update({
+                                            db.salzburgerhofScheduledMessages.update({
                                                     text: rightMessage.text
                                                 },
                                                 {
                                                     $set: {isInThePast: true}
-                                                }, {multi: true}, function (err, message) {
+                                                }, {multi: true}, function (err, messageUpdated) {
                                                     if (err) {
                                                         console.log("error: " + err);
                                                     } else {
@@ -303,34 +309,32 @@ router.post('/guestsMessage', function(req, res, next) {
                         console.log("gaesteGlobalSenderID: line 166 - " + gaesteGlobalSenderID[j]);
                         sourceFile.sendBroadcast(gaesteGlobalSenderID[j], broadcast);
                     }
-                    //Save Message to DB
-                    db.testHotelMessengerMessages.save(message, function (err, message) {
-                        console.log("Message saved: " + message.text + " " + message.date);
-                        if (err) {
-                            res.send(err);
-                        }
-                        res.json(message);
-                    });
 
-                    console.log("######## 3 newFileUploaded is " + newFileUploaded);
-                    if (uploadedFileName !== undefined && newFileUploaded === true) {
-                        setTimeout(function() {
+                    if (uploadedFileName !== undefined && newFileUploaded === true && uploadedFileName !== "undefined") {
+                        var messageUpdated = Object.assign(message, updateMessageObjectUploadedFile);
+                        console.log("Message updated: " + messageUpdated.text + " " + messageUpdated.date + " " + messageUpdated.uploaded_file);
 
-                        db.testHotelMessengerMessages.update({
-                                text: message.text,
-                                date: message.date
-                            },
-                            {
-                                $set: {uploaded_file: uploadedFileName}
-                            }, {multi: true}, function (err, message) {
+                        setTimeout(function () {
+                            db.salzburgerhofMessages.save(messageUpdated, function (err, messageUpdated) {
+                                console.log("MessageUpdated saved: " + messageUpdated.text + " " + messageUpdated.date + " " + messageUpdated.uploaded_file);
                                 if (err) {
-                                    console.log("error: " + err);
-                                } else {
-                                    console.log("Updated successfully, messages var (deleted)");
+                                    res.send(err);
                                 }
+                                res.json(messageUpdated);
                             });
                         }, 3000);
 
+                    } if (newFileUploaded === false) {
+                        setTimeout(function () {
+                            db.salzburgerhofMessages.save(message, function (err, message) {
+                                console.log("Message saved: " + message.text + " " + message.date);
+                                if (err) {
+                                    res.send(err);
+                                }
+                                res.json(message);
+                            });
+                        }, 3000);
+                    }
                         setTimeout(function() {
 
                         var bufferMessages = "";
@@ -376,16 +380,15 @@ router.post('/guestsMessage', function(req, res, next) {
                             console.error("Error line 450:" + e);
                         });
                         }, 5000);
-                    }
                 }
                 errMsg = "";
 
-            }, 15000);
+            }, 1000);
         }
     });
     setTimeout(function() {
         newFileUploaded = false;
-    }, 18000);
+    }, 2000);
 });
 
 //Get W-Lan-landingpage
