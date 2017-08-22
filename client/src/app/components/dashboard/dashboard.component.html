@@ -83,7 +83,7 @@
                         <button style=" background-color: #0a7a74; margin-top: 20px; color: white" type="submit" class="btn btn-send" (click)="clicked()">SPÄTER SENDEN</button> <!--Title for button is same as that of the page-->
                     </div>
                 </div>
-                <h3>Gesendete Nachrichten</h3>
+                <h3 style="margin-top: 20px">Gesendete Nachrichten</h3>
                 <div class="row1">
                     <div *ngFor="let Messages of sentMessages">
                         <p><b>Nachricht gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>
@@ -98,7 +98,8 @@
                     <div class="card" style="margin-top: 10px" *ngFor="let Messages of scheduledMessages">
                         <div [ngStyle]="{'background-color': Messages.isInThePast ? 'white' : '#0a7a74'}">
                             <div [ngStyle]="{'color': Messages.isInThePast ? 'black' : 'white'}">
-                                <p><b>Nachricht wird gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>
+                                <p *ngIf="Messages.isInThePast"><b>Nachricht wurde gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>
+                                <p *ngIf="!Messages.isInThePast"><b>Nachricht wird gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>
                             </div>
                         </div>
                     </div>
