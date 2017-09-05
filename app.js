@@ -6,15 +6,30 @@ const
   config = require('config'),
   crypto = require('crypto'),
   express = require('express'),
-  https = require('https'),  
+  https = require('https'),
   request = require('request'),
   http = require('http'),
   routes = require('./routes/index'),
   app = express(),
   multer = require('multer'),
   path = require('path'),
-  moment = require('moment-timezone');
+  moment = require('moment-timezone'),
+  cors = require('cors'),
+  passport = require('passport'),
+  mongoose = require('mongoose'),
+  configDatabase = require('./config/database'),
+  users = require('./routes/users');
 
+// Connect To Database
+mongoose.connect(configDatabase.database, { useMongoClient: true });
+
+// On Connection
+mongoose.connection.once('open', () => {
+    console.log('Connected to database '+configDatabase.database);
+});
+
+// On Error
+mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
 
 //Bodyparser middleware
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -24,6 +39,12 @@ app.use(bodyParser.urlencoded({ extended: false}));
 //Throws errors if callbacks are not from facebook
 //{ verify: verifyRequestSignature } deleted from function because it throws errors if JSON.parse function is called
 app.use(bodyParser.json());
+
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./config/passport')(passport);
 
 // para CORN
 app.use(function (req, res, next) {
@@ -35,11 +56,17 @@ app.use(function (req, res, next) {
 //Setting port
 app.set('port', process.env.PORT || 8000);
 
+// CORS Middleware
+app.use(cors());
+
 //Setting view engine
 app.set('view engine', 'ejs');
 
 //Set Public folder as static folder
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
+
+app.use('/users', users);
 
 // le dice a express que el directorio 'uploads', es estatico.
 app.use("/uploads", express.static(path.join(__dirname, 'uploads')));
@@ -73,7 +100,6 @@ var upload = multer({ storage: storage });
 //Global variables for Zimmer Anfrage (NOT IN FHG APP)
 //HIER->>>>>>>>>
 var resultTransferData = [];
-
 var numberOfPersons = 0;
 var numberOfRooms = 0;
 var count = 0;
@@ -172,6 +198,12 @@ app.post("/upload", upload.array("uploads[]", 12), function (req, res) {
     routes.newFileUploaded();
     res.send(req.files);
 });
+
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/index.html'));
+});
+
 
 /*
  * Use your own validation token. Check that the token used in the Webhook

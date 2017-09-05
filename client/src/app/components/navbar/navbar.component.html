@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <ul class="nav navbar-nav">
+            <li><img alt="Brand" href="http://www.servicio.io" src="http://servicio.io/wp-content/uploads/2016/05/servicio-logo-hellblau-auto-ohne-hintergrund-1.png" style="height: 45px; width: auto; margin-top:15px; margin-right: 50px; text-align: left; display:table-cell; vertical-align:middle;"></li>
+            <li style="text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px"><a href="http://www.salzburgerhof.servicio.io/wlanlandingpage">LANDINGPAGE</a></li>
+            <li style="text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px"><a href="http://servicio.io/tester-info-2">INFO</a></li>
+        </ul>
+    </div><!--/.nav-collapse -->
+        <ul class="nav navbar-nav navbar-right">
+            <li *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/dashboard']">DASHBOARD</a></li>
+            <li *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions] = "{exact:true}"><a [routerLink]="['/login']">LOGIN</a></li>
+            <li *ngIf="authService.loggedIn()"><a (click)="onLogoutClick()" href="#">LOGOUT</a></li>
+            <li><img alt="Partner" href="http://www.salzburgerhof.servicio.io/wlanlandingpage" src="http://servicio.io/wp-content/uploads/2017/06/Salzburger-Hof_Marke_CMYK-ohne-hintergrund.png" style="height: 45px; width: auto; margin-top: 10px; margin-bottom: 5px; margin-right: 5px;float: right; text-align: right; right: 90%; display:table-cell; vertical-align:middle;"></li>
+        </ul>
+  </div>
+</nav>

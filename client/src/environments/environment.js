@@ -5,6 +5,6 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.environment = {
-    production: false
+    production: true
 };
 //# sourceMappingURL=environment.js.map

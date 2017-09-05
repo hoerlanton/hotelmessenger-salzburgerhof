@@ -22,9 +22,9 @@ var DashboardComponent = (function () {
         this.http = http;
         this._flashMessagesService = _flashMessagesService;
         this.filesToUpload = [];
-        this.scheduledDate = new Date(2016, 5, 10);
+        this.scheduledDate = new Date(2017, 1, 1);
         this.datepickerOpts = {
-            startDate: new Date(2016, 5, 10),
+            startDate: new Date(2017, 1, 1),
             autoclose: true,
             todayBtn: 'linked',
             todayHighlight: true,
@@ -51,6 +51,10 @@ var DashboardComponent = (function () {
             text: this.title,
             date: this.scheduledDate.toString(),
         };
+        if (scheduledMessage.text === undefined) {
+            this._flashMessagesService.show('Die Nachricht ist leer ... ', { cssClass: 'alert-danger', timeout: 20000 });
+            return;
+        }
         console.log(scheduledMessage);
         this.dashboardService.scheduleMessage(scheduledMessage)
             .subscribe(function (Messages) {
@@ -66,6 +70,10 @@ var DashboardComponent = (function () {
             text: this.title,
             date: this.dateGenerated
         };
+        if (newMessage.text === undefined) {
+            this._flashMessagesService.show('Die Nachricht ist leer ... ', { cssClass: 'alert-danger', timeout: 20000 });
+            return;
+        }
         console.log(newMessage);
         this.dashboardService.sendMessage(newMessage)
             .subscribe(function (Messages) {
@@ -79,12 +87,17 @@ var DashboardComponent = (function () {
         var _this = this;
         var formData = new FormData();
         var files = this.filesToUpload;
+        if (files[0] === undefined) {
+            this._flashMessagesService.show('Es wurde keine Datei ausgewählt ... ', { cssClass: 'alert-danger', timeout: 20000 });
+            return;
+        }
         formData.append('uploads[]', files[0], files[0]['name']);
+        console.log(formData);
         this.http.post('/upload', formData)
             .map(function (files) { return files.json(); }).map(function (res) {
             // 1st parameter is a flash message text
             // 2nd parameter is optional. You can pass object with options.
-            return _this._flashMessagesService.show('Datei wird angehängt. Einen Moment bitte ... Sobald diese Meldung verschwindet ist der Upload fertig', { cssClass: 'alert-success', timeout: 20000 });
+            return _this._flashMessagesService.show('Datei wurde angehängt und ist zum versenden bereit ... ', { cssClass: 'alert-success', timeout: 20000 });
         })
             .subscribe(function (files) { return console.log('files', files); });
     };
@@ -99,8 +112,8 @@ var DashboardComponent = (function () {
 DashboardComponent = __decorate([
     core_1.Component({
         selector: 'dashboard',
-        templateUrl: 'dashboard.component.html',
-        styleUrls: ['dashboard.component.css'],
+        templateUrl: './dashboard.component.html',
+        styleUrls: ['./dashboard.component.css'],
     }),
     __metadata("design:paramtypes", [dashboard_service_1.DashboardService, http_1.Http, angular2_flash_messages_1.FlashMessagesService])
 ], DashboardComponent);

@@ -10404,7 +10404,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<flash-messages></flash-messages>\n<dashboard></dashboard>\n\n\n"
+module.exports = "<app-navbar></app-navbar>\n<flash-messages></flash-messages>\n<router-outlet></router-outlet>"
 
 /***/ }),
 
@@ -10450,31 +10450,40 @@ AppComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/@angular/forms.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_moment__ = __webpack_require__("../../../../angular2-moment/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_angular2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_angular2_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_mdn_polyfills_Object_assign__ = __webpack_require__("../../../../mdn-polyfills/Object.assign.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_mdn_polyfills_Object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9_mdn_polyfills_Object_assign__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12_rxjs__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__bower_components_bootstrap_dist_css_bootstrap_css__ = __webpack_require__("../../../../../bower_components/bootstrap/dist/css/bootstrap.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__bower_components_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__bower_components_bootstrap_dist_css_bootstrap_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__bower_components_jquery_dist_jquery_min_js__ = __webpack_require__("../../../../../bower_components/jquery/dist/jquery.min.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__bower_components_jquery_dist_jquery_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__bower_components_jquery_dist_jquery_min_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__bower_components_bootstrap_datepicker_dist_css_bootstrap_datepicker3_min_css__ = __webpack_require__("../../../../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__bower_components_bootstrap_datepicker_dist_css_bootstrap_datepicker3_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__bower_components_bootstrap_datepicker_dist_css_bootstrap_datepicker3_min_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__bower_components_bootstrap_datepicker_dist_js_bootstrap_datepicker_min_js__ = __webpack_require__("../../../../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__bower_components_bootstrap_datepicker_dist_js_bootstrap_datepicker_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__bower_components_bootstrap_datepicker_dist_js_bootstrap_datepicker_min_js__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__node_modules_bootstrap_timepicker_css_bootstrap_timepicker_min_css__ = __webpack_require__("../../../../bootstrap-timepicker/css/bootstrap-timepicker.min.css");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__node_modules_bootstrap_timepicker_css_bootstrap_timepicker_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_17__node_modules_bootstrap_timepicker_css_bootstrap_timepicker_min_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__node_modules_bootstrap_timepicker_js_bootstrap_timepicker_min_js__ = __webpack_require__("../../../../bootstrap-timepicker/js/bootstrap-timepicker.min.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__node_modules_bootstrap_timepicker_js_bootstrap_timepicker_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18__node_modules_bootstrap_timepicker_js_bootstrap_timepicker_min_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_moment__ = __webpack_require__("../../../../angular2-moment/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_angular2_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ng2_datetime_ng2_datetime__ = __webpack_require__("../../../../ng2-datetime/ng2-datetime.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__ = __webpack_require__("../../../../../src/app/components/login/login.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_register_register_component__ = __webpack_require__("../../../../../src/app/components/register/register.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_home_home_component__ = __webpack_require__("../../../../../src/app/components/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_profile_profile_component__ = __webpack_require__("../../../../../src/app/components/profile/profile.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_navbar_navbar_component__ = __webpack_require__("../../../../../src/app/components/navbar/navbar.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__guards_auth_guard__ = __webpack_require__("../../../../../src/app/guards/auth.guard.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_mdn_polyfills_Object_assign__ = __webpack_require__("../../../../mdn-polyfills/Object.assign.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18_mdn_polyfills_Object_assign___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_18_mdn_polyfills_Object_assign__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/@angular/platform-browser-dynamic.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_common__ = __webpack_require__("../../../common/@angular/common.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs__ = __webpack_require__("../../../../rxjs/Rx.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21_rxjs___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_21_rxjs__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__bower_components_bootstrap_dist_css_bootstrap_css__ = __webpack_require__("../../../../../bower_components/bootstrap/dist/css/bootstrap.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__bower_components_bootstrap_dist_css_bootstrap_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22__bower_components_bootstrap_dist_css_bootstrap_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__bower_components_jquery_dist_jquery_min_js__ = __webpack_require__("../../../../../bower_components/jquery/dist/jquery.min.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__bower_components_jquery_dist_jquery_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_23__bower_components_jquery_dist_jquery_min_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__bower_components_bootstrap_datepicker_dist_css_bootstrap_datepicker3_min_css__ = __webpack_require__("../../../../../bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.min.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__bower_components_bootstrap_datepicker_dist_css_bootstrap_datepicker3_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_24__bower_components_bootstrap_datepicker_dist_css_bootstrap_datepicker3_min_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__bower_components_bootstrap_datepicker_dist_js_bootstrap_datepicker_min_js__ = __webpack_require__("../../../../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__bower_components_bootstrap_datepicker_dist_js_bootstrap_datepicker_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_25__bower_components_bootstrap_datepicker_dist_js_bootstrap_datepicker_min_js__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__node_modules_bootstrap_timepicker_css_bootstrap_timepicker_min_css__ = __webpack_require__("../../../../bootstrap-timepicker/css/bootstrap-timepicker.min.css");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__node_modules_bootstrap_timepicker_css_bootstrap_timepicker_min_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_26__node_modules_bootstrap_timepicker_css_bootstrap_timepicker_min_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__node_modules_bootstrap_timepicker_js_bootstrap_timepicker_min_js__ = __webpack_require__("../../../../bootstrap-timepicker/js/bootstrap-timepicker.min.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__node_modules_bootstrap_timepicker_js_bootstrap_timepicker_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_27__node_modules_bootstrap_timepicker_js_bootstrap_timepicker_min_js__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -10503,6 +10512,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
+
+
+
+
+var appRoutes = [
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__["a" /* LoginComponent */] },
+    { path: 'register', component: __WEBPACK_IMPORTED_MODULE_11__components_register_register_component__["a" /* RegisterComponent */] },
+    { path: 'login', component: __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__["a" /* LoginComponent */] },
+    { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_9__components_dashboard_dashboard_component__["a" /* DashboardComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_15__guards_auth_guard__["a" /* AuthGuard */]] },
+    { path: 'profile', component: __WEBPACK_IMPORTED_MODULE_13__components_profile_profile_component__["a" /* ProfileComponent */], canActivate: [__WEBPACK_IMPORTED_MODULE_15__guards_auth_guard__["a" /* AuthGuard */]] }
+];
 var AppModule = (function () {
     function AppModule() {
     }
@@ -10511,18 +10536,19 @@ var AppModule = (function () {
 AppModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_5__components_dashboard_dashboard_component__["a" /* DashboardComponent */]
+            __WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */], __WEBPACK_IMPORTED_MODULE_9__components_dashboard_dashboard_component__["a" /* DashboardComponent */], __WEBPACK_IMPORTED_MODULE_14__components_navbar_navbar_component__["a" /* NavbarComponent */], __WEBPACK_IMPORTED_MODULE_10__components_login_login_component__["a" /* LoginComponent */], __WEBPACK_IMPORTED_MODULE_11__components_register_register_component__["a" /* RegisterComponent */], __WEBPACK_IMPORTED_MODULE_12__components_home_home_component__["a" /* HomeComponent */], __WEBPACK_IMPORTED_MODULE_13__components_profile_profile_component__["a" /* ProfileComponent */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_8_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
+            __WEBPACK_IMPORTED_MODULE_6_ng2_datetime_ng2_datetime__["a" /* NKDatetimeModule */],
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
             __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */],
-            __WEBPACK_IMPORTED_MODULE_6_angular2_flash_messages__["FlashMessagesModule"],
-            __WEBPACK_IMPORTED_MODULE_7_angular2_moment__["MomentModule"]
+            __WEBPACK_IMPORTED_MODULE_3__angular_http__["HttpModule"],
+            __WEBPACK_IMPORTED_MODULE_4_angular2_flash_messages__["FlashMessagesModule"],
+            __WEBPACK_IMPORTED_MODULE_5_angular2_moment__["MomentModule"],
+            __WEBPACK_IMPORTED_MODULE_7__angular_router__["a" /* RouterModule */].forRoot(appRoutes)
         ],
-        providers: [],
-        bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
+        providers: [__WEBPACK_IMPORTED_MODULE_16__services_validate_service__["a" /* ValidateService */], __WEBPACK_IMPORTED_MODULE_17__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_15__guards_auth_guard__["a" /* AuthGuard */]],
+        bootstrap: [__WEBPACK_IMPORTED_MODULE_8__app_component__["a" /* AppComponent */]]
     })
 ], AppModule);
 
@@ -10538,7 +10564,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "html, body {\n    padding: 0;\n    margin: 0;\n    height: 100%;\n    background-color: #0a7a74;\n}\n\n.row {\n    height: 100%;\n}\n\n.row .container-fluid .col-md-4 {\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    border-left: 10px solid #0a7a74;\n    border-right: 10px solid #0a7a74;\n    height: 100%;\n    border-bottom: 40px solid #0a7a74;\n}\n\n.row .container-fluid .col-md-4 .row1 {\n    overflow: auto;\n    margin: 0 auto;\n    display: inline-block;\n    width: 100%;\n    height: 382.5px;\n    padding-top: 20px;\n}\n\n.row .container-fluid .col-md-4 .row3 {\n    margin: 0 auto;\n    display: inline-block;\n    width: 100%;\n    height: 800px;\n}\n\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 {\n    overflow: auto;\n    margin: 0 auto;\n    display: inline-block;\n    width: 100%;\n    height: 800px;\n    padding-top: 20px;\n}\n\n\n.row .container-fluid .col-md-4 h3 {\n    -ms-flex-line-pack: center;\n        align-content: center;\n    margin: 0 auto;\n    display: inline-block;\n    color: #0a7a74;\n    position: relative;\n    text-align:center;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group {\n    border-top:3px solid #0a7a74;\n    width: 105%;\n    padding: 10px 10px 10px 30px;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group3 {\n    border-top:3px solid #0a7a74;\n    border-bottom:20px solid #0a7a74;\n    width: 105%;\n    padding: 10px 10px 80px 30px;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group1 {\n    margin-top: 20px;\n    overflow: auto;\n    max-height: 300px;\n    display: inline-block;\n    border-top:3px solid #0a7a74;\n    width: 102%;\n    padding: 10px 10px 10px 25px;\n}\n\n.row1 .col {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n\n.row1 .col:nth-child(1) {\n    -webkit-box-ordinal-group: 2;\n        -ms-flex-order: 1;\n            order: 1;\n}\n.row1 .col:nth-child(2) {\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0;\n}\n.row1 .col:nth-child(3) {\n    -webkit-box-ordinal-group: 3;\n        -ms-flex-order: 2;\n            order: 2;\n}\n\n.row .col-md-4 .row2 {\n    padding-bottom: 10px;\n    position: relative;\n    min-height: 100%;\n    border-bottom: 1px solid red;\n}\n\n.card {\n    background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n    background: rgba(255,255,255, 1);\n}\n\n.row .container-fluid .col-md-4 .row1 .card p {\n    padding:10px 10px 10px 10px;\n}\n\n.row .container-fluid .col-md-4 .card p {\n    padding:10px 10px 10px 10px;\n}\n\n.row .container-fluid .col-md-4 .row3 .row1 p {\n    padding: 10px 10px 10px 10px;\n    background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n    background: rgba(255,255,255, 1);\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 .card p {\n    padding: 10px 10px 10px 10px;\n}", ""]);
+exports.push([module.i, "html, body {\n    padding: 0;\n    margin: 0;\n    height: 100%;\n    background-color: #0a7a74;\n}\n\n.row {\n    height: 100%;\n}\n\n.row .container-fluid .col-md-4 {\n    background-color: #f3efe4;\n    padding: 20px 10px 20px 10px;\n    border-left: 10px solid #0a7a74;\n    border-right: 10px solid #0a7a74;\n    height: 100%;\n    border-bottom: 40px solid #0a7a74;\n    border-top: 40px solid #0a7a74;\n}\n\n.row .container-fluid .col-md-4 .row1 {\n    overflow: auto;\n    margin: 0 auto;\n    display: inline-block;\n    width: 100%;\n    height: 382.5px;\n    padding-top: 20px;\n}\n\n.row .container-fluid .col-md-4 .row3 {\n    margin: 0 auto;\n    display: inline-block;\n    width: 100%;\n    height: 800px;\n}\n\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 {\n    overflow: auto;\n    margin: 0 auto;\n    display: inline-block;\n    width: 100%;\n    height: 800px;\n    padding-top: 20px;\n}\n\n\n.row .container-fluid .col-md-4 h3 {\n    -ms-flex-line-pack: center;\n        align-content: center;\n    margin: 0 auto;\n    display: inline-block;\n    color: #0a7a74;\n    position: relative;\n    text-align:center;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group {\n    border-top:3px solid #0a7a74;\n    width: 105%;\n    padding: 10px 10px 10px 30px;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group3 {\n    border-top:3px solid #0a7a74;\n    border-bottom:20px solid #0a7a74;\n    width: 105%;\n    padding: 10px 10px 80px 30px;\n}\n\n.row .container-fluid .col-md-4 .row3 .col-xs-12 .form-group1 {\n    margin-top: 20px;\n    overflow: auto;\n    max-height: 300px;\n    display: inline-block;\n    border-top:3px solid #0a7a74;\n    width: 102%;\n    padding: 10px 10px 10px 25px;\n}\n\n.row1 .col {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n\n.row1 .col:nth-child(1) {\n    -webkit-box-ordinal-group: 2;\n        -ms-flex-order: 1;\n            order: 1;\n}\n.row1 .col:nth-child(2) {\n    -webkit-box-ordinal-group: 1;\n        -ms-flex-order: 0;\n            order: 0;\n}\n.row1 .col:nth-child(3) {\n    -webkit-box-ordinal-group: 3;\n        -ms-flex-order: 2;\n            order: 2;\n}\n\n.row .col-md-4 .row2 {\n    padding-bottom: 10px;\n    position: relative;\n    min-height: 100%;\n    border-bottom: 1px solid red;\n}\n\n.card {\n    background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n    background: rgba(255,255,255, 1);\n}\n\n.row .container-fluid .col-md-4 .row1 .card p {\n    padding:10px 10px 10px 10px;\n}\n\n.row .container-fluid .col-md-4 .card p {\n    padding:10px 10px 10px 10px;\n}\n\n.row .container-fluid .col-md-4 .row3 .row1 p {\n    padding: 10px 10px 10px 10px;\n    background: rgb(255,255,255); /* Fall-back for browsers that don support rgba */\n    background: rgba(255,255,255, 1);\n}\n\n.row .container-fluid .col-md-4 .col-xs-12 .row1 .card p {\n    padding: 10px 10px 10px 10px;\n}", ""]);
 
 // exports
 
@@ -10551,7 +10577,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/components/dashboard/dashboard.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<html>\n<head>\n    <title>Dashboard</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-1.12.4.min.js\"   integrity=\"sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=\"   crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" href=\" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css\">\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/locales/bootstrap-datepicker.ar.min.js\"></script>\n    <script src=\"node_modules/core-js/client/shim.min.js\"></script>\n    <script src=\"<your-libs-directory>/object-assign.min.js\"></script>\n</head>\n\n<body>\n\n<nav class=\"navbar navbar-default\">\n    <div class=\"container-fluid\">\n        <div class=\"navbar-header\">\n            <ul class=\"nav navbar-nav\">\n                <li><img alt=\"Brand\" href=\"http://www.servicio.io\" src=\"http://servicio.io/wp-content/uploads/2016/05/servicio-logo-hellblau-auto-ohne-hintergrund-1.png\" style=\"height: 45px; width: auto; margin-top:15px; margin-right: 50px; text-align: left; display:table-cell; vertical-align:middle;\"></li>\n                <li style=\"text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px\"><a href=\"http://www.salzburgerhof.servicio.io/wlanlandingpage\">LANDINGPAGE</a></li>\n                <li style=\"text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px\"><a href=\"http://servicio.io/tester-info-2\">INFO</a></li>\n            </ul>\n        </div>\n        <ul class=\"nav navbar-nav navbar-right\">\n            <li><img alt=\"Partner\" href=\"http://www.salzburgerhof.servicio.io/wlanlandingpage\" src=\"http://servicio.io/wp-content/uploads/2017/06/Salzburger-Hof_Marke_CMYK-ohne-hintergrund.png\" style=\"height: 45px; width: auto; margin-top: 10px; margin-bottom: 5px; margin-right: 5px;float: right; text-align: right; display:table-cell; vertical-align:middle;\"></li>\n        </ul>\n    </div>\n</nav>\n\n<div class=\"row\">\n    <div class=\"container-fluid\">\n        <div class=\"col-md-4\"><h3>Angemeldete Gäste</h3>\n            <div class=\"row1\">\n                <div *ngFor=\"let guest of guests\">\n                    <div class=\"card\" *ngIf=\"guest.signed_up\">\n                        <img src=\"{{guest.profile_pic}}\" style=\"width: 60px;height: 60px;position: relative;border-radius: 50%;margin: 5px; margin-left: 60%;\">\n                        <p><b>Name:</b> {{guest.first_name + \" \"}}{{guest.last_name}}<br>\n                            <b>Geschlecht:</b> {{guest.gender}}<br>\n                            <b>Heimat:</b> {{guest.locale}}<br>\n                            <b>FacebookID:</b> {{guest.senderId}}<br>\n                            <b>Angemeldet am:</b> {{guest.signed_up_at}}<br>\n                        </p>\n                    </div>\n                </div>\n            </div><h3>Abgemeldete Gäste</h3>\n            <div class=\"row1\">\n                <div *ngFor=\"let guest of guests\">\n                    <div class=\"card\" *ngIf=\"!guest.signed_up\">\n                        <img *ngIf=\"guest.profile_pic\" src=\"{{guest.profile_pic}}\" style=\"width: 60px;height: 60px;position: relative;border-radius: 50%;margin: 5px; margin-left: 60%;\">\n                        <img *ngIf=\"guest.profile_pic===undefined\" src=\"http://servicio.io/wp-content/uploads/2017/08/profile-icon-9-2.png\" style=\"width: 60px;height: 60px;position: relative;border-radius: 50%;margin: 5px; margin-left: 60%;\">\n                        <p><b>Name:</b> {{guest.first_name + \" \"}}{{guest.last_name}}<br>\n                            <b>Geschlecht:</b> {{guest.gender}}<br>\n                            <b>Heimat:</b> {{guest.locale}}<br>\n                            <b>FacebookID:</b> {{guest.senderId}}<br>\n                            <b>Angemeldet am:</b> {{guest.signed_up_at}}<br>\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"col-md-4\"><h3>Nachricht senden</h3>\n            <div class=\"row3\">\n                <form class=\"SendMessage\" (submit)=\"sendMessage($event)\">\n                    <div class=\"col-xs-12\" style=\"padding: 0px 10px 10px 10px\">\n                        <div class=\"form-group2\">\n                            ​<textarea id=\"nachrichtSenden\" rows=\"5\" type=\"text\" style=\"margin-bottom: 10px\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\" required>\n                            </textarea>\n                            <input type=\"file\" style=\"float: left; margin-top: 10px; color: #0a7a74\" (change)=\"fileChangeEvent($event)\" placeholder=\"Upload file...\" />\n                            <button style=\" background-color: #0a7a74; float: right; color:  white\" type=\"button\" class=\"btn btn-send\" (click)=\"upload()\">DATEI ANHÄNGEN</button>\n                        </div>\n                    </div>\n                    <div class=\"col-xs-12\" style=\"padding: 0px 0px 0px 0px; right: 2.5%\">\n                        <div class=\"form-group\">\n                            <h6>Nachricht jetzt versenden</h6>\n                            <button style=\" background-color: #0a7a74; float: right; margin-bottom: 20px; margin-right: 20px; color: white\" type=\"submit\" class=\"btn btn-send\">JETZT SENDEN</button> <!--Title for button is same as that of the page-->\n                        </div>\n                    </div>\n                </form>\n                <div class=\"col-xs-12\" style=\"padding: 0px 0px 0px 0px; right: 2.5%\">\n                    <div class=\"form-group3\">\n                        <h6>Nachricht für später planen</h6>\n                        <datetime [timepicker]=\"{ showMeridian: false, minuteStep: 1 }\" [datepicker]=\"datepickerOpts\" [(ngModel)]=\"scheduledDate\" [hasClearButton]=\"true\"></datetime>\n                        <button style=\" background-color: #0a7a74; float: right; margin-top: 20px; margin-bottom: 20px; margin-right: 20px; color: white\" type=\"submit\" class=\"btn btn-send\" (click)=\"clicked()\">SPÄTER SENDEN</button> <!--Title for button is same as that of the page-->\n                    </div>\n                </div>\n                <h3 style=\"margin-top: 20px\">Gesendete Nachrichten</h3>\n                <div class=\"row1\">\n                    <div *ngFor=\"let Messages of sentMessages\">\n                        <p><b>Nachricht gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"col-md-4\"><h3>Geplante Nachrichten</h3>\n            <div class=\"col-xs-12\" style=\"padding: 0px 0px 0px 0px;\">\n                <div class=\"row1\">\n                    <div class=\"card\" style=\"margin-top: 10px\" *ngFor=\"let Messages of scheduledMessages\">\n                        <div [ngStyle]=\"{'background-color': Messages.isInThePast ? 'white' : '#0a7a74'}\">\n                            <div [ngStyle]=\"{'color': Messages.isInThePast ? 'black' : 'white'}\">\n                                <p *ngIf=\"Messages.isInThePast\"><b>Nachricht wurde gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>\n                                <p *ngIf=\"!Messages.isInThePast\"><b>Nachricht wird gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n</body>\n</html>\n"
+module.exports = "<html>\n<head>\n    <title>Dashboard</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n    <script src=\"https://code.jquery.com/jquery-1.12.4.min.js\"   integrity=\"sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=\"   crossorigin=\"anonymous\"></script>\n    <link rel=\"stylesheet\" href=\" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.css\">\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/locales/bootstrap-datepicker.ar.min.js\"></script>\n    <script src=\"node_modules/core-js/client/shim.min.js\"></script>\n    <script src=\"<your-libs-directory>/object-assign.min.js\"></script>\n</head>\n\n<body>\n\n<div class=\"row\">\n    <div class=\"container-fluid\">\n        <div class=\"col-md-4\"><h3>Angemeldete Gäste</h3>\n            <div class=\"row1\">\n                <div *ngFor=\"let guest of guests\">\n                    <div class=\"card\" *ngIf=\"guest.signed_up\">\n                        <img src=\"{{guest.profile_pic}}\" style=\"width: 60px;height: 60px;position: relative;border-radius: 50%;margin: 5px; margin-left: 60%;\">\n                        <p><b>Name:</b> {{guest.first_name + \" \"}}{{guest.last_name}}<br>\n                            <b>Geschlecht:</b> {{guest.gender}}<br>\n                            <b>Heimat:</b> {{guest.locale}}<br>\n                            <b>FacebookID:</b> {{guest.senderId}}<br>\n                            <b>Angemeldet am:</b> {{guest.signed_up_at}}<br>\n                        </p>\n                    </div>\n                </div>\n            </div><h3>Abgemeldete Gäste</h3>\n            <div class=\"row1\">\n                <div *ngFor=\"let guest of guests\">\n                    <div class=\"card\" *ngIf=\"!guest.signed_up\">\n                        <img *ngIf=\"guest.profile_pic\" src=\"{{guest.profile_pic}}\" style=\"width: 60px;height: 60px;position: relative;border-radius: 50%;margin: 5px; margin-left: 60%;\">\n                        <img *ngIf=\"guest.profile_pic===undefined\" src=\"http://servicio.io/wp-content/uploads/2017/08/profile-icon-9-2.png\" style=\"width: 60px;height: 60px;position: relative;border-radius: 50%;margin: 5px; margin-left: 60%;\">\n                        <p><b>Name:</b> {{guest.first_name + \" \"}}{{guest.last_name}}<br>\n                            <b>Geschlecht:</b> {{guest.gender}}<br>\n                            <b>Heimat:</b> {{guest.locale}}<br>\n                            <b>FacebookID:</b> {{guest.senderId}}<br>\n                            <b>Angemeldet am:</b> {{guest.signed_up_at}}<br>\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"col-md-4\"><h3>Nachricht senden</h3>\n            <div class=\"row3\">\n                <form class=\"SendMessage\" (submit)=\"sendMessage($event)\">\n                    <div class=\"col-xs-12\" style=\"padding: 0px 10px 10px 10px\">\n                        <div class=\"form-group2\">\n                            ​<textarea id=\"nachrichtSenden\" rows=\"5\" type=\"text\" style=\"margin-bottom: 10px\" [(ngModel)]=\"title\" name=\"title\" class=\"form-control\" required>\n                            </textarea>\n                            <input type=\"file\" style=\"float: left; margin-top: 10px; color: #0a7a74\" (change)=\"fileChangeEvent($event)\" placeholder=\"Upload file...\" />\n                            <button style=\" background-color: #0a7a74; float: right; color:  white\" type=\"button\" class=\"btn btn-send\" (click)=\"upload()\">DATEI ANHÄNGEN</button>\n                        </div>\n                    </div>\n                    <div class=\"col-xs-12\" style=\"padding: 0px 0px 0px 0px; right: 2.5%\">\n                        <div class=\"form-group\">\n                            <h6>Nachricht jetzt versenden</h6>\n                            <button style=\" background-color: #0a7a74; float: right; margin-bottom: 20px; margin-right: 20px; color: white\" type=\"submit\" class=\"btn btn-send\">JETZT SENDEN</button> <!--Title for button is same as that of the page-->\n                        </div>\n                    </div>\n                </form>\n                <div class=\"col-xs-12\" style=\"padding: 0px 0px 0px 0px; right: 2.5%\">\n                    <div class=\"form-group3\">\n                        <h6>Nachricht für später planen</h6>\n                        <datetime [timepicker]=\"{ showMeridian: false, minuteStep: 1 }\" [datepicker]=\"datepickerOpts\" [(ngModel)]=\"scheduledDate\" [hasClearButton]=\"true\"></datetime>\n                        <button style=\" background-color: #0a7a74; float: right; margin-top: 20px; margin-bottom: 20px; margin-right: 20px; color: white\" type=\"submit\" class=\"btn btn-send\" (click)=\"clicked()\">SPÄTER SENDEN</button> <!--Title for button is same as that of the page-->\n                    </div>\n                </div>\n                <h3 style=\"margin-top: 20px\">Gesendete Nachrichten</h3>\n                <div class=\"row1\">\n                    <div *ngFor=\"let Messages of sentMessages\">\n                        <p><b>Nachricht gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"col-md-4\"><h3>Geplante Nachrichten</h3>\n            <div class=\"col-xs-12\" style=\"padding: 0px 0px 0px 0px;\">\n                <div class=\"row1\">\n                    <div class=\"card\" style=\"margin-top: 10px\" *ngFor=\"let Messages of scheduledMessages\">\n                        <div [ngStyle]=\"{'background-color': Messages.isInThePast ? 'white' : '#0a7a74'}\">\n                            <div [ngStyle]=\"{'color': Messages.isInThePast ? 'black' : 'white'}\">\n                                <p *ngIf=\"Messages.isInThePast\"><b>Nachricht wurde gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>\n                                <p *ngIf=\"!Messages.isInThePast\"><b>Nachricht wird gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n</body>\n</html>\n"
 
 /***/ }),
 
@@ -10684,13 +10710,573 @@ DashboardComponent = __decorate([
         template: __webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.html"),
         styles: [__webpack_require__("../../../../../src/app/components/dashboard/dashboard.component.css")],
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_dashboard_service__["a" /* DashboardService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_dashboard_service__["a" /* DashboardService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["b" /* Http */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_angular2_flash_messages__["FlashMessagesService"]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_dashboard_service__["a" /* DashboardService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_dashboard_service__["a" /* DashboardService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_http__["Http"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_5_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5_angular2_flash_messages__["FlashMessagesService"]) === "function" && _c || Object])
 ], DashboardComponent);
 
 var _a, _b, _c;
 // html file deleted:
 // {{"Kann zahlen: " + guest.is_payment_enabled}} 
 //# sourceMappingURL=dashboard.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/home/home.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/home/home.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"jumbotron text-center\">\n  <h1>MEAN Authentication App</h1>\n  <p class=\"lead\">Welcome to our custom MEAN authentication application built from scratch</p>\n  <div>\n    <a class=\"btn btn-primary\" [routerLink]=\"['/register']\">Register</a> <a class=\"btn btn-default\" [routerLink]=\"['/login']\">Login</a>\n  </div>\n</div>\n\n<div class=\"row\">\n  <div class=\"col-md-4\">\n    <h3>Express Backend</h3>\n    <p>A rock solid Node.js/Express server using Mongoose to organize models and query the database</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>Angular-CLI</h3>\n    <p>Angular-CLI to generate components, services and more. Local dev server and easy compilation</p>\n  </div>\n  <div class=\"col-md-4\">\n    <h3>JWT Tokens</h3>\n    <p>Full featured authentication using JSON web tokens. Login and store user data</p>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/home/home.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var HomeComponent = (function () {
+    function HomeComponent() {
+    }
+    HomeComponent.prototype.ngOnInit = function () {
+    };
+    return HomeComponent;
+}());
+HomeComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-home',
+        template: __webpack_require__("../../../../../src/app/components/home/home.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/home/home.component.css")]
+    }),
+    __metadata("design:paramtypes", [])
+], HomeComponent);
+
+//# sourceMappingURL=home.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/login/login.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "html, body {\n    padding: 0;\n    margin: 0;\n    height: 100%;\n    background-color: #0a7a74;\n}\n\n.row {\n    height: 100%;\n    background-color: #0a7a74;\n}\n\n.row .container-fluid {\n    background-color: #0a7a74;\n    height: 100%;\n}\n\n.row .container-fluid .col-md-4 {\n    background-color: #0a7a74;\n    padding: 20px 10px 20px 10px;\n    border-left: 10px solid #0a7a74;\n    border-right: 10px solid #0a7a74;\n    height: 100%;\n    border-bottom: 40px solid #0a7a74;\n}\n\n\n\n\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/login/login.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<html>\n<head>\n  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n</head>\n<body>\n<div class=\"row\">\n<div class=\"container-fluid\">\n    <div class=\"col-md-4\">\n    </div>\n    <div class=\"col-md-4\">\n    <h2 class=\"page-header\" style=\"color: #FFFFFF\">Login</h2>\n      <form (submit)=\"onLoginSubmit()\">\n        <div class=\"form-group\">\n          <label style=\"color: #FFFFFF\">Benutzername</label>\n          <input type=\"text\" class=\"form-control\" [(ngModel)]=\"username\" name=\"username\">\n        </div>\n        <div class=\"form-group\">\n          <label style=\"color: #FFFFFF\">Passwort</label>\n          <input type=\"password\" class=\"form-control\" [(ngModel)]=\"password\" name=\"password\">\n        </div>\n        <input type=\"submit\" class=\"btn btn-primary\" style=\"background-color: #ffffff; color: #0a7a74\" value=\"Login\">\n      </form>\n    </div>\n    <div class=\"col-md-4\">\n    </div>\n</div>\n</div>\n</body>\n</html>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/login/login.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var LoginComponent = (function () {
+    function LoginComponent(authService, router, flashMessage) {
+        this.authService = authService;
+        this.router = router;
+        this.flashMessage = flashMessage;
+    }
+    LoginComponent.prototype.ngOnInit = function () {
+    };
+    LoginComponent.prototype.onLoginSubmit = function () {
+        var _this = this;
+        var user = {
+            username: this.username,
+            password: this.password
+        };
+        console.log("Login submit");
+        this.authService.authenticateUser(user).subscribe(function (data) {
+            if (data.success) {
+                _this.authService.storeUserData(data.token, data.user);
+                _this.flashMessage.show('You are now logged in', {
+                    cssClass: 'alert-success',
+                    timeout: 5000
+                });
+                _this.router.navigate(['dashboard']);
+            }
+            else {
+                _this.flashMessage.show(data.msg, {
+                    cssClass: 'alert-danger',
+                    timeout: 5000
+                });
+                _this.router.navigate(['login']);
+            }
+        });
+    };
+    return LoginComponent;
+}());
+LoginComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-login',
+        template: __webpack_require__("../../../../../src/app/components/login/login.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/login/login.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _c || Object])
+], LoginComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=login.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/navbar/navbar.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".navbar navbar-default {\n    margin-bottom: 0px;\n}", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/navbar/navbar.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav class=\"navbar navbar-default\">\n  <div class=\"container-fluid\">\n    <div class=\"navbar-header\">\n        <ul class=\"nav navbar-nav\">\n            <li><img alt=\"Brand\" href=\"http://www.servicio.io\" src=\"http://servicio.io/wp-content/uploads/2016/05/servicio-logo-hellblau-auto-ohne-hintergrund-1.png\" style=\"height: 45px; width: auto; margin-top:15px; margin-right: 50px; text-align: left; display:table-cell; vertical-align:middle;\"></li>\n            <li style=\"text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px\"><a href=\"http://www.salzburgerhof.servicio.io/wlanlandingpage\">LANDINGPAGE</a></li>\n            <li style=\"text-align: left; display:table-cell; vertical-align:middle; margin-bottom: 5px\"><a href=\"http://servicio.io/tester-info-2\">INFO</a></li>\n        </ul>\n    </div><!--/.nav-collapse -->\n        <ul class=\"nav navbar-nav navbar-right\">\n            <li *ngIf=\"authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/dashboard']\">DASHBOARD</a></li>\n            <li *ngIf=\"!authService.loggedIn()\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions] = \"{exact:true}\"><a [routerLink]=\"['/login']\">LOGIN</a></li>\n            <li *ngIf=\"authService.loggedIn()\"><a (click)=\"onLogoutClick()\" href=\"#\">LOGOUT</a></li>\n            <li><img alt=\"Partner\" href=\"http://www.salzburgerhof.servicio.io/wlanlandingpage\" src=\"http://servicio.io/wp-content/uploads/2017/06/Salzburger-Hof_Marke_CMYK-ohne-hintergrund.png\" style=\"height: 45px; width: auto; margin-top: 10px; margin-bottom: 5px; margin-right: 5px;float: right; text-align: right; right: 90%; display:table-cell; vertical-align:middle;\"></li>\n        </ul>\n  </div>\n</nav>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/navbar/navbar.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NavbarComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NavbarComponent = (function () {
+    function NavbarComponent(authService, router, flashMessage) {
+        this.authService = authService;
+        this.router = router;
+        this.flashMessage = flashMessage;
+    }
+    NavbarComponent.prototype.ngOnInit = function () {
+    };
+    NavbarComponent.prototype.onLogoutClick = function () {
+        this.authService.logout();
+        this.flashMessage.show('You are logged out', {
+            cssClass: 'alert-success',
+            timeout: 3000
+        });
+        this.router.navigate(['/login']);
+        return false;
+    };
+    return NavbarComponent;
+}());
+NavbarComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-navbar',
+        template: __webpack_require__("../../../../../src/app/components/navbar/navbar.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/navbar/navbar.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _c || Object])
+], NavbarComponent);
+
+var _a, _b, _c;
+//# sourceMappingURL=navbar.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/profile/profile.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/profile/profile.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div *ngIf=\"user\">\n  <h2 class=\"page-header\">{{user.name}}</h2>\n  <ul class=\"list-group\">\n    <li class=\"list-group-item\">Username: {{user.username}}</li>\n    <li class=\"list-group-item\">Email: {{user.email}}</li>\n  </ul>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/profile/profile.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfileComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ProfileComponent = (function () {
+    function ProfileComponent(authService, router) {
+        this.authService = authService;
+        this.router = router;
+    }
+    ProfileComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.authService.getProfile().subscribe(function (profile) {
+            _this.user = profile.user;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    return ProfileComponent;
+}());
+ProfileComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-profile',
+        template: __webpack_require__("../../../../../src/app/components/profile/profile.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/profile/profile.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], ProfileComponent);
+
+var _a, _b;
+//# sourceMappingURL=profile.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/register/register.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/register/register.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2 class=\"page-header\">Register</h2>\n<form (submit)=\"onRegisterSubmit()\">\n  <div class=\"form-group\">\n    <label>Name</label>\n    <input type=\"text\" [(ngModel)]=\"name\" name=\"name\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Username</label>\n    <input type=\"text\" [(ngModel)]=\"username\" name=\"username\" class=\"form-control\">\n  </div>\n  <div class=\"form-group\">\n    <label>Email</label>\n    <input type=\"text\" [(ngModel)]=\"email\" name=\"email\" class=\"form-control\" >\n  </div>\n  <div class=\"form-group\">\n    <label>Password</label>\n    <input type=\"password\" [(ngModel)]=\"password\" name=\"password\" class=\"form-control\">\n  </div>\n  <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\">\n</form>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/register/register.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_validate_service__ = __webpack_require__("../../../../../src/app/services/validate.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__ = __webpack_require__("../../../../angular2-flash-messages/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var RegisterComponent = (function () {
+    function RegisterComponent(validateService, flashMessage, authService, router) {
+        this.validateService = validateService;
+        this.flashMessage = flashMessage;
+        this.authService = authService;
+        this.router = router;
+    }
+    RegisterComponent.prototype.ngOnInit = function () {
+    };
+    RegisterComponent.prototype.onRegisterSubmit = function () {
+        var _this = this;
+        var user = {
+            name: this.name,
+            email: this.email,
+            username: this.username,
+            password: this.password
+        };
+        // Required Fields
+        if (!this.validateService.validateRegister(user)) {
+            this.flashMessage.show('Please fill in all fields', { cssClass: 'alert-danger', timeout: 3000 });
+            return false;
+        }
+        // Validate Email
+        if (!this.validateService.validateEmail(user.email)) {
+            this.flashMessage.show('Please use a valid email', { cssClass: 'alert-danger', timeout: 3000 });
+            return false;
+        }
+        // Register user
+        this.authService.registerUser(user).subscribe(function (data) {
+            if (data.success) {
+                _this.flashMessage.show('You are now registered and can log in', { cssClass: 'alert-success', timeout: 3000 });
+                _this.router.navigate(['/login']);
+            }
+            else {
+                _this.flashMessage.show('Something went wrong', { cssClass: 'alert-danger', timeout: 3000 });
+                _this.router.navigate(['/register']);
+            }
+        });
+    };
+    return RegisterComponent;
+}());
+RegisterComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+        selector: 'app-register',
+        template: __webpack_require__("../../../../../src/app/components/register/register.component.html"),
+        styles: [__webpack_require__("../../../../../src/app/components/register/register.component.css")]
+    }),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__services_validate_service__["a" /* ValidateService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3_angular2_flash_messages__["FlashMessagesService"]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__angular_router__["b" /* Router */]) === "function" && _d || Object])
+], RegisterComponent);
+
+var _a, _b, _c, _d;
+//# sourceMappingURL=register.component.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/guards/auth.guard.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/@angular/router.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthGuard; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var AuthGuard = (function () {
+    function AuthGuard(authService, router) {
+        this.authService = authService;
+        this.router = router;
+    }
+    AuthGuard.prototype.canActivate = function () {
+        if (this.authService.loggedIn()) {
+            console.log('CAN ACTIVATE IS TRUE');
+            return true;
+        }
+        else {
+            this.router.navigate(['/login']);
+            console.log('CAN ACTIVATE IS FALSE');
+            return false;
+        }
+    };
+    return AuthGuard;
+}());
+AuthGuard = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__services_auth_service__["a" /* AuthService */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */]) === "function" && _b || Object])
+], AuthGuard);
+
+var _a, _b;
+//# sourceMappingURL=auth.guard.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/auth.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/@angular/http.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt__ = __webpack_require__("../../../../angular2-jwt/angular2-jwt.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_angular2_jwt___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var AuthService = (function () {
+    function AuthService(http) {
+        this.http = http;
+        this.isDev = true; // Change to false before deployment
+    }
+    AuthService.prototype.registerUser = function (user) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        var ep = this.prepEndpoint('users/register');
+        return this.http.post(ep, user, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    // Gets called from submit login form
+    AuthService.prototype.authenticateUser = function (user) {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        headers.append('Content-Type', 'application/json');
+        var ep = this.prepEndpoint('users/authenticate');
+        return this.http.post(ep, user, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    AuthService.prototype.getProfile = function () {
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
+        this.loadToken();
+        headers.append('Authorization', this.authToken);
+        headers.append('Content-Type', 'application/json');
+        var ep = this.prepEndpoint('users/profile');
+        return this.http.get(ep, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
+    // Gets called from submit login form
+    AuthService.prototype.storeUserData = function (token, user) {
+        localStorage.setItem('id_token', token);
+        localStorage.setItem('user', JSON.stringify(user));
+        this.authToken = token;
+        this.user = user;
+        console.log(JSON.stringify(user));
+    };
+    AuthService.prototype.loadToken = function () {
+        var token = localStorage.getItem('id_token');
+        this.authToken = token;
+    };
+    AuthService.prototype.loggedIn = function () {
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3_angular2_jwt__["tokenNotExpired"])('id_token');
+    };
+    AuthService.prototype.logout = function () {
+        this.authToken = null;
+        this.user = null;
+        localStorage.clear();
+    };
+    AuthService.prototype.prepEndpoint = function (ep) {
+        if (this.isDev) {
+            return ep;
+        }
+        else {
+            return 'http://localhost:8000/' + ep;
+        }
+    };
+    return AuthService;
+}());
+AuthService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
+], AuthService);
+
+var _a;
+//# sourceMappingURL=auth.service.js.map
 
 /***/ }),
 
@@ -10733,14 +11319,14 @@ var DashboardService = (function () {
             .map(function (res) { return res.json(); });
     };
     DashboardService.prototype.sendMessage = function (newMessage) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('guestsMessage', newMessage, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     DashboardService.prototype.scheduleMessage = function (scheduledMessage) {
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["c" /* Headers */]();
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('guestsMessage', scheduledMessage, { headers: headers })
@@ -10750,11 +11336,53 @@ var DashboardService = (function () {
 }());
 DashboardService = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["Http"]) === "function" && _a || Object])
 ], DashboardService);
 
 var _a;
 //# sourceMappingURL=dashboard.service.js.map
+
+/***/ }),
+
+/***/ "../../../../../src/app/services/validate.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/@angular/core.es5.js");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ValidateService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ValidateService = (function () {
+    function ValidateService() {
+    }
+    ValidateService.prototype.validateRegister = function (user) {
+        if (user.name === undefined || user.email === undefined || user.username === undefined || user.password === undefined) {
+            return false;
+        }
+        else {
+            return true;
+        }
+    };
+    ValidateService.prototype.validateEmail = function (email) {
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(email);
+    };
+    return ValidateService;
+}());
+ValidateService = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
+    __metadata("design:paramtypes", [])
+], ValidateService);
+
+//# sourceMappingURL=validate.service.js.map
 
 /***/ }),
 
