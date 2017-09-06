@@ -81,6 +81,8 @@ var DashboardComponent = (function () {
             _this.title = '';
         });
     };
+    DashboardComponent.prototype.ngOnInit = function () {
+    };
     DashboardComponent.prototype.delete = function (Messages, i) {
         var _this = this;
         console.log(Messages);
@@ -89,8 +91,6 @@ var DashboardComponent = (function () {
             .subscribe(function (Messages) {
             _this.scheduledMessages.splice(i, 1);
         });
-    };
-    DashboardComponent.prototype.ngOnInit = function () {
     };
     DashboardComponent.prototype.upload = function () {
         var _this = this;

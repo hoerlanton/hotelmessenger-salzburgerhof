@@ -92,6 +92,10 @@ export class DashboardComponent implements OnInit {
             });
     }
 
+    ngOnInit() {
+
+    }
+
     delete(Messages, i) {
         console.log(Messages);
         console.log(i);
@@ -99,10 +103,6 @@ export class DashboardComponent implements OnInit {
             .subscribe(Messages => {
                 this.scheduledMessages.splice (i, 1);
             });
-    }
-
-    ngOnInit() {
-
     }
 
     upload() {

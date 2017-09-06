@@ -60,7 +60,7 @@ router.get('/guestsMessages', function(req, res, next) {
 router.get('/guestsScheduledMessages', function(req, res, next) {
     console.log("guestsMessages get called");
     //Get guests from Mongo DB
-    db[0].find(function(err, message){
+    db.salzburgerhofScheduledMessages.find(function(err, message){
         if (err){
             res.send(err);
         }
@@ -101,7 +101,7 @@ router.post('/guests', function(req, res, next) {
     }
 });
 
-//Save new guests
+//Delete scheduled message
 router.post('/deleteScheduledMessage', function(req, res, next) {
     //JSON string is parsed to a JSON object
     console.log("Delete request made to /deleteScheduledMessage");

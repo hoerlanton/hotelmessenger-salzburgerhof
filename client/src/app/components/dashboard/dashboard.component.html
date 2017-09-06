@@ -81,8 +81,8 @@
         <div class="col-md-4"><h3>Geplante Nachrichten</h3>
             <div class="col-xs-12" style="padding: 0px 0px 0px 0px;">
                 <div class="row1">
-                    <div class="card" style="margin-top: 10px" *ngFor="let Messages of scheduledMessages; let i = index">
-                        <button style=" background-color: #0d2f2e; float: right; color: white" type="submit" class="btn btn-send" (click)="delete(Messages, i)">x</button> <!--Title for button is same as that of the page-->
+                    <div class="card" style="margin-top: 10px" *ngFor="let Messages of scheduledMessages; let z = index">
+                        <button style=" background-color: #0d2f2e; float: right; color: white" type="submit" class="btn btn-send" (click)="delete(Messages, z)">x</button>
                         <div [ngStyle]="{'background-color': Messages.isInThePast ? 'white' : '#0a7a74'}">
                             <div [ngStyle]="{'color': Messages.isInThePast ? 'black' : 'white'}">
                                 <p *ngIf="Messages.isInThePast"><b>Nachricht wurde gesendet am: </b>{{Messages.date | amLocale:'de' | amDateFormat:'MMMM Do YYYY, h:mm:ss a'}}<br><b>Nachricht: </b>{{Messages.text}}<br><b>Datei im Anhang: </b>{{Messages.uploaded_file}}</p>
