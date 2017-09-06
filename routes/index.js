@@ -11,7 +11,9 @@ const
     db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['salzburgerhofMessages', 'salzburgerhofGaeste', 'salzburgerhofScheduledMessages']),
     config = require('config'),
     CronJob = require('cron').CronJob,
-    moment = require('moment-timezone');
+    moment = require('moment-timezone'),
+    configDB = require('../config/database');
+
 
 // HOST_URL used for DB calls - SERVER_URL without https or https://
 const HOST_URL = config.get('hostURL');
@@ -58,7 +60,7 @@ router.get('/guestsMessages', function(req, res, next) {
 router.get('/guestsScheduledMessages', function(req, res, next) {
     console.log("guestsMessages get called");
     //Get guests from Mongo DB
-    db.salzburgerhofScheduledMessages.find(function(err, message){
+    db[0].find(function(err, message){
         if (err){
             res.send(err);
         }
@@ -97,6 +99,22 @@ router.post('/guests', function(req, res, next) {
             res.json(guest);
         });
     }
+});
+
+//Save new guests
+router.post('/deleteScheduledMessage', function(req, res, next) {
+    //JSON string is parsed to a JSON object
+    console.log("Delete request made to /deleteScheduledMessage");
+    let messageToDelete = req.body;
+    console.log(JSON.stringify(messageToDelete));
+        db.salzburgerhofScheduledMessages.remove({
+
+                date: messageToDelete.date
+            },
+            {
+                justOne: true,
+            });
+        res.json(messageToDelete);
 });
 
 //Update guest

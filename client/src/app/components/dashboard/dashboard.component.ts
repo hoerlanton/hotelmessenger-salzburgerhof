@@ -92,6 +92,15 @@ export class DashboardComponent implements OnInit {
             });
     }
 
+    delete(Messages, i) {
+        console.log(Messages);
+        console.log(i);
+        this.dashboardService.deleteMessage(Messages)
+            .subscribe(Messages => {
+                this.scheduledMessages.splice (i, 1);
+            });
+    }
+
     ngOnInit() {
 
     }

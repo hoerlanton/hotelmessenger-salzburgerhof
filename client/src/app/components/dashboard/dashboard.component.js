@@ -81,6 +81,15 @@ var DashboardComponent = (function () {
             _this.title = '';
         });
     };
+    DashboardComponent.prototype.delete = function (Messages, i) {
+        var _this = this;
+        console.log(Messages);
+        console.log(i);
+        this.dashboardService.deleteMessage(Messages)
+            .subscribe(function (Messages) {
+            _this.scheduledMessages.splice(i, 1);
+        });
+    };
     DashboardComponent.prototype.ngOnInit = function () {
     };
     DashboardComponent.prototype.upload = function () {

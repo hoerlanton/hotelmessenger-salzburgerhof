@@ -19,9 +19,6 @@ export class DashboardService {
         return this.http.get('guestsScheduledMessages')
             .map(res => res.json());
     }
-
-
-
     sendMessage(newMessage) {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
@@ -29,12 +26,18 @@ export class DashboardService {
         return this.http.post('guestsMessage', newMessage, {headers: headers} )
             .map(res => res.json());
     }
-
     scheduleMessage(scheduledMessage) {
         var headers = new Headers();
         headers.append('Content-Type', 'application/json');
         console.log(headers);
         return this.http.post('guestsMessage', scheduledMessage, {headers: headers} )
+            .map(res => res.json());
+    }
+    deleteMessage(Messages) {
+        var headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        console.log(headers);
+        return this.http.post('deleteScheduledMessage', Messages, {headers: headers} )
             .map(res => res.json());
     }
 }

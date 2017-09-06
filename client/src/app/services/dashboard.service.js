@@ -43,6 +43,13 @@ var DashboardService = (function () {
         return this.http.post('guestsMessage', scheduledMessage, { headers: headers })
             .map(function (res) { return res.json(); });
     };
+    DashboardService.prototype.deleteMessage = function (Messages) {
+        var headers = new http_1.Headers();
+        headers.append('Content-Type', 'application/json');
+        console.log(headers);
+        return this.http.post('deleteScheduledMessage', Messages, { headers: headers })
+            .map(function (res) { return res.json(); });
+    };
     return DashboardService;
 }());
 DashboardService = __decorate([
