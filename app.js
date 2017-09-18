@@ -20,6 +20,20 @@ const
   configDatabase = require('./config/database'),
   users = require('./routes/users');
 
+var storage = multer.diskStorage({
+    // Destination of upload
+    destination: function (req, file, cb) {
+        cb(null, './uploads/');
+    },
+    // Rename of file
+    filename: function (req, file, cb) {
+        cb(null, Math.random() + "*" + file.originalname.replace(/ /g, ""));
+    }
+});
+
+//Store uploaded files - destination set / name of file set
+var upload = multer({ storage: storage });
+
 
 //Bodyparser middleware
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -67,10 +81,9 @@ app.set('view engine', 'ejs');
 //Set Public folder as static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-
 app.use('/users', users);
 
-// le dice a express que el directorio 'uploads', es estatico.
+//Set uploads folder as static folder
 app.use("/uploads", express.static(path.join(__dirname, 'uploads')));
 
 //Use ./routes/index.js as routes root /
@@ -85,19 +98,6 @@ var b = "";
 // c = messageData.recipient.id; called in updateDb function -> if sendAPI call failes
 var c = "";
 //Store uploaded files - destination set / name of file set
-var storage = multer.diskStorage({
-    // Destination of upload
-    destination: function (req, file, cb) {
-        cb(null, './uploads/');
-    },
-    // Rename of file
-    filename: function (req, file, cb) {
-        cb(null, Math.random() + "*" + file.originalname.replace(/ /g, ""));
-    }
-});
-//Store uploaded files - destination set / name of file set
-var upload = multer({ storage: storage });
-
 
 //Global variables for Zimmer Anfrage (NOT IN FHG APP)
 //HIER->>>>>>>>>
