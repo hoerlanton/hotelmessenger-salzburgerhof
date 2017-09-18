@@ -234,7 +234,7 @@ app.post('/webhook', function (req, res) {
   var data = req.body;
 
   // Make sure this is a page subscription
-  if (data.object == 'page') {
+  if (data.object === 'page') {
     // Iterate over each entry
     // There may be multiple if batched
     data.entry.forEach(function(pageEntry) {
@@ -318,7 +318,7 @@ function verifyRequestSignature(req, res, buf) {
                         .update(buf)
                         .digest('hex');
 
-    if (signatureHash != expectedHash) {
+    if (signatureHash !== expectedHash) {
       throw new Error("Couldn't validate the request signature.");
     }
   }
