@@ -16,24 +16,7 @@ const
   moment = require('moment-timezone'),
   cors = require('cors'),
   passport = require('passport'),
-  mongoose = require('mongoose'),
-  configDatabase = require('./config/database'),
   users = require('./routes/users');
-
-var storage = multer.diskStorage({
-    // Destination of upload
-    destination: function (req, file, cb) {
-        cb(null, './uploads/');
-    },
-    // Rename of file
-    filename: function (req, file, cb) {
-        cb(null, Math.random() + "*" + file.originalname.replace(/ /g, ""));
-    }
-});
-
-//Store uploaded files - destination set / name of file set
-var upload = multer({ storage: storage });
-
 
 //Bodyparser middleware
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -44,30 +27,18 @@ app.use(bodyParser.urlencoded({ extended: false}));
 //{ verify: verifyRequestSignature } deleted from function because it throws errors if JSON.parse function is called
 app.use(bodyParser.json());
 
-// Passport Middleware
-app.use(passport.initialize());
-app.use(passport.session());
-
-require('./config/passport')(passport);
-
-
-// Connect To Database
-mongoose.connect(configDatabase.database, { useMongoClient: true });
-
-// On Connection
-mongoose.connection.once('open', () => {
-    console.log('Connected to database '+configDatabase.database);
-});
-
-// On Error
-mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
-
 // para CORN
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
+
+// Passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+require('./config/passport')(passport);
 
 //Setting port
 app.set('port', process.env.PORT || 8000);
@@ -98,6 +69,19 @@ var b = "";
 // c = messageData.recipient.id; called in updateDb function -> if sendAPI call failes
 var c = "";
 //Store uploaded files - destination set / name of file set
+var storage = multer.diskStorage({
+    // Destination of upload
+    destination: function (req, file, cb) {
+        cb(null, './uploads/');
+    },
+    // Rename of file
+    filename: function (req, file, cb) {
+        cb(null, Math.random() + "*" + file.originalname.replace(/ /g, ""));
+    }
+});
+
+//Store uploaded files - destination set / name of file set
+var upload = multer({ storage: storage });
 
 //Global variables for Zimmer Anfrage (NOT IN FHG APP)
 //HIER->>>>>>>>>
