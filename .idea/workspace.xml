@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31aa1f9b-f5e8-4109-bab4-a5fc224afd25" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,8 +25,18 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2625">
-              <caret line="175" column="42" lean-forward="true" selection-start-line="175" selection-start-column="42" selection-end-line="175" selection-end-column="42" />
+            <state relative-caret-position="315">
+              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -36,16 +45,16 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="342">
+              <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
               <folding>
-                <element signature="e#5880#6203#0" expanded="false" />
-                <element signature="e#6522#7822#0" expanded="false" />
-                <element signature="e#8002#8554#0" expanded="false" />
+                <element signature="e#6285#6608#0" expanded="false" />
+                <element signature="e#6927#8227#0" expanded="false" />
+                <element signature="e#8407#8959#0" expanded="false" />
                 <element signature="n#!!block;n#verifyRequestSignature#0" expanded="false" />
                 <element signature="n#!!block;n#receivedAuthentication#0" expanded="false" />
                 <element signature="n#!!block;n#postNewUserToDB#0" expanded="false" />
-                <element signature="e#24908#25146#0" expanded="false" />
+                <element signature="e#25313#25551#0" expanded="false" />
                 <element signature="n#!!block;n#receivedDeliveryConfirmation#0" expanded="false" />
                 <element signature="n#!!block;n#receivedPostback#0" expanded="false" />
                 <element signature="n#!!block;n#sendWelcomeMessage#0" expanded="false" />
@@ -127,16 +136,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.component.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/app.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -207,6 +206,7 @@
       <find>open</find>
       <find>upload</find>
       <find>configDatabase</find>
+      <find>mongoose</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/client/node_modules/angular-jwt</dir>
@@ -354,6 +354,11 @@
             <path>
               <item name="hotelmessenger-salzburgerhof" type="b2602c69:ProjectViewProjectNode" />
               <item name="hotelmessenger-salzburgerhof" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hotelmessenger-salzburgerhof" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hotelmessenger-salzburgerhof" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -436,12 +441,12 @@
       <workItem from="1503304951668" duration="26363000" />
       <workItem from="1504454616450" duration="1396000" />
       <workItem from="1504511695422" duration="48421000" />
-      <workItem from="1505717958740" duration="4450000" />
+      <workItem from="1505717958740" duration="4699000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180874000" />
+    <option name="totallyTimeSpent" value="181123000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -827,14 +832,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/default.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -929,24 +926,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2625">
-          <caret line="175" column="42" lean-forward="true" selection-start-line="175" selection-start-column="42" selection-end-line="175" selection-end-column="42" />
+        <state relative-caret-position="315">
+          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="342">
+          <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
           <folding>
-            <element signature="e#5880#6203#0" expanded="false" />
-            <element signature="e#6522#7822#0" expanded="false" />
-            <element signature="e#8002#8554#0" expanded="false" />
+            <element signature="e#6285#6608#0" expanded="false" />
+            <element signature="e#6927#8227#0" expanded="false" />
+            <element signature="e#8407#8959#0" expanded="false" />
             <element signature="n#!!block;n#verifyRequestSignature#0" expanded="false" />
             <element signature="n#!!block;n#receivedAuthentication#0" expanded="false" />
             <element signature="n#!!block;n#postNewUserToDB#0" expanded="false" />
-            <element signature="e#24908#25146#0" expanded="false" />
+            <element signature="e#25313#25551#0" expanded="false" />
             <element signature="n#!!block;n#receivedDeliveryConfirmation#0" expanded="false" />
             <element signature="n#!!block;n#receivedPostback#0" expanded="false" />
             <element signature="n#!!block;n#sendWelcomeMessage#0" expanded="false" />
