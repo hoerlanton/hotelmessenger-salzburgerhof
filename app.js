@@ -20,16 +20,6 @@ const
   configDatabase = require('./config/database'),
   users = require('./routes/users');
 
-// Connect To Database
-mongoose.connect(configDatabase.database, { useMongoClient: true });
-
-// On Connection
-mongoose.connection.once('open', () => {
-    console.log('Connected to database '+configDatabase.database);
-});
-
-// On Error
-mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
 
 //Bodyparser middleware
 app.use(bodyParser.urlencoded({ extended: false}));
@@ -45,6 +35,18 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./config/passport')(passport);
+
+
+// Connect To Database
+mongoose.connect(configDatabase.database, { useMongoClient: true });
+
+// On Connection
+mongoose.connection.once('open', () => {
+    console.log('Connected to database '+configDatabase.database);
+});
+
+// On Error
+mongoose.connection.on('error', console.error.bind(console, 'connection error:'));
 
 // para CORN
 app.use(function (req, res, next) {
