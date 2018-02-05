@@ -1,8 +1,7 @@
-"use strict";
 /* tslint:disable:no-unused-variable */
-Object.defineProperty(exports, "__esModule", { value: true });
-var testing_1 = require("@angular/core/testing");
-var auth_service_1 = require("./auth.service");
+"use strict";
+var testing_1 = require('@angular/core/testing');
+var auth_service_1 = require('./auth.service');
 describe('AuthService', function () {
     beforeEach(function () {
         testing_1.TestBed.configureTestingModule({

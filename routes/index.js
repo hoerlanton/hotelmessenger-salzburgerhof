@@ -274,7 +274,7 @@ router.post('/guestsMessage', function(req, res, next) {
                                     var month = monthNames[monthNumber];
 
                                     //Regex is the added variables from the cronbJob job.crontime property
-                                    var regex = String(month + " " + day + " 2017 " + hour + ":" + minutes);
+                                    var regex = String(month + " " + day + " 2018 " + hour + ":" + minutes);
                                     console.log("---->regex:"+regex);
                                     //Messages from stored scheduled messages stored in rightmessage variable
                                     for (var m = 0; m < bufferObject.length; m++) {

@@ -8,12 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var validate_service_1 = require("../../services/validate.service");
-var auth_service_1 = require("../../services/auth.service");
-var angular2_flash_messages_1 = require("angular2-flash-messages");
-var router_1 = require("@angular/router");
+var core_1 = require('@angular/core');
+var validate_service_1 = require('../../services/validate.service');
+var auth_service_1 = require('../../services/auth.service');
+var angular2_flash_messages_1 = require('angular2-flash-messages');
+var router_1 = require('@angular/router');
 var RegisterComponent = (function () {
     function RegisterComponent(validateService, flashMessage, authService, router) {
         this.validateService = validateService;
@@ -53,18 +52,15 @@ var RegisterComponent = (function () {
             }
         });
     };
+    RegisterComponent = __decorate([
+        core_1.Component({
+            selector: 'app-register',
+            templateUrl: './register.component.html',
+            styleUrls: ['./register.component.css']
+        }), 
+        __metadata('design:paramtypes', [validate_service_1.ValidateService, angular2_flash_messages_1.FlashMessagesService, auth_service_1.AuthService, router_1.Router])
+    ], RegisterComponent);
     return RegisterComponent;
 }());
-RegisterComponent = __decorate([
-    core_1.Component({
-        selector: 'app-register',
-        templateUrl: './register.component.html',
-        styleUrls: ['./register.component.css']
-    }),
-    __metadata("design:paramtypes", [validate_service_1.ValidateService,
-        angular2_flash_messages_1.FlashMessagesService,
-        auth_service_1.AuthService,
-        router_1.Router])
-], RegisterComponent);
 exports.RegisterComponent = RegisterComponent;
 //# sourceMappingURL=register.component.js.map

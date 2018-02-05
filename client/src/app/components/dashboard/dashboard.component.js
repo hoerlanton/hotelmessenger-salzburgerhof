@@ -8,13 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var dashboard_service_1 = require("../../services/dashboard.service");
-var http_1 = require("@angular/http");
-require("rxjs/add/operator/map");
-require("rxjs/add/operator/catch");
-var angular2_flash_messages_1 = require("angular2-flash-messages");
+var core_1 = require('@angular/core');
+var dashboard_service_1 = require('../../services/dashboard.service');
+var http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
+require('rxjs/add/operator/catch');
+var angular2_flash_messages_1 = require('angular2-flash-messages');
 var DashboardComponent = (function () {
     function DashboardComponent(dashboardService, http, _flashMessagesService) {
         var _this = this;
@@ -116,16 +115,16 @@ var DashboardComponent = (function () {
         //console.log(this.successMsg);
         //this.product.photo = fileInput.target.files[0]['name'];
     };
+    DashboardComponent = __decorate([
+        core_1.Component({
+            selector: 'dashboard',
+            templateUrl: './dashboard.component.html',
+            styleUrls: ['./dashboard.component.css'],
+        }), 
+        __metadata('design:paramtypes', [dashboard_service_1.DashboardService, http_1.Http, angular2_flash_messages_1.FlashMessagesService])
+    ], DashboardComponent);
     return DashboardComponent;
 }());
-DashboardComponent = __decorate([
-    core_1.Component({
-        selector: 'dashboard',
-        templateUrl: './dashboard.component.html',
-        styleUrls: ['./dashboard.component.css'],
-    }),
-    __metadata("design:paramtypes", [dashboard_service_1.DashboardService, http_1.Http, angular2_flash_messages_1.FlashMessagesService])
-], DashboardComponent);
 exports.DashboardComponent = DashboardComponent;
 // html file deleted:
 // {{"Kann zahlen: " + guest.is_payment_enabled}} 

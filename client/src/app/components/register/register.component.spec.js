@@ -1,8 +1,7 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 /* tslint:disable:no-unused-variable */
-var testing_1 = require("@angular/core/testing");
-var register_component_1 = require("./register.component");
+var testing_1 = require('@angular/core/testing');
+var register_component_1 = require('./register.component');
 describe('RegisterComponent', function () {
     var component;
     var fixture;

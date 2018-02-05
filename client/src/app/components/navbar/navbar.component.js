@@ -8,11 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
-var core_1 = require("@angular/core");
-var auth_service_1 = require("../../services/auth.service");
-var router_1 = require("@angular/router");
-var angular2_flash_messages_1 = require("angular2-flash-messages");
+var core_1 = require('@angular/core');
+var auth_service_1 = require('../../services/auth.service');
+var router_1 = require('@angular/router');
+var angular2_flash_messages_1 = require('angular2-flash-messages');
 var NavbarComponent = (function () {
     function NavbarComponent(authService, router, flashMessage) {
         this.authService = authService;
@@ -30,17 +29,15 @@ var NavbarComponent = (function () {
         this.router.navigate(['/login']);
         return false;
     };
+    NavbarComponent = __decorate([
+        core_1.Component({
+            selector: 'app-navbar',
+            templateUrl: './navbar.component.html',
+            styleUrls: ['./navbar.component.css']
+        }), 
+        __metadata('design:paramtypes', [auth_service_1.AuthService, router_1.Router, angular2_flash_messages_1.FlashMessagesService])
+    ], NavbarComponent);
     return NavbarComponent;
 }());
-NavbarComponent = __decorate([
-    core_1.Component({
-        selector: 'app-navbar',
-        templateUrl: './navbar.component.html',
-        styleUrls: ['./navbar.component.css']
-    }),
-    __metadata("design:paramtypes", [auth_service_1.AuthService,
-        router_1.Router,
-        angular2_flash_messages_1.FlashMessagesService])
-], NavbarComponent);
 exports.NavbarComponent = NavbarComponent;
 //# sourceMappingURL=navbar.component.js.map
