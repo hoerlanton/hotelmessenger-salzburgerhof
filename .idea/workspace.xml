@@ -5,608 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31aa1f9b-f5e8-4109-bab4-a5fc224afd25" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/mixins/background-variant.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/mixins/center-block.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/mixins/labels.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/mixins/nav-divider.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/mixins/opacity.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/mixins/progress-bar.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/mixins/resize.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/mixins/size.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/mixins/text-emphasis.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/less/mixins/text-overflow.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/JSV/schemas/json-schema-draft-01/empty-schema.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/JSV/schemas/json-schema-draft-02/empty-schema.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/browserify-zlib/test/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/csscomb-core/TODO.nani" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/entities/maps/xml.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/entities/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/grunt-html/vnu.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/har-schema/lib/har.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/has/README.mkd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/http-signature/.dir-locals.el" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/js-base64/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/jscs-preset-wikimedia/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/jscs/node_modules/uuid/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/jscs/node_modules/vow-queue/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/jscs/presets/grunt.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/jshint/node_modules/shelljs/.documentup.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/json-stringify-safe/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/jsonlint/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/mute-stream/.nyc_output/33508.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/package/test/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/performance-now/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/phantomjs/lib/phantom/examples/arguments.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/phantomjs/lib/phantom/examples/countdown.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/phantomjs/lib/phantom/examples/hello.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/phantomjs/lib/phantom/examples/module.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/phantomjs/lib/phantom/examples/printenv.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/phantomjs/lib/phantom/examples/version.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/phantomjs/node_modules/har-validator/lib/schemas/har.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug-load/test/bar.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug-load/test/bing.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug-load/test/foo.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/dynamicscript.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/each.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/extend-layout.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/extend.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/includes.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/includes/foot.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/includes/head.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/includes/scripts.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/includes/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/mixins.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/mixins/dialog.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/mixins/profile.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/pet.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/pug/examples/whitespace.pug" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/saucelabs/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/throttleit/component.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/bootstrap/node_modules/vow-queue/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/bower_components/node_modules/jquery/src/.eslintrc.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/animations/browser/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/animations/browser/testing.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/animations/browser/testing/index.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/cli/blueprints/component/files/__path__/__name__.component.__styleext__" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/cli/lib/ast-tools/index.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/cli/lib/base-href-webpack/index.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/cli/models/build-options.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/common/testing/index.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/common/testing/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/compiler/src/aot/compiler_factory.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/compiler/src/aot/compiler_host.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/compiler/src/aot/compiler_options.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/compiler/src/i18n/i18n_parser.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/compiler/src/output/output_interpreter.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/compiler/src/output/output_jit.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/compiler/src/schema/dom_security_schema.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/compiler/testing/index.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/compiler/testing/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/core/testing/index.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/core/testing/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/core/testing/src/async.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/core/testing/src/before_each.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/http/testing/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/platform-browser-dynamic/testing/index.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/platform-browser/testing/index.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/platform-browser/testing/src/testing.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/platform-server/testing/index.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/platform-server/testing/src/testing.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/router/testing/index.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/router/testing/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/router/testing/src/testing.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/router/upgrade/index.metadata.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/router/upgrade/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@angular/upgrade/static/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@ngtools/json-schema/src/index.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@ngtools/json-schema/src/node.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@ngtools/json-schema/src/serializer.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/@ngtools/webpack/src/webpack.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/blocking-proxy/built/lib/index.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/browser-sync-ui/public/css/components.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/browser-sync-ui/public/css/core.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/browser-sync-ui/public/css/core.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/browser-sync/lib/cli/opts.init.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/browser-sync/lib/cli/opts.recipe.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/browser-sync/lib/templates/script-tags-simple.tmpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/browser-sync/lib/templates/script-tags.tmpl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/bs-recipes/recipes/server/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/bs-recipes/recipes/webpack.typescript.react/src/main.tsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/bs-recipes/recipes/webpack.typescript.react/typings.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/_lib/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/ar/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/bg/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/ca/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/cs/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/da/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/de/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/el/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/en/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/eo/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/es/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/fi/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/fil/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/fr/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/hr/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/id/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/is/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/it/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/ja/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/ko/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/mk/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/nb/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/nl/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/pl/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/pt/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/ro/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/ru/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/sk/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/sv/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/th/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/tr/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/zh_cn/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/date-fns/locale/zh_tw/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/directory-encoder/test/files/default-css.hbs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/dom-converter/scripts/coffee/lib/domToMarkup.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/dom-converter/scripts/coffee/test/_prepare.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/domhandler/test/cases/12-text_only.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/domhandler/test/cases/18-enforce_empty_tags.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/expand-braces/node_modules/repeat-string/bower.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/fsevents/node_modules/har-schema/lib/har.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/fsevents/node_modules/http-signature/.dir-locals.el" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/fsevents/node_modules/json-stringify-safe/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/fsevents/node_modules/node-pre-gyp/bin/node-pre-gyp.cmd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/fsevents/node_modules/performance-now/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/fsevents/node_modules/uuid/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/htmlparser2/lib/entities/xml.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/htmlparser2/test/Events/06-leading-lt.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/htmlparser2/test/Events/15-lt-whitespace.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/htmlparser2/test/Events/17-numeric_entities.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/jasmine/lib/examples/jasmine.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/console-errors/test-error.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/errors/image-height-error.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/errors/image-size-error.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/errors/image-width-error.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/global-vars/simple.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/imports/urls.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/imports/urls2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/modify-vars/imports/simple2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/modify-vars/simple.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/nested-gradient-with-svg-gradient/mixin-consumer.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/browser/less/postProcessor/postProcessor.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/charsets.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/empty.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/extend-clearfix.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/import-inline.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/import-interpolation.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/import-once.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/lazy-eval.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/mixins-closure.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/mixins-nested.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/no-output.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/css/variables-in-at-rules.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/charsets.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/empty.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/errors/import-missing.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/errors/mixin-not-defined.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/errors/mixin-not-visible-in-scope-1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/errors/parse-error-with-import.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/extend-clearfix.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/import-inline.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/import-interpolation.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/import-reference-issues/appender-reference-1968.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/import-reference-issues/multiple-import.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/import/import-test-a.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/lazy-eval.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/mixins-nested.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less-bom/no-output.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/charsets.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/empty.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/add-mixed-units.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/add-mixed-units2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/at-rules-undefined-var.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/bad-variable-declaration1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/color-func-invalid-color.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/color-invalid-hex-code.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/color-invalid-hex-code2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/css-guard-default-func.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/detached-ruleset-1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/detached-ruleset-2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/detached-ruleset-3.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/detached-ruleset-5.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/detached-ruleset-6.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/divide-mixed-units.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/extend-no-selector.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/extend-not-at-end.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-10-keyword.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-11-operation.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-12-quoted.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-13-selector.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-14-url.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-15-value.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-2-alpha.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-3-assignment.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-4-call.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-5-color-2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-5-color.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-6-condition.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-7-dimension.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-8-element.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/functions-9-expression.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/import-malformed.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/import-missing.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/import-no-semi.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/import-subfolder1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/import-subfolder2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/imports/import-subfolder1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/imports/import-subfolder2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/imports/import-test.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/javascript-error.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/javascript-undefined-var.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/mixed-mixin-definition-args-1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/mixed-mixin-definition-args-2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/mixin-not-defined.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/mixin-not-matched.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/mixin-not-matched2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/mixin-not-visible-in-scope-1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/mixins-guards-default-func-1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/mixins-guards-default-func-2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/mixins-guards-default-func-3.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/multiple-guards-on-css-selectors.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/multiple-guards-on-css-selectors2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/multiply-mixed-units.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/parens-error-1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/parens-error-2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/parens-error-3.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/parse-error-curly-bracket.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/parse-error-media-no-block-1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/parse-error-media-no-block-2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/parse-error-media-no-block-3.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/parse-error-missing-bracket.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/parse-error-missing-parens.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/parse-error-with-import.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/percentage-missing-space.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/percentage-non-number-argument.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/property-asterisk-only-name.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/property-ie5-hack.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/property-in-root.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/property-in-root2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/property-in-root3.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/property-interp-not-defined.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/recursive-variable.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/root-func-undefined-1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/root-func-undefined-2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/single-character.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/svg-gradient1.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/svg-gradient2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/svg-gradient3.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/svg-gradient4.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/svg-gradient5.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/svg-gradient6.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/errors/unit-function.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/extend-clearfix.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/filemanagerPlugin/colors.test" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/filemanagerPlugin/filemanager.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/globalVars/extended.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/globalVars/simple.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/globalVars/simple.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import-inline.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import-interpolation.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import-reference-issues/appender-reference-1968.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import-reference-issues/global-scope-nested.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import-reference-issues/mixin-1968.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import-reference-issues/multiple-import-nested.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import-reference-issues/multiple-import.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import-reference-issues/simple-mixin.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import-reference-issues/simple-ruleset-2162.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/css-import.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/deeper/import-once-test-a.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/deeper/url-import.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-charset-test.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-inline-invalid-css.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-interpolation.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-interpolation2.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-once-test-c.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-test-a.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-test-b.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-test-c.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-test-d.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-test-e.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/import-test-f.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/imports/font.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/imports/logo.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/interpolation-vars.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/invalid-css.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/import/urls.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/include-path-string/include-path-string.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/include-path/include-path.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/lazy-eval.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/mixins-nested.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/modifyVars/extended.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/modifyVars/extended.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/nested-gradient-with-svg-gradient/mixin-consumer.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/no-js-errors/no-js-errors.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/no-output.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/plugin/plugin-transitive.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/postProcessorPlugin/postProcessor.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/preProcessorPlugin/preProcessor.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/sourcemaps-empty/empty.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/sourcemaps-empty/var-defs.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/sourcemaps/basic.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/sourcemaps/imported.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/strict-units/strict-units.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/less/test/less/visitorPlugin/visitor.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/bootstrap-datepicker/yarn.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-gyp/gyp/samples/samples.bat" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/compressed/expected.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/compressed/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/custom-functions/setter-expected.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/custom-functions/setter.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/custom-functions/string-conversion-expected.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/custom-functions/string-conversion.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/cwd-include-path/expected.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/cwd-include-path/outside.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/depth-first/_common.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/depth-first/_struct.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/depth-first/_vars.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/depth-first/a.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/depth-first/a1.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/depth-first/b.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/depth-first/b1.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/depth-first/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/follow/foo/bar/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/include-files/bar.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/include-files/chained-imports-with-custom-importer.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/include-files/expected-importer.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/include-files/file-not-processed-by-loader.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/include-files/file-processed-by-loader.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/include-files/foo.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/include-files/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/include-path/expected.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/include-path/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/indent/expected.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/indent/index.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/input-directory/sass/_skipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/input-directory/sass/one.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/input-directory/sass/two.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/invalid/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/output-directory/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/precision/expected.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/precision/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/sass-path/expected-orange.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/sass-path/expected-red.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/sass-path/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/simple/expected.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/simple/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/source-comments/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/source-map-embed/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/source-map/expected.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/source-map/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/watching-dir-01/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/watching-dir-02/foo.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/watching-dir-02/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/watching/bar.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/watching/index.sass" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/watching/index.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/node-sass/test/fixtures/watching/white.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/protractor/node_modules/jasmine-core/MANIFEST.in" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/protractor/node_modules/jasmine/lib/examples/jasmine.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/readdirp/test/bed/root_file1.ext1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/readdirp/test/bed/root_file2.ext2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/readdirp/test/bed/root_file3.ext3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/resolve/test/module_dir/zmodules/bbb/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/resolve/test/resolver/baz/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/resolve/test/resolver/cup.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/resolve/test/resolver/incorrect_main/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/resolve/test/resolver/mug.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/Operator.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/bindCallback.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/bindNodeCallback.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/combineLatest.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/concat.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/defer.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/empty.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/forkJoin.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/from.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/fromEvent.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/fromEventPattern.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/fromPromise.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/generate.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/if.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/interval.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/merge.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/never.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/of.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/pairs.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/race.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/range.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/throw.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/timer.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/using.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/observable/zip.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/audit.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/auditTime.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/buffer.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/bufferCount.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/bufferTime.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/bufferToggle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/bufferWhen.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/combineAll.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/combineLatest.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/concat.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/concatAll.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/concatMap.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/concatMapTo.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/count.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/debounce.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/debounceTime.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/defaultIfEmpty.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/delay.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/delayWhen.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/dematerialize.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/distinct.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/elementAt.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/every.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/exhaust.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/exhaustMap.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/expand.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/filter.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/find.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/findIndex.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/first.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/groupBy.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/ignoreElements.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/isEmpty.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/last.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/map.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/mapTo.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/materialize.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/max.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/merge.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/mergeAll.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/mergeScan.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/min.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/multicast.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/observeOn.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/pairwise.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/partition.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/pluck.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/publish.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/publishLast.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/publishReplay.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/race.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/reduce.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/repeat.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/repeatWhen.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/retry.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/retryWhen.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/sample.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/sampleTime.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/scan.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/sequenceEqual.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/share.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/single.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/skip.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/skipUntil.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/skipWhile.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/startWith.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/subscribeOn.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/switchMap.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/switchMapTo.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/take.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/takeLast.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/takeUntil.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/takeWhile.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/throttle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/throttleTime.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/timeInterval.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/timeout.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/timeoutWith.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/timestamp.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/toArray.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/toPromise.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/window.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/windowCount.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/windowTime.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/windowToggle.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/windowWhen.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/withLatestFrom.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/zip.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/add/operator/zipAll.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/observable/dom/ajax.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/rxjs/observable/dom/webSocket.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/sockjs/examples/echo/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/sockjs/examples/express-3.x/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/sockjs/examples/express/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/sockjs/examples/hapi/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/sockjs/examples/koa/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/sockjs/examples/multiplex/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/source-map-loader/test/fixtures/external-source-map.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/source-map-loader/test/fixtures/missing-source-map2.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/stream-http/test/browser/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/typescript/test.config" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/webdriver-js-extender/built/spec/command_tests/totally_real_apk.apk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/webdriver-js-extender/built/spec/mock-server/interfaces.js.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/webdriver-js-extender/node_modules/selenium-webdriver/lib/test/data/html5/test.appcache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/webdriver-js-extender/node_modules/xml2js/83.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/webdriver-js-extender/node_modules/xml2js/incompat.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/webdriver-js-extender/node_modules/xml2js/text.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/weinre/node_modules/mkdirp/.gitignore.orig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/weinre/node_modules/mkdirp/.gitignore.rej" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/weinre/node_modules/mkdirp/examples/pow.js.orig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/weinre/node_modules/qs/test/mocha.opts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/weinre/web/client/InspectorBackendStub.qrc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/xhr2/test/fixtures/hello.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/node_modules/xhr2/test/src/helpers/browser_mocha_setup.coffee" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/components/home/home.component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/components/profile/profile.component.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/client/src/app/components/register/register.component.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Guest.js" afterPath="$PROJECT_DIR$/client/Guest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Guest.js.map" afterPath="$PROJECT_DIR$/client/Guest.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Messages.js" afterPath="$PROJECT_DIR$/client/Messages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/Messages.js.map" afterPath="$PROJECT_DIR$/client/Messages.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-datetime/ng2-datetime.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-datetime/ng2-datetime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-datetime/ng2-datetime.js.map" afterPath="$PROJECT_DIR$/client/node_modules/ng2-datetime/ng2-datetime.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/ng2-datetime/ITimepickerEvent.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/ng2-datetime/ITimepickerEvent.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/ng2-datetime/ng2-datetime.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/ng2-datetime/ng2-datetime.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/ng2-datetime/ng2-datetime.js.map" afterPath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/ng2-datetime/ng2-datetime.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/ng2-datetime/ng2-datetime.module.js" afterPath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/ng2-datetime/ng2-datetime.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/ng2-datetime/ng2-datetime.module.js.map" afterPath="$PROJECT_DIR$/client/node_modules/ng2-datetime/src/ng2-datetime/ng2-datetime.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/app.component.js" afterPath="$PROJECT_DIR$/client/src/app/app.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/app.component.js.map" afterPath="$PROJECT_DIR$/client/src/app/app.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/app.component.spec.js" afterPath="$PROJECT_DIR$/client/src/app/app.component.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/app.component.spec.js.map" afterPath="$PROJECT_DIR$/client/src/app/app.component.spec.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/app.module.js" afterPath="$PROJECT_DIR$/client/src/app/app.module.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/app.module.js.map" afterPath="$PROJECT_DIR$/client/src/app/app.module.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.js" afterPath="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/dashboard/dashboard.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/home/home.component.js" afterPath="$PROJECT_DIR$/client/src/app/components/home/home.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/home/home.component.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/home/home.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/home/home.component.spec.js" afterPath="$PROJECT_DIR$/client/src/app/components/home/home.component.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/home/home.component.spec.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/home/home.component.spec.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/login/login.component.html" afterPath="$PROJECT_DIR$/client/src/app/components/login/login.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/login/login.component.js" afterPath="$PROJECT_DIR$/client/src/app/components/login/login.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/login/login.component.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/login/login.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/login/login.component.spec.js" afterPath="$PROJECT_DIR$/client/src/app/components/login/login.component.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/login/login.component.spec.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/login/login.component.spec.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.html" afterPath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.js" afterPath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.spec.js" afterPath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.spec.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.spec.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/profile/profile.component.js" afterPath="$PROJECT_DIR$/client/src/app/components/profile/profile.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/profile/profile.component.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/profile/profile.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/profile/profile.component.spec.js" afterPath="$PROJECT_DIR$/client/src/app/components/profile/profile.component.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/profile/profile.component.spec.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/profile/profile.component.spec.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/register/register.component.js" afterPath="$PROJECT_DIR$/client/src/app/components/register/register.component.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/register/register.component.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/register/register.component.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/register/register.component.spec.js" afterPath="$PROJECT_DIR$/client/src/app/components/register/register.component.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/components/register/register.component.spec.js.map" afterPath="$PROJECT_DIR$/client/src/app/components/register/register.component.spec.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/guards/auth.guard.js" afterPath="$PROJECT_DIR$/client/src/app/guards/auth.guard.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/guards/auth.guard.js.map" afterPath="$PROJECT_DIR$/client/src/app/guards/auth.guard.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/services/auth.service.js" afterPath="$PROJECT_DIR$/client/src/app/services/auth.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/services/auth.service.js.map" afterPath="$PROJECT_DIR$/client/src/app/services/auth.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/services/auth.service.spec.js" afterPath="$PROJECT_DIR$/client/src/app/services/auth.service.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/services/auth.service.spec.js.map" afterPath="$PROJECT_DIR$/client/src/app/services/auth.service.spec.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/services/dashboard.service.js" afterPath="$PROJECT_DIR$/client/src/app/services/dashboard.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/services/dashboard.service.js.map" afterPath="$PROJECT_DIR$/client/src/app/services/dashboard.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/services/validate.service.js" afterPath="$PROJECT_DIR$/client/src/app/services/validate.service.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/services/validate.service.js.map" afterPath="$PROJECT_DIR$/client/src/app/services/validate.service.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/services/validate.service.spec.js" afterPath="$PROJECT_DIR$/client/src/app/services/validate.service.spec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/app/services/validate.service.spec.js.map" afterPath="$PROJECT_DIR$/client/src/app/services/validate.service.spec.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/environments/environment.js" afterPath="$PROJECT_DIR$/client/src/environments/environment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/environments/environment.js.map" afterPath="$PROJECT_DIR$/client/src/environments/environment.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/environments/environment.prod.js" afterPath="$PROJECT_DIR$/client/src/environments/environment.prod.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/environments/environment.prod.js.map" afterPath="$PROJECT_DIR$/client/src/environments/environment.prod.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main.js" afterPath="$PROJECT_DIR$/client/src/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/main.js.map" afterPath="$PROJECT_DIR$/client/src/main.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/polyfills.js" afterPath="$PROJECT_DIR$/client/src/polyfills.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/polyfills.js.map" afterPath="$PROJECT_DIR$/client/src/polyfills.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/test.js" afterPath="$PROJECT_DIR$/client/src/test.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/src/test.js.map" afterPath="$PROJECT_DIR$/client/src/test.js.map" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -665,34 +64,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="default.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/default.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="4" column="57" lean-forward="true" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="passport.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/passport.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="277" column="69" lean-forward="true" selection-start-line="277" selection-start-column="69" selection-end-line="277" selection-end-column="69" />
+            <state relative-caret-position="323">
+              <caret line="127" column="41" lean-forward="true" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/app/app.module.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -740,9 +137,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>receivedAuthentication</find>
-      <find>setNewFileUploadedToTrue</find>
-      <find>newFileUploaded</find>
       <find>http</find>
       <find>gaesteGlobalSenderID</find>
       <find>scheduled e</find>
@@ -770,6 +164,9 @@
       <find>users</find>
       <find>dashboard</find>
       <find>2017</find>
+      <find>guestsMessages get called</find>
+      <find>----&gt;re</find>
+      <find>salzburgerhofGaeste</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/client/node_modules/angular-jwt</dir>
@@ -817,8 +214,8 @@
         <option value="$PROJECT_DIR$/client/src/app/components/navbar/navbar.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/components/login/login.component.html" />
         <option value="$PROJECT_DIR$/client/src/app/services/auth.service.ts" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/config/default.json" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
@@ -875,6 +272,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hotelmessenger-salzburgerhof" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hotelmessenger-salzburgerhof" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hotelmessenger-salzburgerhof" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1045,12 +456,12 @@
       <workItem from="1517431301097" duration="14155000" />
       <workItem from="1517482638619" duration="5698000" />
       <workItem from="1517512762395" duration="9817000" />
-      <workItem from="1517843644796" duration="1231000" />
+      <workItem from="1517843644796" duration="2313000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="231747000" />
+    <option name="totallyTimeSpent" value="232829000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1071,7 +482,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32743362" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24907847" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38514853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="246" y="261" width="1280" height="773" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25148514" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="246" y="261" width="1280" height="773" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1215,13 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="17" column="1" lean-forward="false" selection-start-line="17" selection-start-column="1" selection-end-line="41" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -1525,18 +929,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/config/passport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="277" column="69" lean-forward="true" selection-start-line="277" selection-start-column="69" selection-end-line="277" selection-end-column="69" />
+        <state relative-caret-position="45">
+          <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/default.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="4" column="57" lean-forward="true" selection-start-line="4" selection-start-column="57" selection-end-line="4" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="127" column="41" lean-forward="true" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
           <folding />
         </state>
       </provider>
