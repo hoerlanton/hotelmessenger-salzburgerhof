@@ -8,7 +8,7 @@ const
     cors = require('cors'),
     bodyParser = require('body-parser'),
     mongojs = require('mongojs'),
-    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['salzburgerhofMessages', 'testHotelMessengerGaeste', 'salzburgerhofScheduledMessages']),
+    db = mongojs('mongodb://anton:b2d4f6h8@ds127132.mlab.com:27132/servicio', ['salzburgerhofMessages', 'salzburgerhofGaeste', 'salzburgerhofScheduledMessages']),
     config = require('config'),
     CronJob = require('cron').CronJob,
     moment = require('moment-timezone'),
@@ -72,7 +72,7 @@ router.get('/guestsScheduledMessages', function(req, res, next) {
 router.get('/guests', function(req, res, next) {
     console.log("guests get called");
     //Get guests from Mongo DB
-    db.testHotelMessengerGaeste.find(function(err, gaeste){
+    db.salzburgerhofGaeste.find(function(err, gaeste){
         if (err){
             res.send(err);
         }
@@ -92,7 +92,7 @@ router.post('/guests', function(req, res, next) {
             error: "Bad data"
         });
     } else {
-        db.testHotelMessengerGaeste.save(guest, function (err, guest) {
+        db.salzburgerhofGaeste.save(guest, function (err, guest) {
             if (err) {
                 res.send(err);
             }
@@ -124,7 +124,7 @@ router.put('/guests', function(req, res, next) {
     var guestUpdateString = JSON.stringify(guestUpdate);
     var guestUpdateHoi = guestUpdateString.slice(2, -5);
     console.log("SenderId:" + guestUpdateHoi);
-    db.testHotelMessengerGaeste.update({
+    db.salzburgerhofGaeste.update({
             senderId:  guestUpdateHoi  },
         {
             $set: { signed_up: false }
@@ -167,7 +167,7 @@ router.post('/guestsMessage', function(req, res, next) {
     //Destination URL for uploaded files
     var URLUploadedFile = String(config.get('serverURL') + "/uploads/" + uploadedFileName);
     //Find all senderids from signed_up guests abd push it to the temporary array gaesteGlobalSenderID
-    db.testHotelMessengerGaeste.find(function (err, gaeste) {
+    db.salzburgerhofGaeste.find(function (err, gaeste) {
         if (err) {
             errMsg = "Das senden der Nachricht ist nicht möglich. Es sind keine Gäste angemeldet.";
         } else {
